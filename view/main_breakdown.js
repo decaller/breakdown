@@ -3,21 +3,24 @@ var view_main_breakdown ={
   cols : [
     {
       type : "line",
+      borderless : true,
+
       rows : [
         {
           view : "toolbar",
+          borderless : true,
           elements : [
             { label : "Project's Breakdown", view : "label" },
-            { view : "button", type : "iconButton", icon : "plus", width : 28 },
-            { view : "button", type : "iconButton", icon : "child", width : 27 },
+            { view : "button", type : "iconButtonTop", icon : "plus", width : 35 },
+            { view : "button", type : "iconButtonTop", icon : "child", width : 35 },
             {
               view : "toggle",
               click : "if($$('cart_add_breakdown').isVisible()){$$('cart_add_breakdown').hide();$$('resizer_add_breakdown').hide();}else{$$('cart_add_breakdown').show();$$('resizer_add_breakdown').show();}",
-              type : "iconButton",
+              type : "iconButtonTop",
               icon : "shopping-cart",
-              width : 31
+              width : 35
             },
-            { view : "button", type : "iconButton", icon : "search", width : 28 }
+            { view : "button", type : "iconButtonTop", icon : "search", width : 35 }
           ]
         },
         {
@@ -33,6 +36,7 @@ var view_main_breakdown ={
             { id : "menu", header : "", width : 35 }
           ],
           view : "treetable",
+          borderless : true,
           
           editable : true,
           drag : true,
@@ -41,9 +45,12 @@ var view_main_breakdown ={
         { view : "resizer", id : "resizer_add_breakdown", hidden : true },
         {
           type : "line",
+          borderless : true,
+          
           rows : [
             {
               view : "toolbar",
+              borderless : true,
               elements : [
                 { label : "Breakdown's Cart", view : "label" }
               ]
@@ -62,6 +69,7 @@ var view_main_breakdown ={
                 { id : "menu", header : "", width : 35 }
               ],
               view : "treetable",
+              borderless : true,
               drag : true,
               on : {onBeforeDrop:function(context){context.parent = context.target; context.index = -1;}}
             }
@@ -72,13 +80,23 @@ var view_main_breakdown ={
         }
       ]
     },
-    { view : "resizer" },
+    { view : "resizer"},
     {
       view : "scrollview",
+      borderless : true,
+      css:"mdl-shadow--2dp",
       body : {
         type : "line",
+        borderless : true,
         rows : [
-          { label : "Label", view : "label", height : 40 },
+          {
+                view : "toolbar",
+                borderless : true,
+                elements : [
+                  { label : "Dimension", view : "label" },
+                  
+                ]
+              },
           {
             view : "carousel",
             css : "webix_dark",
@@ -90,18 +108,21 @@ var view_main_breakdown ={
           },
           {
             type : "line",
+            borderless : true,
             rows : [
               {
                 view : "toolbar",
+                borderless : true,
                 elements : [
                   { label : "Dimension", view : "label" },
-                  { view : "button", type : "iconButton", icon : "plus", width : 28 }
+                  { view : "button", type : "iconButtonTop", icon : "plus", width : 28 }
                 ]
               },
               {
                 
                 autoConfig : true,
                 view : "datatable",
+                borderless : true,
                 navigation : false,
                 height : 250,
                 columns : [
@@ -116,25 +137,28 @@ var view_main_breakdown ={
           },
           {
             type : "line",
+            borderless : true,
             rows : [
               {
                 view : "toolbar",
+                borderless : true,
                 elements : [
                   { label : "Items", view : "label" },
                   {
-                    type : "iconButton",
+                    type : "iconButtonTop",
                     icon : "shopping-cart",
-                    width : 31,
+                    width : 35,
                     view : "toggle",
-                    click : "if($$('cart_add_mtw').isVisible()){$$('cart_add_mtw').hide();$$('resizer_add_mtw').hide();}else{$$('cart_add_mtw').show();$$('resizer_add_mtw').show();}"
+                    click : "if($$('cart_add_mtw').isVisible()){$$('cart_add_mtw').hide();}else{$$('cart_add_mtw').show();}"
                   },
-                  { view : "button", type : "iconButton", icon : "search", width : 28 }
+                  { view : "button", type : "iconButtonTop", icon : "search", width : 28 }
                 ]
               },
               {
                 
                 autoConfig : true,
                 view : "datatable",
+                borderless : true,
                 height : 250,
                 columns : [
                   { id : "sku", header : "SKU", width : 100 },
@@ -148,11 +172,12 @@ var view_main_breakdown ={
               }
             ]
           },
-          { view : "resizer", id : "resizer_add_mtw", hidden : true },
+          
           {
             rows : [
               {
                 view : "toolbar",
+                borderless : true,
                 elements : [
                   { label : "Item's Cart", view : "label" }
                 ]
@@ -161,6 +186,7 @@ var view_main_breakdown ={
                 
                 autoConfig : true,
                 view : "datatable",
+                borderless : true,
                 height : 250,
                 columns : [
                   { id : "sku", header : "SKU", width : 100 },
