@@ -1,4 +1,5 @@
 var view_main_breakdown ={
+  container:"webix-content",
   cols : [
     {
       type : "line",
