@@ -1,19 +1,102 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+  
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+webix.ready(function(){
+var persons = webix.proxy("databoom", "https://samples.databoom.space/api1/sandboxdb/collections/people")
+grid = webix.ui({
+  container:"breakdown",
+  rows : [
+    {
+      cols : [
+        {
+          type : "line",
+          rows : [
+            {
+              view : "toolbar",
+              elements : [
+                { label : "Label", view : "label" },
+                { view : "button", label : "Button 1" },
+                { view : "button", label : "Button 2" },
+                { url : "demo->menu", type : { subsign : true },
+                  view : "menu"
+                }
+              ]
+            },
+            {
+              view : "toolbar",
+              elements : [
+                { view : "button", label : "Button 1" },
+                { view : "button", label : "Button 2" },
+                { view : "spacer" }
+              ]
+            },
+            {
+              type : "line",
+              cols : [
+                {
+                  url : "demo->tree",
+                  columns : [
+                    {
+                      id : "value",
+                      header : "Film title",
+                      fillspace : true,
+                      template : "{common.treetable()} #value#"
+                    },
+                    { id : "id", header : "ID", width : 55 }
+                  ],
+                  view : "treetable"
+                }
+              ]
+            }
+          ],
+          borderless : true
+        },
+        { view : "resizer" },
+        {
+          type : "line",
+          rows : [
+            {
+              view : "toolbar",
+              elements : [
+                { label : "Label", view : "label" },
+                { view : "button", label : "Button 1" },
+                { view : "button", label : "Button 2" },
+                { url : "demo->menu", type : { subsign : true },
+                  view : "menu"
+                }
+              ]
+            },
+            {
+              view : "toolbar",
+              elements : [
+                { view : "button", label : "Button 1" },
+                { view : "button", label : "Button 2" },
+                { view : "spacer" }
+              ]
+            },
+            {
+              view : "carousel",
+              css : "webix_dark",
+              cols : [
+                { view : "template", template : "View A" },
+                { view : "template", template : "View B" }
+              ]
+            },
+            { url : "demo->table", autoConfig : true, view : "datatable" },
+            { url : "demo->table", autoConfig : true, view : "datatable" }
+          ],
+          borderless : true
+        }
+      ],
+      borderless : true
     }
-  });
+  ],
+  borderless : true
+})
+});
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
+
+  
 }
 
 if (Meteor.isServer) {

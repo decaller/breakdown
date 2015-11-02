@@ -1,5 +1,6 @@
 .meteor/local
 .meteor/meteorite
+<<<<<<< HEAD
 
 # =========================
 # Operating System Files
@@ -47,3 +48,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+=======
+>>>>>>> af9bcf3baff55fbd04e7d4f4270c789e521bb408
