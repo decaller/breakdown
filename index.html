@@ -9,57 +9,49 @@
   </head>
 
     <body>
-    	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-          <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">
-              Breakdown
-            </span>
+    	<!-- Wide card with share menu button -->
+<!-- Uses a transparent header that draws on top of the layout's background -->
+<style>
+.br-layout-transparent {
+  background: url('public/bg/bg.jpg') center / cover;
+}
+.br-layout-transparent .mdl-layout__header,
+.br-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+</style>
+
+<div class="br-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Breakdown</span>
       <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation mdl-layout--large-screen-only">
-              <button class="mdl-button mdl-js-button mdl-button--icon">
-                <i class="material-icons">save</i>
-		          </button>
-              <button class="mdl-button mdl-js-button mdl-button--icon">
-                <i class="material-icons">share</i>
-		          </button>
-              <button class="mdl-button mdl-js-button mdl-button--icon">
-                <i class="material-icons">more_vert</i> 
-		          </button>
-            </nav>
-          </div>
-        </header>
-
-      <div class="demo-drawer mdl-layout__drawer">
-        <header class="demo-drawer-header mdl-color--teal-50">
-          <img src="public/images/user.png" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>hello@example.com</span>
-            <div class="mdl-layout-spacer"></div>
-            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons" role="presentation">arrow_drop_down</i>
-              <span class="visuallyhidden">Accounts</span>
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-              <li class="mdl-menu__item">Sign Out</li>
-            </ul>
-          </div>
-        </header>
-
-        <nav class="demo-navigation mdl-navigation mdl-color--grey-50">
-          <a class="mdl-navigation__link mdl-color-text--grey-900" href=""><i class="mdl-color-text--grey-900 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link mdl-color-text--grey-900" href=""><i class="mdl-color-text--grey-900 material-icons" role="presentation">share</i>Share</a>
-          <a class="mdl-navigation__link mdl-color-text--grey-900" href=""><i class="mdl-color-text--grey-900 material-icons" role="presentation">help_outline</i>Help</a>
-          <a class="mdl-navigation__link mdl-color-text--grey-900" href=""><i class="mdl-color-text--grey-900 material-icons" role="presentation">settings</i>Settings</a>
-        </nav>
-      </div>
-
-  <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>
-  </main>
   
-      </div>
-    </body>
+    </div>
+  </header>
+  
+  <main class="mdl-layout__content">
+    <a name="top"></a>
+        <div class="br-be-together-section mdl-typography--text-center">
+          <div class="br-font br-slogan">BREAKDOWN!</div>
+          <div class="br-font br-sub-slogan">welcome to breakdown... break your project down. estimate the cost. </div>
+
+    <div class="br-font br-create-character">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+        LOGIN
+      </button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button">
+        SIGN UP
+      </button>
+    </div>
+        
+
+        
+        </div>
+  </main>
+</div>
+    
 </html>
