@@ -9,7 +9,6 @@ var view_main_breakdown ={
         {
           view : "toolbar",
           borderless : true,
-          css:"bg_panel",
           elements : [
             { label : "Project's Breakdown", view : "label" },
             { view : "button", type : "iconButtonTop", icon : "plus", width : 35 },
@@ -85,7 +84,7 @@ var view_main_breakdown ={
     {
       view : "scrollview",
       borderless : true,
-      css:"mdl-shadow--8dp",
+      css:"mdl-shadow--2dp",
       body : {
         type : "line",
         borderless : true,
