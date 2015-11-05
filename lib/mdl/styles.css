@@ -78,5 +78,40 @@ html, body {
   margin-right: 20px;
 }
 
+.br-be-together-section {
+  position: relative;
+  height: 100%;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/project.jpg') center 30% no-repeat;
+  background-size: cover;
+}
 
+.br-font {
+  font-family: 'And Black', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #FAFAFA;
+  font-weight: 300;
+}
+
+.br-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.br-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.br-create-character {
+  font-size: 21px;
+  padding-top: 200px;
+}
+
+  .br-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
 
