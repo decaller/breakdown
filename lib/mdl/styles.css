@@ -118,8 +118,11 @@ html, body {
   .main-plus-button {
     height:150px;
     width: 250px;
+    padding-left: 210px;
+    padding-top: 0px;
 
   }
+  
 
 
 
