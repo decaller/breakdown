@@ -1,0 +1,5 @@
+var logic ={
+	init: function(){
+	
+	}
+}

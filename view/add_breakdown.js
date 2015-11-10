@@ -1,41 +1,43 @@
-var view_add_breakdown = {
-  cols : [
+var view_add_breakdown__search = 
+{
+  type : "line",
+  rows : [
     {
-      type : "line",
-      rows : [
-        {
-          view : "toolbar",
-          elements : [
-            { view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
-            { label : "Search", view : "search" }
-          ]
-        },
-        {
-          columns : [
-            {
-              id : "item",
-              header : "Item",
-              fillspace : true,
-              template : "{common.treetable()} #value#"
-            },
-            { id : "index", header : "Index Unit", width : 65 },
-            { id : "total", header : "Total Price", width : 100 },
-            { id : "menu", header : "", width : 35 }
-          ],
-          view : "treetable",
-          url : "demo->tree",
-          
-          on : {}
-        }
+      view : "toolbar",
+      elements : [
+        { view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
+        { label : "Search", view : "search" }
       ]
     },
-    { view : "resizer" },
+    {
+      columns : [
+        {
+          id : "item",
+          header : "Item",
+          fillspace : true,
+          template : "{common.treetable()} #value#"
+        },
+        { id : "index", header : "Index Unit", width : 65 },
+        { id : "total", header : "Total Price", width : 100 },
+        { id : "menu", header : "", width : 35 }
+      ],
+      view : "treetable",
+      url : "demo->tree",
+      
+      on : {}
+    }
+  ]
+};
+var view_add_breakdown__search_details = 
+{
+  type : "line",
+  rows : [
+    { label : "Label", view : "label", height : 40 },
     {
       view : "scrollview",
+      scroll : "y",
       body : {
-        type : "line",
         rows : [
-          { label : "Label", view : "label", height : 40 },
           {
             view : "carousel",
             css : "webix_dark",
@@ -52,11 +54,11 @@ var view_add_breakdown = {
                 view : "toolbar",
                 elements : [
                   { label : "Dimension", view : "label" },
-                  
+                  { view : "button", type : "iconButton", icon : "plus", width : 28 }
                 ]
               },
               {
-                url : "demo->table",
+                
                 autoConfig : true,
                 view : "datatable",
                 navigation : false,
@@ -67,7 +69,7 @@ var view_add_breakdown = {
                   { id : "unit", header : "Unit", width : 65, $id : "unit" },
                   { id : "source", header : "Source", $id : "source", fillspace : true }
                 ],
-              
+                drag : false
               }
             ]
           },
@@ -77,11 +79,19 @@ var view_add_breakdown = {
               {
                 view : "toolbar",
                 elements : [
-                  { label : "Items", view : "label" }
+                  { label : "Items", view : "label" },
+                  {
+                    type : "iconButton",
+                    icon : "shopping-cart",
+                    width : 31,
+                    view : "toggle",
+                    
+                  },
+                  { view : "button", type : "iconButton", icon : "search", width : 28 }
                 ]
               },
               {
-                url : "demo->table",
+                
                 autoConfig : true,
                 view : "datatable",
                 height : 250,
@@ -92,13 +102,13 @@ var view_add_breakdown = {
                   { id : "unit", header : "Unit", width : 65 },
                   { id : "unitprice", header : "Unit Price", width : 100 },
                   { id : "totalprice", header : "Total Price", width : 100 }
-                ]
+                ],
+                drag : true
               }
             ]
           }
         ]
-      },
-      scroll : "y"
+      }
     }
   ]
-}
+};
