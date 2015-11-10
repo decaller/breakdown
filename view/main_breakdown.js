@@ -157,8 +157,7 @@ var view_main_breakdown__breakdown_cart =
   borderless : false,
   hidden : true,
   id : "cart_add_breakdown"
-}
-
+};
 
 var view_main_breakdown__items_cart =
 {

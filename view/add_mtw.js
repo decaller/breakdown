@@ -22,7 +22,7 @@ var view_add_mtw__search =
       ]
     }
   ]
-}
+};
 
 var view_add_mtw__search_details =
 {
