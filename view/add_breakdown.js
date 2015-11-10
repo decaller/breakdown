@@ -1,11 +1,12 @@
 var view_add_breakdown__search = 
 {
+  id : "breakdown_search",
   type : "line",
   rows : [
     {
       view : "toolbar",
       elements : [
-        { view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
+        { click : main_breakdown, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
         { label : "Search", view : "search" }
       ]
     },
@@ -28,6 +29,7 @@ var view_add_breakdown__search =
     }
   ]
 };
+
 var view_add_breakdown__search_details = 
 {
   type : "line",
@@ -84,7 +86,8 @@ var view_add_breakdown__search_details =
                     type : "iconButton",
                     icon : "shopping-cart",
                     width : 31,
-                    view : "toggle",
+                    view : "button",
+                    click : cart_items
                     
                   },
                   { view : "button", type : "iconButton", icon : "search", width : 28 }

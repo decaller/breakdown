@@ -1,13 +1,17 @@
 
-var app_structure =
+var app_structure = 
 {
-  view : "multiview",
+  view : "multiview", 
+  keepViews : true,
+  animate : { subtype:"in", direction : "top"},
   container : "webix-content",
   cells : [
     {
       cols : [
         {
           view : "multiview",
+          keepViews : true,
+          animate : { direction : "right" },
           cells : [
             view_main_breakdown__project_breakdown,
             view_main_breakdown__items_cart
@@ -16,6 +20,8 @@ var app_structure =
         { view : "resizer" },
         {
           view : "multiview",
+          keepViews : true,
+          animate : {  direction : "left" },
           cells : [
             view_main_breakdown__breakdown_details,
             view_main_breakdown__breakdown_cart
