@@ -1,6 +1,6 @@
 var view_main_breakdown__project_breakdown =
 {
-  id : "breakdown_main",
+  id : "project_breakdown",
   type : "line",
   borderless : true,
   rows : [
@@ -85,8 +85,8 @@ var view_main_breakdown__breakdown_details =
                 navigation : false,
                 height : 250,
                 columns : [
-                  { id : "dimension", header : "Dimension", width : 80, $id : "dimension" },
-                  { id : "index", header : "Index", width : 55, $id : "index" },
+                  { id : "dimension", header : "Dimension", width : 100, $id : "dimension" },
+                  { id : "index", header : "Index", width : 70, $id : "index" },
                   { id : "unit", header : "Unit", width : 65, $id : "unit" },
                   { id : "source", header : "Source", $id : "source", fillspace : true }
                 ],
@@ -106,9 +106,9 @@ var view_main_breakdown__breakdown_details =
                     icon : "shopping-cart",
                     width : 31,
                     view : "button",
-                    click : cart_items
+                    click : show_mtw_cart
                   },
-                  { view : "button", type : "iconButton", icon : "search", width : 28 }
+                  { click : show_mtw_search, view : "button", type : "iconButton", icon : "search", width : 28 }
                 ]
               },
               {
@@ -119,9 +119,9 @@ var view_main_breakdown__breakdown_details =
                 columns : [
                   { id : "sku", header : "SKU", width : 100 },
                   { id : "item", header : "Item", fillspace : true, minWidth : 100 },
-                  { id : "index", header : "Index", width : 55 },
+                  { id : "index", header : "Index", width : 70 },
                   { id : "unit", header : "Unit", width : 65 },
-                  { id : "unitprice", header : "Unit Price", width : 100 },
+                  { id : "unitprice", header : "Unit Price", width : 120 },
                   { id : "totalprice", header : "Total Price", width : 100 }
                 ],
                 drag : true
@@ -140,11 +140,11 @@ var view_main_breakdown__breakdown_cart =
   type : "line",
   rows : [
     {
-      view : "toolbar", height : 64,
+      view : "toolbar",
       borderless : true,
       elements : [
              
-        { id : "show_details" , click : show_details, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 24, height : 64 },
+        { click : back_to_details, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 24 },
         { label : "Breakdown's Cart", view : "label" }
 
       ]
@@ -180,7 +180,7 @@ var view_main_breakdown__items_cart =
       view : "toolbar",
       borderless : true,
       elements : [
-        { click : main_breakdown, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },      
+        { click : back_to_project_breakdown, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },      
         { label : "Item's Cart", view : "label" }
       ]
     },
@@ -193,9 +193,9 @@ var view_main_breakdown__items_cart =
       columns : [
         { id : "sku", header : "SKU", width : 100 },
         { id : "item", header : "Item", fillspace : true, minWidth : 100 },
-        { id : "index", header : "Index", width : 55 },
+        { id : "index", header : "Index", width : 70 },
         { id : "unit", header : "Unit", width : 65 },
-        { id : "unitprice", header : "Unit Price", width : 100 },
+        { id : "unitprice", header : "Unit Price", width : 120 },
         { id : "totalprice", header : "Total Price", width : 100 }
       ],
       drag : true

@@ -1,16 +1,85 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-    <link rel="stylesheet" href="lib/webix/webix.css" type="text/css"> 
-    <script src="lib/webix/webix.js" type="text/javascript"></script>
-
-    <script src="lib/odata.js" type="text/javascript"></script>  
+        <link rel="stylesheet" href="lib/mdl/material.min.css">
+        <script src="lib/mdl/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="lib/mdl/material.blue_grey-orange.min.css" /> 
+        <link rel="stylesheet" href="lib/mdl/styles.css">
     </head>
+
+   
+   
     <body>
-        <script type="text/javascript" charset="utf-8">
+        
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Breakdown</span>
+            </div>
+              <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Recent</a>
+                <a href="#scroll-tab-2" class="mdl-layout__tab">Local</a>
+                <a href="#scroll-tab-3" class="mdl-layout__tab">Shared</a>
+                <a href="#scroll-tab-4" class="mdl-layout__tab">Online</a>
+            </div>
+          </header>
 
-    /* place for UI configuration */
+                <div class="br-drawer mdl-layout__drawer">
+                    <header class="br-drawer-header mdl-color--teal-50">
+                        <img src="public/images/user.png" class="br-avatar">
+                        <div class="br-avatar-dropdown">
+                            <span>hello@example.com</span>
+                            <div class="mdl-layout-spacer"></div>
+                            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                                <i class="material-icons" role="presentation">arrow_drop_down</i>
+                                <span class="visuallyhidden">Accounts</span>
+                            </button>
+                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+                                <li class="mdl-menu__item">Sign Out</li>
+                            </ul>
+                        </div>
+                    </header>
 
-        </script>
+                    <nav class="br-navigation mdl-navigation mdl-color--grey-50">
+                      <a class="mdl-navigation__link mdl-color-text--grey-900" href=""><i class="mdl-color-text--grey-900 material-icons" role="presentation">home</i>Home</a>
+                      <a class="mdl-navigation__link mdl-color-text--grey-900" href=""><i class="mdl-color-text--grey-900 material-icons" role="presentation">share</i>Share</a>
+                      <a class="mdl-navigation__link mdl-color-text--grey-900" href=""><i class="mdl-color-text--grey-900 material-icons" role="presentation">help_outline</i>Help</a>
+                      <a class="mdl-navigation__link mdl-color-text--grey-900" href=""><i class="mdl-color-text--grey-900 material-icons" role="presentation">settings</i>Settings</a>
+                    </nav>
+                </div>
+
+
+
+          <main class="mdl-layout__content">
+          
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+              <div class="page-content">
+              <h6>You dont have any project yet <br/>
+              Please make new project here</h6>
+
+            <div class="main-plus-button">
+                <a href="app.html"> <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+                    <i class="material-icons">add</i>
+                </button></a>
+            </div>
+
+              </div>
+            </section>
+
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+              <div class="page-content">apanya</div>
+            </section>
+
+            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+              <div class="page-content">dong</div>
+            </section>
+
+            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+              <div class="page-content">cape</div>
+            </section>
+
+          </main>
+        </div>
     </body>
 </html>

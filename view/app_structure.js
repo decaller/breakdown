@@ -3,10 +3,11 @@ var app_structure =
 {
   view : "multiview", 
   keepViews : true,
-  animate : { subtype:"in", direction : "top"},
+  animate : { direction : "top"},
   container : "webix-content",
   cells : [
     {
+      id : "breakdown_main",
       cols : [
         {
           view : "multiview",
@@ -30,6 +31,7 @@ var app_structure =
       ]
     },
     {
+      id : "breakdown_search",
       cols : [
         view_add_breakdown__search ,
         { view : "resizer" },
@@ -37,6 +39,7 @@ var app_structure =
       ]
     },
     {
+      id : "mtw_search",
       cols : [
         view_add_mtw__search,
         { view : "resizer" },

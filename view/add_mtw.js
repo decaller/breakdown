@@ -1,12 +1,13 @@
 var view_add_mtw__search = 
 {
+  
   type : "line",
   rows : [
     {
       view : "toolbar",
       elements : [
-        { view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
-        { label : "Search", view : "search" }
+        { click : back_to_main, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
+        { label : "Search", view : "search" , color : "white"}
       ]
     },
     {
@@ -28,7 +29,16 @@ var view_add_mtw__search_details =
 {
   type : "line",
   rows : [
-    { label : "Label", view : "label", height : 40 },
+    { 
+      view : "toolbar",
+      borderless : true,
+      elements : [
+        { label : "MTW Details", view : "label", width : 300  }
+      ]
+    },
+
+
+
     {
       view : "scrollview",
       scroll : "y",

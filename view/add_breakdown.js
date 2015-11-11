@@ -1,13 +1,13 @@
 var view_add_breakdown__search = 
 {
-  id : "breakdown_search",
+  
   type : "line",
   rows : [
     {
       view : "toolbar",
       elements : [
-        { click : main_breakdown, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
-        { label : "Search", view : "search" }
+        { click : back_to_main, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
+        { label : "Search", view : "search" , color : "white"}
       ]
     },
     {
@@ -34,7 +34,13 @@ var view_add_breakdown__search_details =
 {
   type : "line",
   rows : [
-    { label : "Label", view : "label", height : 40 },
+    { 
+      view : "toolbar",
+      borderless : true,
+      elements : [
+        { label : "Breakdown Item's Detail", view : "label", width : 300  }
+      ]
+    },
     {
       view : "scrollview",
       scroll : "y",
@@ -66,8 +72,8 @@ var view_add_breakdown__search_details =
                 navigation : false,
                 height : 250,
                 columns : [
-                  { id : "dimension", header : "Dimension", width : 80, $id : "dimension" },
-                  { id : "index", header : "Index", width : 55, $id : "index" },
+                  { id : "dimension", header : "Dimension", width : 100, $id : "dimension" },
+                  { id : "index", header : "Index", width : 70, $id : "index" },
                   { id : "unit", header : "Unit", width : 65, $id : "unit" },
                   { id : "source", header : "Source", $id : "source", fillspace : true }
                 ],
@@ -85,12 +91,12 @@ var view_add_breakdown__search_details =
                   {
                     type : "iconButton",
                     icon : "shopping-cart",
-                    width : 31,
+                    width : 28,
                     view : "button",
-                    click : cart_items
+                    click : show_mtw_cart
                     
                   },
-                  { view : "button", type : "iconButton", icon : "search", width : 28 }
+                  { click : show_mtw_search, view : "button", type : "iconButton", icon : "search", width : 28 }
                 ]
               },
               {
@@ -101,9 +107,9 @@ var view_add_breakdown__search_details =
                 columns : [
                   { id : "sku", header : "SKU", width : 100 },
                   { id : "item", header : "Item", fillspace : true, minWidth : 100 },
-                  { id : "index", header : "Index", width : 55 },
+                  { id : "index", header : "Index", width : 70 },
                   { id : "unit", header : "Unit", width : 65 },
-                  { id : "unitprice", header : "Unit Price", width : 100 },
+                  { id : "unitprice", header : "Unit Price", width : 120 },
                   { id : "totalprice", header : "Total Price", width : 100 }
                 ],
                 drag : true
