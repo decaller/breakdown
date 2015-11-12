@@ -5,6 +5,7 @@ var view_add_mtw__search =
   rows : [
     {
       view : "toolbar",
+      borderless : true,
       elements : [
         { click : back_to_main, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
         { label : "Search", view : "search" , color : "white"}
@@ -70,8 +71,8 @@ var view_add_mtw__search_details =
                 navigation : false,
                 height : 250,
                 columns : [
-                  { id : "dimension", header : "Dimension", width : 80, $id : "dimension" },
-                  { id : "index", header : "Index", width : 55, $id : "index" },
+                  { id : "dimension", header : "Dimension", width : 100, $id : "dimension" },
+                  { id : "index", header : "Index", width : 70, $id : "index" },
                   { id : "unit", header : "Unit", width : 65, $id : "unit" },
                   { id : "source", header : "Source", $id : "source", fillspace : true }
                 ],
