@@ -9,6 +9,7 @@ var view_main_breakdown__project_breakdown =
       borderless : true,
    
       elements : [
+        { view : "button", type : "iconButtonTop", icon : "navicon", width : 24, click:show_sidebar},
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
         { view : "button", type : "iconButtonTop", icon : "plus", width : 24},
@@ -23,12 +24,15 @@ var view_main_breakdown__project_breakdown =
         {
           id : "item",
           header : "Item",
-          fillspace : true,
+          gravity : 2,
           template : "{common.treetable()} #value#"
         },
-        { id : "index", header : "Index Unit", width : 65 },
-        { id : "total", header : "Total Price", width : 100 },
-        { id : "menu", header : "", width : 35 }
+        { id : "index", header : "Index", gravity : 1 },
+        { id : "unit", header : "Unit", gravity : 1 },
+        { id : "child", header : "Child", gravity : 1 },
+        { id : "mtw", header : "MTW", gravity : 1 },
+        { id : "total", header : "Total", gravity : 1.5 },
+        { id : "menu", header : "", gravity : 0.2 }
       ],
       view : "treetable",
       borderless : true,
@@ -85,10 +89,11 @@ var view_main_breakdown__breakdown_details =
                 navigation : false,
                 height : 250,
                 columns : [
-                  { id : "dimension", header : "Dimension", width : 100, $id : "dimension" },
-                  { id : "index", header : "Index", width : 70, $id : "index" },
-                  { id : "unit", header : "Unit", width : 65, $id : "unit" },
-                  { id : "source", header : "Source", $id : "source", fillspace : true }
+                  { id : "dimension", header : "Dimension", gravity : 1.4, $id : "dimension" },
+                  { id : "index", header : "Index", gravity : 1, $id : "index" },
+                  { id : "unit", header : "Unit", gravity : 1, $id : "unit" },
+                  { id : "source", header : "Source", gravity : 1, $id : "source" },
+                  { id : "use", header : "Use", $id : "use", gravity : 1 }
                 ],
                 drag : false
               }
@@ -117,12 +122,12 @@ var view_main_breakdown__breakdown_details =
                 view : "datatable",
                 height : 250,
                 columns : [
-                  { id : "sku", header : "SKU", width : 100 },
-                  { id : "item", header : "Item", fillspace : true, minWidth : 100 },
-                  { id : "index", header : "Index", width : 70 },
-                  { id : "unit", header : "Unit", width : 65 },
-                  { id : "unitprice", header : "Unit Price", width : 120 },
-                  { id : "totalprice", header : "Total Price", width : 100 }
+                  { id : "sku", header : "SKU", gravity : 1 },
+                  { id : "item", header : "Item", fillspace : true, minWidth : 105 },
+                  { id : "index", header : "Index", gravity : 1.1 },
+                  { id : "unit", header : "Unit", gravity : 1 },
+                  { id : "unitprice", header : "Unit Price", gravity : 1.7 },
+                  { id : "totalprice", header : "Total Price", gravity : 1.4 }
                 ],
                 drag : true
               }
@@ -155,12 +160,15 @@ var view_main_breakdown__breakdown_cart =
         {
           id : "item",
           header : "Item",
-          fillspace : true,
+          gravity : 2,
           template : "{common.treetable()} #value#"
         },
-        { id : "index", header : "Index Unit", width : 65 },
-        { id : "total", header : "Total Price", width : 100 },
-        { id : "menu", header : "", width : 35 }
+        { id : "index", header : "Index", gravity : 1 },
+        { id : "unit", header : "Unit", gravity : 1 },
+        { id : "child", header : "Child", gravity : 1 },
+        { id : "mtw", header : "MTW", gravity : 1 },
+        { id : "total", header : "Total Price", gravity : 1.5 },
+        { id : "menu", header : "", gravity : 0.2 }
       ],
       view : "treetable",
       drag : true
@@ -191,12 +199,12 @@ var view_main_breakdown__items_cart =
       borderless : true,
       
       columns : [
-        { id : "sku", header : "SKU", width : 100 },
-        { id : "item", header : "Item", fillspace : true, minWidth : 100 },
-        { id : "index", header : "Index", width : 70 },
-        { id : "unit", header : "Unit", width : 65 },
-        { id : "unitprice", header : "Unit Price", width : 120 },
-        { id : "totalprice", header : "Total Price", width : 100 }
+        { id : "sku", header : "SKU", gravity : 1.2 },
+        { id : "item", header : "Item", fillspace : true, minWidth : 105 },
+        { id : "index", header : "Index", gravity : 1. },
+        { id : "unit", header : "Unit", gravity : 1 },
+        { id : "unitprice", header : "Unit Price", gravity : 1.5 },
+        { id : "totalprice", header : "Total Price", gravity : 1.5 }
       ],
       drag : true
     }

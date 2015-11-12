@@ -61,7 +61,7 @@ var view_add_mtw__search_details =
                 view : "toolbar",
                 elements : [
                   { label : "Dimension", view : "label" },
-                  { view : "button", type : "iconButton", icon : "plus", width : 28 }
+             
                 ]
               },
               {
@@ -74,7 +74,8 @@ var view_add_mtw__search_details =
                   { id : "dimension", header : "Dimension", width : 100, $id : "dimension" },
                   { id : "index", header : "Index", width : 70, $id : "index" },
                   { id : "unit", header : "Unit", width : 65, $id : "unit" },
-                  { id : "source", header : "Source", $id : "source", fillspace : true }
+                  { id : "source", header : "Source", width : 70, $id : "source" },
+                  { id : "use", header : "Use", $id : "use", fillspace : true }
                 ],
                 drag : false
               }

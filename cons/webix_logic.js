@@ -33,5 +33,10 @@ function show_mtw_search(){
     $$("mtw_search").show();
 };
 
+function show_sidebar() {
+  $(".mdl-layout__drawer").addClass("is-visible");
 
+  //var sidebar = document.getElementsByClassName("br-drawer mdl-layout__drawer");
+ // sidebar.setAttribute("class", "is-visible");
+};
 

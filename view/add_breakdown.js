@@ -18,7 +18,11 @@ var view_add_breakdown__search =
           fillspace : true,
           template : "{common.treetable()} #value#"
         },
+
         { id : "index", header : "Index Unit", width : 65 },
+        { id : "unit", header : "Unit", width : 65 },
+        { id : "child", header : "Child", width : 65 },
+        { id : "mtw", header : "MTW", width : 65 },
         { id : "total", header : "Total Price", width : 100 },
         { id : "menu", header : "", width : 35 }
       ],
@@ -62,7 +66,7 @@ var view_add_breakdown__search_details =
                 view : "toolbar",
                 elements : [
                   { label : "Dimension", view : "label" },
-                  { view : "button", type : "iconButton", icon : "plus", width : 28 }
+                  
                 ]
               },
               {
@@ -75,7 +79,8 @@ var view_add_breakdown__search_details =
                   { id : "dimension", header : "Dimension", width : 100, $id : "dimension" },
                   { id : "index", header : "Index", width : 70, $id : "index" },
                   { id : "unit", header : "Unit", width : 65, $id : "unit" },
-                  { id : "source", header : "Source", $id : "source", fillspace : true }
+                  { id : "source", header : "Source", width : 70, $id : "source" },
+                  { id : "use", header : "Use", $id : "use", fillspace : true }
                 ],
                 drag : false
               }
@@ -88,15 +93,7 @@ var view_add_breakdown__search_details =
                 view : "toolbar",
                 elements : [
                   { label : "Items", view : "label" },
-                  {
-                    type : "iconButton",
-                    icon : "shopping-cart",
-                    width : 28,
-                    view : "button",
-                    click : show_mtw_cart
-                    
-                  },
-                  { click : show_mtw_search, view : "button", type : "iconButton", icon : "search", width : 28 }
+                  
                 ]
               },
               {
