@@ -13,18 +13,18 @@ var view_add_breakdown__search =
     {
       columns : [
         {
-          id : "item",
+          id : "br_search_item",
           header : "Item",
-          fillspace : true,
+          fillspace : 2,
           template : "{common.treetable()} #value#"
         },
 
-        { id : "index", header : "Index Unit", width : 65 },
-        { id : "unit", header : "Unit", width : 65 },
-        { id : "child", header : "Child", width : 65 },
-        { id : "mtw", header : "MTW", width : 65 },
-        { id : "total", header : "Total Price", width : 100 },
-        { id : "menu", header : "", width : 35 }
+        { id : "br_index", header : "Index" , fillspace : 0.7},
+        { id : "br_unit", header : "Unit", fillspace : 1},
+        { id : "br_child_prc", header : "Child", fillspace : 1 },
+        { id : "br_mtw_prc", header : "MTW", fillspace : 1 },
+        { id : "br_total_prc", header : "Total", fillspace : 1.5 },
+        { id : "br_menu", header : "", fillspace : 0.2  }
       ],
       view : "treetable",
       url : "demo->tree",
@@ -71,16 +71,15 @@ var view_add_breakdown__search_details =
               },
               {
                 
-                autoConfig : true,
                 view : "datatable",
                 navigation : false,
                 height : 250,
                 columns : [
-                  { id : "dimension", header : "Dimension", width : 100, $id : "dimension" },
-                  { id : "index", header : "Index", width : 70, $id : "index" },
-                  { id : "unit", header : "Unit", width : 65, $id : "unit" },
-                  { id : "source", header : "Source", width : 70, $id : "source" },
-                  { id : "use", header : "Use", $id : "use", fillspace : true }
+                  { id : "dt_dimension", header : "Dimension", fillspace : 1.2},
+                  { id : "dt_index", header : "Index", fillspace : 1},
+                  { id : "dt_unit", header : "Unit", fillspace : 1},
+                  { id : "dt_source", header : "Source", fillspace : 1.2},
+                  { id : "dt_use", header : "Use", fillspace : 0.5 }
                 ],
                 drag : false
               }
@@ -102,12 +101,12 @@ var view_add_breakdown__search_details =
                 view : "datatable",
                 height : 250,
                 columns : [
-                  { id : "sku", header : "SKU", width : 100 },
-                  { id : "item", header : "Item", fillspace : true, minWidth : 100 },
-                  { id : "index", header : "Index", width : 70 },
-                  { id : "unit", header : "Unit", width : 65 },
-                  { id : "unitprice", header : "Unit Price", width : 120 },
-                  { id : "totalprice", header : "Total Price", width : 100 }
+                  { id : "mtw_sku", header : "SKU", fillspace : 1 },
+                  { id : "mtw_item", header : "Item", fillspace :2 },
+                  { id : "mtw_index", header : "Index", fillspace : 0.7 },
+                  { id : "mtw_unit", header : "Unit", fillspace : 1 },
+                  { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
+                  { id : "mtw_totalprice", header : "Total Price", fillspace : 1.8 }
                 ],
                 drag : true
               }

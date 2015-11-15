@@ -26,7 +26,7 @@ function back_to_project_breakdown(){
 };
 
 function show_mtw_cart(){
-    $$("items_cart").show();
+    $$("mtw_cart").show();
 };
 
 function show_mtw_search(){

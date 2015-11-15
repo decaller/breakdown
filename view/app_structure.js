@@ -15,7 +15,7 @@ var app_structure =
           animate : { direction : "right" },
           cells : [
             view_main_breakdown__project_breakdown,
-            view_main_breakdown__items_cart
+            view_main_breakdown__mtw_cart
           ]
         },
         { view : "resizer" },

@@ -22,19 +22,354 @@ var view_main_breakdown__project_breakdown =
     {
       columns : [
         {
-          id : "item",
-          header : "Item",
-          gravity : 2,
-          template : "{common.treetable()} #value#"
+          id : "br_item", header : "Item", 
+          fillspace : 2.5,
+          template : "{common.treetable()} #br_item#"
         },
-        { id : "index", header : "Index", gravity : 1 },
-        { id : "unit", header : "Unit", gravity : 1 },
-        { id : "child", header : "Child", gravity : 1 },
-        { id : "mtw", header : "MTW", gravity : 1 },
-        { id : "total", header : "Total", gravity : 1.5 },
-        { id : "menu", header : "", gravity : 0.2 }
+        { id : "br_index", header : "Index" , fillspace : 0.7 },
+        { id : "br_unit", header : "Unit", fillspace : 1},
+        { id : "br_child_prc", header : "Child", fillspace : 1 },
+        { id : "br_mtw_prc", header : "MTW", fillspace : 1 },
+        { id : "br_total_prc", header : "Total", fillspace : 1.5 },
+        { id : "br_menu", header : "", fillspace : 0.2  }
       ],
       view : "treetable",
+      data :[
+      {
+          id:"root", open:true, br_item:"Jembatan Ancol", br_index:"1", br_unit: "buah", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+          dimension : [
+
+          {dimension : "", index : "", unit : "", source : "" }
+
+          ],
+          mtw : [
+
+          {SKU : "", item : "", index : "", unit_price : "", unit : "", total : "" }
+
+          ],
+          data : [
+              {
+                  id:"1", br_item:"Struktur", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                  dimension : [
+
+                  {dimension : "", index : "", unit : "", source : ""}
+
+                  ],
+
+                  mtw : [
+
+                  {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                  ],
+                  data : [
+                    {
+                        id:"1.1", br_item:"Pondasi", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                        dimension : [
+
+                        {dimension : "", index : "", unit : "", source : ""}
+
+                        ],
+                        mtw : [
+
+                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                        ],
+                        data : [
+
+                             {
+                                id:"1.1.1", br_item:"Pondasi Jenis 1", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+                            {
+                                id:"1.1.2", br_item:"Pondasi Jenis 2", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+                            {
+                                id:"1.1.3", br_item:"Pondasi Jenis 3", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+                        ]
+
+                        
+                    },
+
+                     {
+                        id:"1.2", br_item:"Rangka Jembatan", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                        dimension : [
+
+                        {dimension : "", index : "", unit : "", source : ""}
+
+                        ],
+                        mtw : [
+
+                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                        ],
+                        data : [
+                            {
+                                id:"1.2.1", br_item:"Bagian Barat", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+                            {
+                                id:"1.2.2", br_item:"Bagian Tengah", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+                            {
+                                id:"1.2.3", br_item:"Bagian Timur", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+
+                        ]
+
+                        
+                    }
+
+
+                  ]
+
+                  
+              },
+              {
+                  id:"2", br_item:"Jalan", br_index:"20", br_unit: "meter", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                  dimension : [
+
+                  {dimension : "", index : "", unit : "", source : ""}
+
+                  ],
+                  
+                  mtw : [
+
+                  {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                  ],
+                  data : [
+                    {
+                        id:"2.1", br_item:"Abutment", br_index:"2", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                        dimension : [
+
+                        {dimension : "", index : "", unit : "", source : ""}
+
+                        ],
+                        mtw : [
+
+                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                        ],
+
+                        data : [
+
+                            {
+                                id:"2.1.1", br_item:"Sub Base", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+                            {
+                                id:"2.1.2", br_item:"Base Course", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+                            {
+                                id:"2.1.3", br_item:"Slab", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+                        ]
+
+                        
+                    },
+                 
+
+                    {
+                        id:"2.2", br_item:"Di Atas Jembatan", br_index:"2", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                        dimension : [
+
+                            {dimension : "", index : "", unit : "", source : ""}
+
+                        ],
+                        mtw : [
+
+                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                        ],
+                        
+                        data : [
+                            {
+                                id:"2.2.1", br_item:"Slab Beton", br_index:"1", br_unit: "paket", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                dimension : [
+
+                                {dimension : "", index : "", unit : "", source : ""}
+
+                                ],
+                                mtw : [
+
+                                {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+
+                                ],
+                                data : [
+
+
+                                ]
+
+                                
+                            },
+
+
+                        ]
+
+                        
+                    }
+
+                  ]
+
+                  
+              }
+
+          ]
+
+          
+      }],
+
       borderless : true,
       
       editable : true,
@@ -55,14 +390,20 @@ var view_main_breakdown__breakdown_details =
    
       elements : [
         { label : "Details", view : "label", width : 300 }
+
         
       ]
+
+      
+
     },
     {
       view : "scrollview",
       scroll : "y",
       body : {
         rows : [
+          { view:"textarea" , height:200, label:"Second note", labelPosition:"top" },
+      
           {
             view : "carousel",
             css : "webix_dark",
@@ -89,11 +430,11 @@ var view_main_breakdown__breakdown_details =
                 navigation : false,
                 height : 250,
                 columns : [
-                  { id : "dimension", header : "Dimension", gravity : 1.4, $id : "dimension" },
-                  { id : "index", header : "Index", gravity : 1, $id : "index" },
-                  { id : "unit", header : "Unit", gravity : 1, $id : "unit" },
-                  { id : "source", header : "Source", gravity : 1, $id : "source" },
-                  { id : "use", header : "Use", $id : "use", gravity : 1 }
+                  { id : "dt_dimension", header : "Dimension", fillspace : 1.2},
+                  { id : "dt_index", header : "Index", fillspace : 1},
+                  { id : "dt_unit", header : "Unit", fillspace : 1},
+                  { id : "dt_source", header : "Source", fillspace : 1.2},
+                  { id : "dt_use", header : "Use", fillspace : 0.5 }
                 ],
                 drag : false
               }
@@ -105,7 +446,7 @@ var view_main_breakdown__breakdown_details =
               {
                 view : "toolbar",
                 elements : [
-                  { label : "Items", view : "label" },
+                  { label : "Materials, Tools, Workers", view : "label" },
                   {
                     type : "iconButton",
                     icon : "shopping-cart",
@@ -122,12 +463,12 @@ var view_main_breakdown__breakdown_details =
                 view : "datatable",
                 height : 250,
                 columns : [
-                  { id : "sku", header : "SKU", gravity : 1 },
-                  { id : "item", header : "Item", fillspace : true, minWidth : 105 },
-                  { id : "index", header : "Index", gravity : 1.1 },
-                  { id : "unit", header : "Unit", gravity : 1 },
-                  { id : "unitprice", header : "Unit Price", gravity : 1.7 },
-                  { id : "totalprice", header : "Total Price", gravity : 1.4 }
+                  { id : "mtw_sku", header : "SKU", fillspace : 1 },
+                  { id : "mtw_item", header : "Item", fillspace :2 },
+                  { id : "mtw_index", header : "Index", fillspace : 0.7 },
+                  { id : "mtw_unit", header : "Unit", fillspace : 1 },
+                  { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
+                  { id : "mtw_totalprice", header : "Total Price", fillspace : 1.8 }
                 ],
                 drag : true
               }
@@ -158,17 +499,17 @@ var view_main_breakdown__breakdown_cart =
       
       columns : [
         {
-          id : "item",
+          id : "cart_item",
           header : "Item",
-          gravity : 2,
+          fillspace : 2.5,
           template : "{common.treetable()} #value#"
         },
-        { id : "index", header : "Index", gravity : 1 },
-        { id : "unit", header : "Unit", gravity : 1 },
-        { id : "child", header : "Child", gravity : 1 },
-        { id : "mtw", header : "MTW", gravity : 1 },
-        { id : "total", header : "Total Price", gravity : 1.5 },
-        { id : "menu", header : "", gravity : 0.2 }
+        { id : "cart_index", header : "Index", fillspace : 0.7 },
+        { id : "cart_unit", header : "Unit", fillspace : 1 },
+        { id : "cart_child", header : "Child", fillspace : 1 },
+        { id : "cart_mtw", header : "MTW", fillspace : 1 },
+        { id : "cart_total", header : "Total Price", fillspace : 1.5 },
+        { id : "cart_menu", header : "", fillspace : 0.2 }
       ],
       view : "treetable",
       drag : true
@@ -179,9 +520,9 @@ var view_main_breakdown__breakdown_cart =
  
 };
 
-var view_main_breakdown__items_cart =
+var view_main_breakdown__mtw_cart =
 {
-  id : "items_cart",
+  id : "mtw_cart",
   type : "line",
   rows : [
     {
@@ -199,12 +540,12 @@ var view_main_breakdown__items_cart =
       borderless : true,
       
       columns : [
-        { id : "sku", header : "SKU", gravity : 1.2 },
-        { id : "item", header : "Item", fillspace : true, minWidth : 105 },
-        { id : "index", header : "Index", gravity : 1. },
-        { id : "unit", header : "Unit", gravity : 1 },
-        { id : "unitprice", header : "Unit Price", gravity : 1.5 },
-        { id : "totalprice", header : "Total Price", gravity : 1.5 }
+        { id : "mc_sku", header : "SKU", fillspace : 1 },
+        { id : "mc_item", header : "Item", fillspace : 2 },
+        { id : "mc_index", header : "Index", fillspace : 0.7 },
+        { id : "mc_unit", header : "Unit", fillspace : 1 },
+        { id : "mc_unitprice", header : "Unit Price", fillspace : 1.5 },
+        { id : "mc_totalprice", header : "Total Price", fillspace : 1.8 }
       ],
       drag : true
     }
