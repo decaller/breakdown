@@ -1,6 +1,6 @@
 var logic ={
 	init: function(){
-		
+    $$("datatable_dimension_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "dimension");		
 		
 	}
 };
@@ -39,4 +39,3 @@ function show_sidebar() {
   //var sidebar = document.getElementsByClassName("br-drawer mdl-layout__drawer");
  // sidebar.setAttribute("class", "is-visible");
 };
-
