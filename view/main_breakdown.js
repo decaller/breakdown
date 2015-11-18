@@ -69,7 +69,7 @@ var view_main_breakdown__breakdown_details =
       scroll : "y",
       body : {
         rows : [
-          { view:"textarea" , height:200, label:"Second note", labelPosition:"top" },
+          { view:"textarea" , height:200, label:"Description", labelPosition:"top" },
       
           {
             view : "carousel",
@@ -131,6 +131,7 @@ var view_main_breakdown__breakdown_details =
                 autoConfig : true,
                 view : "datatable",
                 height : 250,
+                id : "datatable_mtw_main_breakdown",
                 columns : [
                   { id : "mtw_sku", header : "SKU", fillspace : 1 },
                   { id : "mtw_item", header : "Item", fillspace :2 },

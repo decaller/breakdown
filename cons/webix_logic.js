@@ -5,6 +5,13 @@ var logic ={
 	}
 };
 
+var logic ={
+    init: function(){
+    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "mtw");       
+        
+    }
+};
+
 function show_breakdown_cart(){
     $$("breakdown_cart").show();
 };

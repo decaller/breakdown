@@ -7222,3 +7222,7 @@ label.webix_required:after {
 
 /** Custom **/
 
+.webix_inp_top_label {
+  color : #757575;
+  font-size: 14px;
+}
