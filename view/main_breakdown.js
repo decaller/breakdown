@@ -23,15 +23,15 @@ var view_main_breakdown__project_breakdown =
       columns : [
         {
           id : "br_item", header : "Item", 
-          fillspace : 2.5,
+          fillspace : 3,
           template : "{common.treetable()} #br_item#"
         },
-        { id : "br_index", header : "Index" , fillspace : 0.7 },
+        { id : "br_index", header : "Index" , fillspace : 1 },
         { id : "br_unit", header : "Unit", fillspace : 1},
         { id : "br_child_prc", header : "Child", fillspace : 1 },
         { id : "br_mtw_prc", header : "MTW", fillspace : 1 },
         { id : "br_total_prc", header : "Total", fillspace : 1.5 },
-        { id : "br_menu", header : "", fillspace : 0.2  }
+        { id : "br_menu", header : "", fillspace : 0.1  }
       ],
       view : "treetable",
       select : true,
@@ -135,7 +135,7 @@ var view_main_breakdown__breakdown_details =
                 columns : [
                   { id : "mtw_sku", header : "SKU", fillspace : 1 },
                   { id : "mtw_item", header : "Item", fillspace :2 },
-                  { id : "mtw_index", header : "Index", fillspace : 0.7 },
+                  { id : "mtw_index", header : "Index", fillspace : 1 },
                   { id : "mtw_unit", header : "Unit", fillspace : 1 },
                   { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
                   { id : "mtw_totalprice", header : "Total Price", fillspace : 1.8 }
