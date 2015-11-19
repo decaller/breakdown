@@ -29,7 +29,7 @@ var view_main_breakdown__project_breakdown =
         { id : "br_index", header : "Index" , fillspace : 1 },
         { id : "br_unit", header : "Unit", fillspace : 0.8},
         { id : "br_child+mtw_prc", header : "Child+MTW", fillspace : 1.5 },
-        { id : "br_total_prc", header : "Total", fillspace : 1.5, math: "[$r,br_child+mtw_prc] * [$r,br_unit]"},
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, math: "[$r,br_child+mtw_prc] * [$r,br_index]"},
         { id : "br_menu", header : "", fillspace : 0.1  }
       ],
       view : "treetable",

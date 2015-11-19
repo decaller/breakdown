@@ -4,7 +4,7 @@ var main_breakdown_treetable_data = [
           
           mtw : [
 
-          {SKU : "", item : "", index : "", unit_price : "", unit : "", total : "" }
+          
 
           ],
           data : [
@@ -13,7 +13,7 @@ var main_breakdown_treetable_data = [
                   
                   mtw : [
 
-                  {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                  
 
                   ],
                   data : [
@@ -22,7 +22,7 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                        
 
                         ],
                         data : [
@@ -56,7 +56,7 @@ var main_breakdown_treetable_data = [
                        
                         mtw : [
 
-                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                        
 
                         ],
                         data : [
@@ -104,7 +104,7 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                        
 
                         ],
                         data : [
@@ -171,7 +171,7 @@ var main_breakdown_treetable_data = [
                   id:"2", br_item:"Pekerjaan Tanah", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                     
                   mtw : [
-                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                    
                   ],
 
                   data : [
@@ -258,7 +258,7 @@ var main_breakdown_treetable_data = [
                   
                   
                   mtw : [
-                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                    
                   ],
 
                   data : [
@@ -268,7 +268,7 @@ var main_breakdown_treetable_data = [
                         
 
                         mtw : [
-                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                            
                         ],
                         
                         data : [
@@ -277,7 +277,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -286,7 +286,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -317,7 +317,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -341,7 +341,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -353,7 +353,7 @@ var main_breakdown_treetable_data = [
                                                
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -389,7 +389,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -398,7 +398,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -429,7 +429,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -454,7 +454,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -466,7 +466,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -499,7 +499,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -508,7 +508,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -539,7 +539,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -564,7 +564,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -576,7 +576,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -609,7 +609,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -618,7 +618,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -649,7 +649,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -674,7 +674,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -686,7 +686,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -719,7 +719,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -728,7 +728,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -758,7 +758,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -783,7 +783,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -795,7 +795,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -834,7 +834,7 @@ var main_breakdown_treetable_data = [
                         id:"3.2", br_item:"Pekerjaan Struktur Atas", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                         
                         mtw : [
-                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                            
                         ],
 
                         data : [
@@ -843,7 +843,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -852,7 +852,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -880,7 +880,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -912,7 +912,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -921,7 +921,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -949,7 +949,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -979,7 +979,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -988,7 +988,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1016,7 +1016,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1046,7 +1046,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -1055,7 +1055,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1083,7 +1083,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1113,7 +1113,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -1122,7 +1122,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1150,7 +1150,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1178,7 +1178,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1206,7 +1206,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
