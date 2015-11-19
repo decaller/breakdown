@@ -50,7 +50,9 @@ var view_add_breakdown__search_details =
       scroll : "y",
       body : {
         rows : [
+        { view:"textarea" , height:150, label:"Description", labelPosition:"top" },
           {
+
             view : "carousel",
             css : "webix_dark",
             cols : [
@@ -59,7 +61,7 @@ var view_add_breakdown__search_details =
             ],
             height : 200
           },
-          {
+          /**{
             type : "line",
             rows : [
               {
@@ -84,7 +86,7 @@ var view_add_breakdown__search_details =
                 drag : false
               }
             ]
-          },
+          },**/
           {
             type : "line",
             rows : [
@@ -99,7 +101,7 @@ var view_add_breakdown__search_details =
                 
                 autoConfig : true,
                 view : "datatable",
-                height : 250,
+                height : 350,
                 columns : [
                   { id : "mtw_sku", header : "SKU", fillspace : 1 },
                   { id : "mtw_item", header : "Item", fillspace :2 },

@@ -69,7 +69,7 @@ var view_main_breakdown__breakdown_details =
       scroll : "y",
       body : {
         rows : [
-          { view:"textarea" , height:200, label:"Description", labelPosition:"top" },
+          { view:"textarea" , height:150, label:"Description", labelPosition:"top" },
       
           {
             view : "carousel",
@@ -80,7 +80,7 @@ var view_main_breakdown__breakdown_details =
             ],
             height : 200
           },
-          {
+          /**{
             type : "line",
             rows : [
               {
@@ -108,7 +108,7 @@ var view_main_breakdown__breakdown_details =
           ]
               }
             ]
-          },
+          },**/
           {
             type : "line",
             rows : [

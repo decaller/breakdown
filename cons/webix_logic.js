@@ -1,7 +1,5 @@
 var logic ={
 	init: function(){
-    $$("datatable_dimension_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "dimension");		
-
     
     $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "mtw");  
 		

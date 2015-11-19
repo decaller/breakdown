@@ -8,7 +8,26 @@
         <link rel="stylesheet" href="lib/mdl/styles.css">
     </head>
 
-   
+   <style>
+      .br-card-square.mdl-card {
+        width: 250px;
+        height: 250px;
+      }
+      .br-card-square > .mdl-card__title {
+        color: #fff;
+        background:
+          url('public/images/jembatan.png') bottom right 15% no-repeat #46B6AC;
+      }
+
+      .br-recent-tab {
+        width: 270px;
+        height: 270px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    </style>
    
     <body>
         
@@ -55,28 +74,35 @@
           
             <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
               <div class="page-content">
-              <h6>You dont have any project yet <br/>
-              Please make new project here</h6>
 
-            <div class="main-plus-button">
-                <a href="app.html"> <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
-                    <i class="material-icons">add</i>
-                </button></a>
-            </div>
+              <div class="br-recent-tab">
+
+              <a href="app.html">
+                  <div class="br-card-square mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title mdl-card--expand">
+                        <h4 class="mdl-card__title-text">Jembatan KA</h4>
+                      </div>
+                      <div class="mdl-card__supporting-text">
+                        Last edited on November, 18 2015
+                      </div>
+                   </div>
+              </a>
+              
+
 
               </div>
             </section>
 
             <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-              <div class="page-content">apanya</div>
+              <div class="page-content"></div>
             </section>
 
             <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-              <div class="page-content">dong</div>
+              <div class="page-content"></div>
             </section>
 
             <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-              <div class="page-content">cape</div>
+              <div class="page-content"></div>
             </section>
 
           </main>
