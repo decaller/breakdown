@@ -12,8 +12,8 @@ var view_main_breakdown__project_breakdown =
         { view : "button", type : "iconButtonTop", icon : "navicon", width : 24, click:show_sidebar},
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
-        { view : "button", type : "iconButtonTop", icon : "plus", width : 24},
-        { view : "button", type : "iconButtonTop", icon : "child", width : 24},
+        { view : "button", click:add_item, hotkey: "ctrl+down",  type : "iconButtonTop", icon : "plus", width : 24},
+        { view : "button", click:add_child , hotkey: "ctrl+up",  type : "iconButtonTop", icon : "child", width : 24},
         { click : show_breakdown_cart, view : "button", type:"iconButtonTop", icon : "shopping-cart", width : 24},
         { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 24}
       ]
@@ -24,10 +24,11 @@ var view_main_breakdown__project_breakdown =
         {
           id : "br_item", header : "Item", 
           fillspace : 3,
-          template : "{common.treetable()} #br_item#"
+          template : "{common.treetable()} #br_item#",
+          editor : "text"
         },
-        { id : "br_index", header : "Index" , fillspace : 1 },
-        { id : "br_unit", header : "Unit", fillspace : 0.8},
+        { editor : "text", id : "br_index", header : "Index" , fillspace : 1 },
+        { editor : "text", id : "br_unit", header : "Unit", fillspace : 0.8},
         { id : "br_child+mtw_prc", header : "Child+MTW", fillspace : 1.5 },
         { id : "br_total_prc", header : "Total", fillspace : 1.5, math: "[$r,br_child+mtw_prc] * [$r,br_index]"},
         { id : "br_menu", header : "", fillspace : 0.1  }
@@ -36,8 +37,11 @@ var view_main_breakdown__project_breakdown =
       select : "row",
       id:"treetable_main_breakdown",
       data : main_breakdown_treetable_data,
+      editaction:"dblclick",
+      multiselect : true,
       borderless : true,
       editable : true,
+      navigation:true,
       drag : true,
       math : true,
       on : {onBeforeDrop:function(context){context.parent = context.target; context.index = -1;}}
@@ -55,7 +59,7 @@ var view_main_breakdown__breakdown_details =
       borderless : true,
    
       elements : [
-        { label : "Details", view : "label", width : 300 }
+        {id : "name_details_label", label : "Details", view : "label", width : 300 }
 
         
       ]
@@ -136,20 +140,22 @@ var view_main_breakdown__breakdown_details =
                 ]
               },
               {
-                
-                
                 view : "datatable",
-                height : 250,
+                minHeight : 300,
                 id : "datatable_mtw_main_breakdown",
                 math: true,
+                editable:true,
+                editaction:"dblclick",
+                select : "row",
+                editmath:true,
                 drag : true,
                 columns : [
-                  { id : "mtw_sku", header : "SKU", fillspace : 1 },
-                  { id : "mtw_item", header : "Item", fillspace :2 },
-                  { id : "mtw_index", header : "Index", fillspace : 1 },
-                  { id : "mtw_unit", header : "Unit", fillspace : 1 },
-                  { id : "mtw_unitprice", header : "Price", fillspace : 1.5 },
-                  { id : "mtw_totalprice", header : "Total", fillspace : 1.5, math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"} }
+                  { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 },
+                  { editor : "text", id : "mtw_item", header : "Item", fillspace :2 },
+                  { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 },
+                  { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
+                  { editor : "text", id : "mtw_unitprice", header : "Price", fillspace : 1.5 },
+                  { editor : "text", id : "mtw_totalprice", header : "Total", fillspace : 1.5, math : "[$r,mtw_index] * [$r,mtw_unitprice]"}
                 ]
                 
                 
