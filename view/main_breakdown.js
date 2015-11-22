@@ -34,7 +34,7 @@ var view_main_breakdown__project_breakdown =
         { id : "br_menu", header : "", fillspace : 0.1  }
       ],
       view : "treetable",
-      select : "cell",
+      select : "row",
       id:"treetable_main_breakdown",
       data : main_breakdown_treetable_data,
       editaction:"dblclick",
@@ -44,7 +44,11 @@ var view_main_breakdown__project_breakdown =
       navigation:true,
       drag : true,
       math : true,
-      on : {onBeforeDrop:function(context){context.parent = context.target; context.index = -1;}}
+      on : {
+        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
+        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();}
+        
+      }
     }
   ]
 };
@@ -146,6 +150,7 @@ var view_main_breakdown__breakdown_details =
                 math: true,
                 editable:true,
                 editaction:"dblclick",
+                footer:true,
                 select : "row",
                 editmath:true,
                 drag : true,
@@ -154,8 +159,8 @@ var view_main_breakdown__breakdown_details =
                   { editor : "text", id : "mtw_item", header : "Item", fillspace :2 },
                   { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 },
                   { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
-                  { editor : "text", id : "mtw_unitprice", header : "Price", fillspace : 1.5 },
-                  { editor : "text", id : "mtw_totalprice", header : "Total", fillspace : 1.5, math : "[$r,mtw_index] * [$r,mtw_unitprice]"}
+                  { editor : "text", id : "mtw_unitprice", header : "Price", fillspace : 1.5, footer:"Total" },
+                  { editor : "text", id : "mtw_totalprice", header : "Total", fillspace : 1.5, math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
                 ]
                 
                 

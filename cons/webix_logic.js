@@ -1,7 +1,12 @@
 var logic ={
 	init: function(){
     
-    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "mtw"); 
+    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
+        if (!obj) return this.clearAll();
+        var fulldata = [].concat(obj.mtw);
+        this.data.importData(fulldata, true);
+  		$$("datatable_mtw_main_breakdown").refreshColumns();
+    });
     
     webix.UIManager.addHotKey("any", function(view){
 				var pos = view.getSelectedId();
