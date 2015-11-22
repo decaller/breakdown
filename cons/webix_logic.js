@@ -1,8 +1,19 @@
 var logic ={
 	init: function(){
     
-    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "mtw");  
-		
+    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "mtw"); 
+    
+    webix.UIManager.addHotKey("any", function(view){
+				var pos = view.getSelectedId();
+				view.edit(pos);
+    }, $$("treetable_main_breakdown")); 
+	
+    webix.UIManager.addHotKey("=", function(view){
+				var pos = view.getSelectedId();
+				if(!view.isBranchOpen(pos)) view.open(pos);
+                else view.close(pos);
+    }, $$("treetable_main_breakdown")); 	
+        
 	}
 };
 
@@ -40,12 +51,14 @@ function show_sidebar() {
 };
 
 function add_item() {
-  $$("treetable_main_breakdown").add({ value:"New item"}, -1);
-  
+  $$("treetable_main_breakdown").select($$("treetable_main_breakdown").add({ value:"New item"}, -1));
+  webix.UIManager.setFocus( $$("treetable_main_breakdown") );
 };
 
 function add_child() {
   var parentId= $$("treetable_main_breakdown").getSelectedId();
   $$("treetable_main_breakdown").add( {value:"New item"}, -1, parentId);
-  
+  webix.UIManager.setFocus( $$("treetable_main_breakdown") );
 };
+
+

@@ -12,8 +12,8 @@ var view_main_breakdown__project_breakdown =
         { view : "button", type : "iconButtonTop", icon : "navicon", width : 24, click:show_sidebar},
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
-        { view : "button", click:add_item, hotkey: "ctrl+down",  type : "iconButtonTop", icon : "plus", width : 24},
-        { view : "button", click:add_child , hotkey: "ctrl+up",  type : "iconButtonTop", icon : "child", width : 24},
+        { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 24},
+        { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 24},
         { click : show_breakdown_cart, view : "button", type:"iconButtonTop", icon : "shopping-cart", width : 24},
         { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 24}
       ]
@@ -34,7 +34,7 @@ var view_main_breakdown__project_breakdown =
         { id : "br_menu", header : "", fillspace : 0.1  }
       ],
       view : "treetable",
-      select : "row",
+      select : "cell",
       id:"treetable_main_breakdown",
       data : main_breakdown_treetable_data,
       editaction:"dblclick",
