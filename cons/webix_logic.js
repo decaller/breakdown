@@ -19,6 +19,10 @@ var logic ={
                 else view.close(pos);
     }, $$("treetable_main_breakdown")); 	
         
+    $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
+  $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
+});
+		
 	}
 };
 

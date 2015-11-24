@@ -7,7 +7,7 @@ var view_add_breakdown__search =
       view : "toolbar",
       elements : [
         { click : back_to_main, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
-        { label : "Search", view : "search" , color : "white"}
+        { id : "searchbar_br_search",label : "Search", view : "search" , color : "white"}
       ]
     },
     {
@@ -16,17 +16,19 @@ var view_add_breakdown__search =
           id : "br_search_item",
           header : "Item",
           fillspace : 2,
-          template : "{common.treetable()} #value#"
+          template : "{common.treetable()} #br_search_item#"
         },
 
-        { id : "br_index", header : "Index" , fillspace : 0.7},
-        { id : "br_unit", header : "Unit", fillspace : 1},
-        { id : "br_child_prc", header : "Child", fillspace : 1 },
-        { id : "br_mtw_prc", header : "MTW", fillspace : 1 },
-        { id : "br_total_prc", header : "Total", fillspace : 1.5 },
-        { id : "br_menu", header : "", fillspace : 0.2  }
+        { id : "br_search_index", header : "Index" , fillspace : 0.7},
+        { id : "br_search_unit", header : "Unit", fillspace : 1},
+        { id : "br_search_child_prc", header : "Child", fillspace : 1 },
+        { id : "br_search_mtw_prc", header : "MTW", fillspace : 1 },
+        { id : "br_search_total_prc", header : "Total", fillspace : 1.5 },
+        { id : "br_search_menu", header : "", fillspace : 0.2  }
       ],
       view : "treetable",
+      id : "treetable_search_breakdown",
+      data : search_breakdown_treetable_data,
       url : "demo->tree",
       
       on : {}

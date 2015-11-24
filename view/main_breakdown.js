@@ -78,6 +78,7 @@ var view_main_breakdown__breakdown_details =
       body : {
         rows : [
           {
+
           cols : [
             
               { view:"textarea" , label:"Description", labelPosition:"top", gravity:5 },
@@ -97,6 +98,7 @@ var view_main_breakdown__breakdown_details =
           height : 200
             
           },
+
           {
             type : "line",
             rows : [
