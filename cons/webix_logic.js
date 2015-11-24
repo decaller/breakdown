@@ -80,11 +80,11 @@ function sumTotal(item) {
     if(records)
    	 	for (var i=0; i < records.length ; ++i) 
     	total += parseInt(records[i]["mtw_unitprice"])* parseInt(records[i]["mtw_index"]); 
-  	return webix.i18n.priceFormat(total);
+  	return total;
 };
 
 function priceTotal(item) {
-  	return webix.i18n.priceFormat(sumTotal(item)*item.br_index + childTotal(item));
+  	return (sumTotal(item) + childTotal(item))*parseInt(item.br_index);
 };
 
 function childTotal(item) {
@@ -96,5 +96,5 @@ function childTotal(item) {
         total += priceTotal(obj);
       });
   	//console.log(total);
-  	return webix.i18n.priceFormat(total);
+  	return total;
 };

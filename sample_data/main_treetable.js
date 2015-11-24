@@ -1,6 +1,6 @@
 var main_breakdown_treetable_data = [
       {
-          id:"root", open : true, br_item:"Pembangunan Jembatan Baja KA", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+          id:"root", open : true, br_item:"Pembangunan Jembatan Baja KA", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
           
           mtw : [
 
@@ -9,7 +9,7 @@ var main_breakdown_treetable_data = [
           ],
           data : [
               {
-                  id:"1", br_item:"Pekerjaan Persiapan", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                  id:"1", br_item:"Pekerjaan Persiapan", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                   
                   mtw : [
 
@@ -22,9 +22,7 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        
-
-                        ],
+                          ],
                         data : [
 
                         ]
@@ -168,7 +166,7 @@ var main_breakdown_treetable_data = [
               },
 
               {
-                  id:"2", br_item:"Pekerjaan Tanah", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                  id:"2", br_item:"Pekerjaan Tanah", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                     
                   mtw : [
                     
@@ -254,7 +252,7 @@ var main_breakdown_treetable_data = [
               },
 
               {
-                 id:"3", br_item:"Pekerjaan Struktur", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                 id:"3", br_item:"Pekerjaan Struktur", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                   
                   
                   mtw : [
@@ -264,7 +262,7 @@ var main_breakdown_treetable_data = [
                   data : [
 
                     {
-                         id:"3.1", br_item:"Pekerjaan Pondasi", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                         id:"3.1", br_item:"Pekerjaan Pondasi", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                         
 
                         mtw : [
@@ -273,7 +271,7 @@ var main_breakdown_treetable_data = [
                         
                         data : [
                             {
-                                id:"3.1.1", br_item:"Pondasi Pier 3", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.1.1", br_item:"Pondasi Pier 3", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -282,7 +280,7 @@ var main_breakdown_treetable_data = [
                                 
                                 data : [
                                     {
-                                        id:"3.1.1.1", br_item:"Bore pile dia 1000 mm", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.1.1", br_item:"Bore pile dia 1000 mm", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -313,7 +311,7 @@ var main_breakdown_treetable_data = [
 
 
                                     {
-                                        id:"3.1.1.2", br_item:"Pile Cap", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.1.2", br_item:"Pile Cap", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -385,7 +383,7 @@ var main_breakdown_treetable_data = [
                             },
 
                             {
-                                id:"3.1.2", br_item:"Pondasi Pier 4", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.1.2", br_item:"Pondasi Pier 4", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -394,7 +392,7 @@ var main_breakdown_treetable_data = [
                                 
                                 data : [
                                     {
-                                        id:"3.1.2.1", br_item:"Bore pile dia 1000 mm", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.2.1", br_item:"Bore pile dia 1000 mm", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -425,7 +423,7 @@ var main_breakdown_treetable_data = [
                                     },
 
                                     {
-                                        id:"3.1.2.2", br_item:"Pile Cap", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.2.2", br_item:"Pile Cap", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -495,7 +493,7 @@ var main_breakdown_treetable_data = [
                             },
 
                             {
-                                id:"3.1.3", br_item:"Pondasi Pier 5", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.1.3", br_item:"Pondasi Pier 5", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -504,7 +502,7 @@ var main_breakdown_treetable_data = [
                                 
                                 data : [
                                     {
-                                        id:"3.1.3.1", br_item:"Bore pile dia 1000 mm", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.3.1", br_item:"Bore pile dia 1000 mm", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -535,7 +533,7 @@ var main_breakdown_treetable_data = [
                                     },
 
                                     {
-                                        id:"3.1.3.2", br_item:"Pile Cap", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.3.2", br_item:"Pile Cap", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -605,7 +603,7 @@ var main_breakdown_treetable_data = [
                             },
                             
                             {
-                                id:"3.1.4", br_item:"Pondasi Pier 6", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.1.4", br_item:"Pondasi Pier 6", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -614,7 +612,7 @@ var main_breakdown_treetable_data = [
                                 
                                 data : [
                                     {
-                                        id:"3.1.4.1", br_item:"Bore pile dia 1000 mm", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.4.1", br_item:"Bore pile dia 1000 mm", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -645,7 +643,7 @@ var main_breakdown_treetable_data = [
                                     },
 
                                     {
-                                        id:"3.1.4.2", br_item:"Pile Cap", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.4.2", br_item:"Pile Cap", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -715,7 +713,7 @@ var main_breakdown_treetable_data = [
                             },
 
                             {
-                                id:"3.1.5", br_item:"Pondasi Abutment 2", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.1.5", br_item:"Pondasi Abutment 2", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -724,7 +722,7 @@ var main_breakdown_treetable_data = [
                                 
                                 data : [
                                     {
-                                        id:"3.1.5.1", br_item:"Bore pile dia 1000 mm", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.5.1", br_item:"Bore pile dia 1000 mm", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -754,7 +752,7 @@ var main_breakdown_treetable_data = [
                                     },
 
                                     {
-                                        id:"3.1.5.2", br_item:"Pile Cap", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                        id:"3.1.5.2", br_item:"Pile Cap", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                         
                                         mtw : [
 
@@ -831,7 +829,7 @@ var main_breakdown_treetable_data = [
                     },
 
                     {
-                        id:"3.2", br_item:"Pekerjaan Struktur Atas", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                        id:"3.2", br_item:"Pekerjaan Struktur Atas", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                         
                         mtw : [
                             
@@ -839,7 +837,7 @@ var main_breakdown_treetable_data = [
 
                         data : [
                             {
-                                id:"3.2.1", br_item:"Pekerjaan Pier 3", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.2.1", br_item:"Pekerjaan Pier 3", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -908,7 +906,7 @@ var main_breakdown_treetable_data = [
                             },
 
                             {
-                                id:"3.2.2", br_item:"Pekerjaan Pier 4", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.2.2", br_item:"Pekerjaan Pier 4", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -975,7 +973,7 @@ var main_breakdown_treetable_data = [
                             },
 
                             {
-                                id:"3.2.3", br_item:"Pekerjaan Pier 5", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.2.3", br_item:"Pekerjaan Pier 5", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -1042,7 +1040,7 @@ var main_breakdown_treetable_data = [
                             },
 
                             {
-                                id:"3.2.4", br_item:"Pekerjaan Pier 6", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.2.4", br_item:"Pekerjaan Pier 6", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [
@@ -1109,7 +1107,7 @@ var main_breakdown_treetable_data = [
                             },
 
                             {
-                                id:"3.2.5", br_item:"Pekerjaan Abutment 2", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                                id:"3.2.5", br_item:"Pekerjaan Abutment 2", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                 
 
                                 mtw : [

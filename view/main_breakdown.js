@@ -133,8 +133,8 @@ var view_main_breakdown__breakdown_details =
                   { editor : "text", id : "mtw_item", header : "Item", fillspace :2 },
                   { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 },
                   { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
-                  { editor : "text", id : "mtw_unitprice", header : "Price", fillspace : 1.5, footer:"Total", format : webix.i18n.priceFormat },
-                  { editor : "text", id : "mtw_totalprice", header : "Total", fillspace : 1.5, format : webix.i18n.priceFormat, math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
+                  { editor : "text", id : "mtw_unitprice", header : "Price", fillspace : 1.5, footer:"Total" },
+                  { editor : "text", id : "mtw_totalprice", header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
                 ]
                 
                 
