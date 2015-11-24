@@ -77,11 +77,12 @@ var view_main_breakdown__breakdown_details =
       scroll : "y",
       body : {
         rows : [
+          {view:"text", value:"" },
           {
 
           cols : [
             
-              { view:"textarea" , label:"Description", labelPosition:"top", gravity:5 },
+              { view:"textarea" , gravity:5 },
         
               {
                 view : "carousel",
@@ -98,7 +99,7 @@ var view_main_breakdown__breakdown_details =
           height : 200
             
           },
-
+          {view:"resizer"},
           {
             type : "line",
             rows : [

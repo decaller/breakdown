@@ -1,7 +1,7 @@
 var logic ={
 	init: function(){
     
-<<<<<<< HEAD
+
     $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
         this.data.importData(obj.mtw, true);
@@ -18,15 +18,13 @@ var logic ={
 				if(!view.isBranchOpen(pos)) view.open(pos);
                 else view.close(pos);
     }, $$("treetable_main_breakdown")); 	
-        
-=======
-    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "mtw");  
+
     
     $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
   $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
 });
 		
->>>>>>> master
+
 	}
 };
 
@@ -95,7 +93,7 @@ function childTotal(item) {
   	var total = 0;
   	//console.log("my child!");
   	//console.log(item);
-  	if(item) //how to check if has child? 
+  	if($$("treetable_main_breakdown").isBranch(item.id)) //how to check if has child? 
       $$("treetable_main_breakdown").data.eachChild(item.id,function(obj){
         total += priceTotal(obj);
       });
