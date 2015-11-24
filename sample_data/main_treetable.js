@@ -4,7 +4,7 @@ var main_breakdown_treetable_data = [
           
           mtw : [
 
-          {SKU : "", item : "", index : "", unit_price : "", unit : "", total : "" }
+          
 
           ],
           data : [
@@ -13,7 +13,7 @@ var main_breakdown_treetable_data = [
                   
                   mtw : [
 
-                  {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                  
 
                   ],
                   data : [
@@ -22,7 +22,7 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                        
 
                         ],
                         data : [
@@ -37,13 +37,13 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        {id : 1, mtw_sku : "252", mtw_item : "Tukang Kayu", mtw_index : "8.00", mtw_unit : "OH", mtw_unitprice : "95192.55", mtw_totalprice : "761540.40"},
-                        {id : 2, mtw_sku : "243", mtw_item : "Tukang Batu", mtw_index : "2.00", mtw_unit : "OH", mtw_unitprice : "95192.55", mtw_totalprice : "190385.10"},
-                        {id : 3, mtw_sku : "6030", mtw_item : "Kayu Kelas III", mtw_index : "0.79", mtw_unit : "m3", mtw_unitprice : "3745000.00", mtw_totalprice : "2958550.00"},
-                        {id : 4, mtw_sku : "8101", mtw_item : "seng BJLS", mtw_index : "20.00", mtw_unit : "lbr", mtw_unitprice : "77361.00", mtw_totalprice : "1547220.00"},
-                        {id : 5, mtw_sku : "2201", mtw_item : "Paku", mtw_index : "3.00", mtw_unit : "kg", mtw_unitprice : "20386.71", mtw_totalprice : "61160.13"},
-                        {id : 6, mtw_sku : "2209", mtw_item : "Paku seng", mtw_index : "0.75", mtw_unit : "kg", mtw_unitprice : "24324.31", mtw_totalprice : "18243.23"},
-                        {id : 7, mtw_sku : "94078", mtw_item : "Lantai Kerja 1 pc : 3 ps : 5 kr per m3", mtw_index : "0.90", mtw_unit : "m3", mtw_unitprice : "1215121.25", mtw_totalprice : "1093609.13"},
+                        {id : 1, mtw_sku : "252", mtw_item : "Tukang Kayu", mtw_index : "8.00", mtw_unit : "OH", mtw_unitprice : "95192.55"},
+                        {id : 2, mtw_sku : "243", mtw_item : "Tukang Batu", mtw_index : "2.00", mtw_unit : "OH", mtw_unitprice : "95192.55"},
+                        {id : 3, mtw_sku : "6030", mtw_item : "Kayu Kelas III", mtw_index : "0.79", mtw_unit : "m3", mtw_unitprice : "3745000.00"},
+                        {id : 4, mtw_sku : "8101", mtw_item : "seng BJLS", mtw_index : "20.00", mtw_unit : "lbr", mtw_unitprice : "77361.00"},
+                        {id : 5, mtw_sku : "2201", mtw_item : "Paku", mtw_index : "3.00", mtw_unit : "kg", mtw_unitprice : "20386.71"},
+                        {id : 6, mtw_sku : "2209", mtw_item : "Paku seng", mtw_index : "0.75", mtw_unit : "kg", mtw_unitprice : "24324.31"},
+                        {id : 7, mtw_sku : "94078", mtw_item : "Lantai Kerja 1 pc : 3 ps : 5 kr per m3", mtw_index : "0.90", mtw_unit : "m3", mtw_unitprice : "1215121.25"},
                         ],
                         data : [
                         ]
@@ -56,7 +56,7 @@ var main_breakdown_treetable_data = [
                        
                         mtw : [
 
-                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                        
 
                         ],
                         data : [
@@ -69,17 +69,17 @@ var main_breakdown_treetable_data = [
                                        
                         mtw : [
 
-                        {id : 1, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "1.00", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "123988.39"},
-                        {id : 2, mtw_sku : "252", mtw_item : "Tukang Kayu", mtw_index : "2.00", mtw_unit : "OH", mtw_unitprice : "95192.55", mtw_totalprice : "190385.10"},
-                        {id : 3, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "16.00", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1293039.36"},
-                        {id : 4, mtw_sku : "6030", mtw_item : "Kayu Kelas III", mtw_index : "1.15", mtw_unit : "m3", mtw_unitprice : "3745000.00", mtw_totalprice : "4306750.00"},
-                        {id : 5, mtw_sku : "8101", mtw_item : "seng BJLS", mtw_index : "30.00", mtw_unit : "lbr", mtw_unitprice : "77361.00", mtw_totalprice : "2320830.00"},
-                        {id : 6, mtw_sku : "6083", mtw_item : "Triplek t=4 mm", mtw_index : "24.00", mtw_unit : "lbr", mtw_unitprice : "85600.00", mtw_totalprice : "2054400.00"},
-                        {id : 7, mtw_sku : "2201", mtw_item : "Paku", mtw_index : "4.00", mtw_unit : "kg", mtw_unitprice : "20386.71", mtw_totalprice : "81546.84"},
-                        {id : 8, mtw_sku : "6030", mtw_item : "Paku seng", mtw_index : "1.00", mtw_unit : "kg", mtw_unitprice : "24324.31", mtw_totalprice : "24324.31"},
-                        {id : 9, mtw_sku : "8101", mtw_item : "Pintu panels klas III", mtw_index : "2.00", mtw_unit : "unitr", mtw_unitprice : "232517.00", mtw_totalprice : "465034.00"},
-                        {id : 10, mtw_sku : "6083", mtw_item : "Paku seng", mtw_index : "4.00", mtw_unit : "kg", mtw_unitprice : "24324.31", mtw_totalprice : "97297.24"},
-                        {id : 11, mtw_sku : "2201", mtw_item : "Jendela Nako + accessories", mtw_index : "1.35", mtw_unit : "set", mtw_unitprice : "133750.00", mtw_totalprice : "180562.50"},
+                        {id : 1, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "1.00", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                        {id : 2, mtw_sku : "252", mtw_item : "Tukang Kayu", mtw_index : "2.00", mtw_unit : "OH", mtw_unitprice : "95192.55"},
+                        {id : 3, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "16.00", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                        {id : 4, mtw_sku : "6030", mtw_item : "Kayu Kelas III", mtw_index : "1.15", mtw_unit : "m3", mtw_unitprice : "3745000.00"},
+                        {id : 5, mtw_sku : "8101", mtw_item : "seng BJLS", mtw_index : "30.00", mtw_unit : "lbr", mtw_unitprice : "77361.00"},
+                        {id : 6, mtw_sku : "6083", mtw_item : "Triplek t=4 mm", mtw_index : "24.00", mtw_unit : "lbr", mtw_unitprice : "85600.00"},
+                        {id : 7, mtw_sku : "2201", mtw_item : "Paku", mtw_index : "4.00", mtw_unit : "kg", mtw_unitprice : "20386.71"},
+                        {id : 8, mtw_sku : "6030", mtw_item : "Paku seng", mtw_index : "1.00", mtw_unit : "kg", mtw_unitprice : "24324.31"},
+                        {id : 9, mtw_sku : "8101", mtw_item : "Pintu panels klas III", mtw_index : "2.00", mtw_unit : "unitr", mtw_unitprice : "232517.00"},
+                        {id : 10, mtw_sku : "6083", mtw_item : "Paku seng", mtw_index : "4.00", mtw_unit : "kg", mtw_unitprice : "24324.31"},
+                        {id : 11, mtw_sku : "2201", mtw_item : "Jendela Nako + accessories", mtw_index : "1.35", mtw_unit : "set", mtw_unitprice : "133750.00"},
                         ],
 
                         
@@ -104,7 +104,7 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                        
 
                         ],
                         data : [
@@ -117,11 +117,11 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        {id : 1, mtw_sku : "236", mtw_item : "Surveyor", mtw_index : "1.00", mtw_unit : "OH", mtw_unitprice : "171735.00", mtw_totalprice : "171735.00"},
-                        {id : 2, mtw_sku : "227", mtw_item : "Pembantu Surveyor", mtw_index : "1.00", mtw_unit : "OH", mtw_unitprice : "114490.00", mtw_totalprice : "114490.00"},
-                        {id : 3, mtw_sku : "829", mtw_item : "Patok Bantu", mtw_index : "2.00", mtw_unit : "BH", mtw_unitprice : "143600.00", mtw_totalprice : "287200.00"},
-                        {id : 4, mtw_sku : "666", mtw_item : "Theodolite", mtw_index : "2.00", mtw_unit : "jam", mtw_unitprice : "85942.40", mtw_totalprice : "171884.80"},
-                        {id : 5, mtw_sku : "830", mtw_item : "Alat bantu pengukuran dan stacking out", mtw_index : "1.00", mtw_unit : "ls", mtw_unitprice : "25000.00", mtw_totalprice : "25000.00"},
+                        {id : 1, mtw_sku : "236", mtw_item : "Surveyor", mtw_index : "1.00", mtw_unit : "OH", mtw_unitprice : "171735.00"},
+                        {id : 2, mtw_sku : "227", mtw_item : "Pembantu Surveyor", mtw_index : "1.00", mtw_unit : "OH", mtw_unitprice : "114490.00"},
+                        {id : 3, mtw_sku : "829", mtw_item : "Patok Bantu", mtw_index : "2.00", mtw_unit : "BH", mtw_unitprice : "143600.00"},
+                        {id : 4, mtw_sku : "666", mtw_item : "Theodolite", mtw_index : "2.00", mtw_unit : "jam", mtw_unitprice : "85942.40"},
+                        {id : 5, mtw_sku : "830", mtw_item : "Alat bantu pengukuran dan stacking out", mtw_index : "1.00", mtw_unit : "ls", mtw_unitprice : "25000.00"},
                        
 
                         ],
@@ -135,7 +135,7 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "1.00", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "80814.96"},
+                        {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "1.00", mtw_unit : "OH", mtw_unitprice : "80814.96"},
                   
 
                         ],
@@ -149,12 +149,12 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                        {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.00", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "161629.92"},
-                        {id : 2, mtw_sku : "6006", mtw_item : "Bambu dia. 5-7 cm", mtw_index : "3.00", mtw_unit : "btg", mtw_unitprice : "18190.00", mtw_totalprice : "54570.00"},
-                        {id : 3, mtw_sku : "6083", mtw_item : "Triplek t=4 mm", mtw_index : "1.00", mtw_unit : "lbr", mtw_unitprice : "85600.00", mtw_totalprice : "85600.00"},
-                        {id : 4, mtw_sku : "7107", mtw_item : "Cat Besi", mtw_index : "1.00", mtw_unit : "kg", mtw_unitprice : "77280.75", mtw_totalprice : "77280.75"},
-                        {id : 5, mtw_sku : "9915", mtw_item : "Kain Bendera", mtw_index : "1.00", mtw_unit : "m2", mtw_unitprice : "59278.00", mtw_totalprice : "88917.00"},
-                        {id : 6, mtw_sku : "11032", mtw_item : "Lampu Semboyan", mtw_index : "2.00", mtw_unit : "bh", mtw_unitprice : "280000.00", mtw_totalprice : "560000.00"},
+                        {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.00", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                        {id : 2, mtw_sku : "6006", mtw_item : "Bambu dia. 5-7 cm", mtw_index : "3.00", mtw_unit : "btg", mtw_unitprice : "18190.00"},
+                        {id : 3, mtw_sku : "6083", mtw_item : "Triplek t=4 mm", mtw_index : "1.00", mtw_unit : "lbr", mtw_unitprice : "85600.00"},
+                        {id : 4, mtw_sku : "7107", mtw_item : "Cat Besi", mtw_index : "1.00", mtw_unit : "kg", mtw_unitprice : "77280.75"},
+                        {id : 5, mtw_sku : "9915", mtw_item : "Kain Bendera", mtw_index : "1.00", mtw_unit : "m2", mtw_unitprice : "59278.00"},
+                        {id : 6, mtw_sku : "11032", mtw_item : "Lampu Semboyan", mtw_index : "2.00", mtw_unit : "bh", mtw_unitprice : "280000.00"},
                         
 
                         ],
@@ -171,7 +171,7 @@ var main_breakdown_treetable_data = [
                   id:"2", br_item:"Pekerjaan Tanah", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                                     
                   mtw : [
-                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                    
                   ],
 
                   data : [
@@ -180,11 +180,11 @@ var main_breakdown_treetable_data = [
                        
                         mtw : [
 
-                        {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.05", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "4040.75"},
-                        {id : 2, mtw_sku : "205", mtw_item : "Kepala Tukang", mtw_index : "0.05", mtw_unit : "OH", mtw_unitprice : "109596.89", mtw_totalprice : "5479.84"},
-                        {id : 3, mtw_sku : "252", mtw_item : "Tukang Kayu", mtw_index : "0.05", mtw_unit : "OH", mtw_unitprice : "95192.55", mtw_totalprice : "4759.63"},
-                        {id : 4, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.05", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                        {id : 5, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.00", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                        {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.05", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                        {id : 2, mtw_sku : "205", mtw_item : "Kepala Tukang", mtw_index : "0.05", mtw_unit : "OH", mtw_unitprice : "109596.89"},
+                        {id : 3, mtw_sku : "252", mtw_item : "Tukang Kayu", mtw_index : "0.05", mtw_unit : "OH", mtw_unitprice : "95192.55"},
+                        {id : 4, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.05", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                        {id : 5, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.00", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                         ],
 
@@ -198,15 +198,15 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0102", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "824.31"},
-                            {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0025", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "315.28"},
-                            {id : 3, mtw_sku : "1264", mtw_item : "Tanah Urug", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "45796.00", mtw_totalprice : "54955.20"},
-                            {id : 4, mtw_sku : "652", mtw_item : "Wheel Loader", mtw_index : "0.0178", mtw_unit : "jam", mtw_unitprice : "203300.00", mtw_totalprice : "3618.74"},
-                            {id : 5, mtw_sku : "620", mtw_item : "Dump Truck 3.5 ton", mtw_index : "0.2289", mtw_unit : "jam", mtw_unitprice : "160500.00", mtw_totalprice : "36738.45"},
-                            {id : 6, mtw_sku : "637", mtw_item : "Motor Grader", mtw_index : "0.0061", mtw_unit : "jam", mtw_unitprice : "257656.00", mtw_totalprice : "1571.70"},
-                            {id : 7, mtw_sku : "649", mtw_item : "Vibrator Roller", mtw_index : "0.0010", mtw_unit : "jam", mtw_unitprice : "706567.01", mtw_totalprice : "706.57"},
-                            {id : 8, mtw_sku : "651", mtw_item : "Water Tanker", mtw_index : "0.0070", mtw_unit : "jam", mtw_unitprice : "221276.00", mtw_totalprice : "1548.93"},
-                            {id : 9, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0102", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                            {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0025", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                            {id : 3, mtw_sku : "1264", mtw_item : "Tanah Urug", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "45796.00"},
+                            {id : 4, mtw_sku : "652", mtw_item : "Wheel Loader", mtw_index : "0.0178", mtw_unit : "jam", mtw_unitprice : "203300.00"},
+                            {id : 5, mtw_sku : "620", mtw_item : "Dump Truck 3.5 ton", mtw_index : "0.2289", mtw_unit : "jam", mtw_unitprice : "160500.00"},
+                            {id : 6, mtw_sku : "637", mtw_item : "Motor Grader", mtw_index : "0.0061", mtw_unit : "jam", mtw_unitprice : "257656.00"},
+                            {id : 7, mtw_sku : "649", mtw_item : "Vibrator Roller", mtw_index : "0.0010", mtw_unit : "jam", mtw_unitprice : "706567.01"},
+                            {id : 8, mtw_sku : "651", mtw_item : "Water Tanker", mtw_index : "0.0070", mtw_unit : "jam", mtw_unitprice : "221276.00"},
+                            {id : 9, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                         ],
                         
@@ -218,15 +218,15 @@ var main_breakdown_treetable_data = [
                         
                         mtw : [
 
-                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0102", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "824.31"},
-                            {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0025", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "315.28"},
-                            {id : 3, mtw_sku : "1207", mtw_item : "Bahan Pilihan", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "46545.00", mtw_totalprice : "55854.00"},
-                            {id : 4, mtw_sku : "652", mtw_item : "Wheel Loader", mtw_index : "0.0178", mtw_unit : "jam", mtw_unitprice : "203300.00", mtw_totalprice : "3618.74"},
-                            {id : 5, mtw_sku : "620", mtw_item : "Dump Truck 3.5 ton", mtw_index : "0.2289", mtw_unit : "jam", mtw_unitprice : "160500.00", mtw_totalprice : "36738.45"},
-                            {id : 6, mtw_sku : "637", mtw_item : "Motor Grader", mtw_index : "0.0061", mtw_unit : "jam", mtw_unitprice : "257656.00", mtw_totalprice : "1571.70"},
-                            {id : 7, mtw_sku : "649", mtw_item : "Vibrator Roller", mtw_index : "0.0010", mtw_unit : "jam", mtw_unitprice : "706567.01", mtw_totalprice : "706.57"},
-                            {id : 8, mtw_sku : "651", mtw_item : "Water Tanker", mtw_index : "0.0070", mtw_unit : "jam", mtw_unitprice : "221276.00", mtw_totalprice : "1548.93"},
-                            {id : 9, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0102", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                            {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0025", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                            {id : 3, mtw_sku : "1207", mtw_item : "Bahan Pilihan", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "46545.00"},
+                            {id : 4, mtw_sku : "652", mtw_item : "Wheel Loader", mtw_index : "0.0178", mtw_unit : "jam", mtw_unitprice : "203300.00"},
+                            {id : 5, mtw_sku : "620", mtw_item : "Dump Truck 3.5 ton", mtw_index : "0.2289", mtw_unit : "jam", mtw_unitprice : "160500.00"},
+                            {id : 6, mtw_sku : "637", mtw_item : "Motor Grader", mtw_index : "0.0061", mtw_unit : "jam", mtw_unitprice : "257656.00"},
+                            {id : 7, mtw_sku : "649", mtw_item : "Vibrator Roller", mtw_index : "0.0010", mtw_unit : "jam", mtw_unitprice : "706567.01"},
+                            {id : 8, mtw_sku : "651", mtw_item : "Water Tanker", mtw_index : "0.0070", mtw_unit : "jam", mtw_unitprice : "221276.00"},
+                            {id : 9, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
 
                         ],
@@ -239,12 +239,12 @@ var main_breakdown_treetable_data = [
                        
 
                         mtw : [
-                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0857", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "6927.00"},
-                            {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "169.54"},
-                            {id : 3, mtw_sku : "1207", mtw_item : "Bahan Pilihan", mtw_index : "0.0500", mtw_unit : "m3", mtw_unitprice : "46545.00", mtw_totalprice : "23720.50"},
-                            {id : 4, mtw_sku : "623", mtw_item : "Excavator", mtw_index : "0.0591", mtw_unit : "jam", mtw_unitprice : "374500.00", mtw_totalprice : "22132.95"},
-                            {id : 5, mtw_sku : "606", mtw_item : "Bulldozer", mtw_index : "0.0226", mtw_unit : "jam", mtw_unitprice : "245336.02", mtw_totalprice : "5544.59"},
-                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0857", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                            {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                            {id : 3, mtw_sku : "1207", mtw_item : "Bahan Pilihan", mtw_index : "0.0500", mtw_unit : "m3", mtw_unitprice : "46545.00"},
+                            {id : 4, mtw_sku : "623", mtw_item : "Excavator", mtw_index : "0.0591", mtw_unit : "jam", mtw_unitprice : "374500.00"},
+                            {id : 5, mtw_sku : "606", mtw_item : "Bulldozer", mtw_index : "0.0226", mtw_unit : "jam", mtw_unitprice : "245336.02"},
+                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
                         ],
                         
                         data : []
@@ -258,7 +258,7 @@ var main_breakdown_treetable_data = [
                   
                   
                   mtw : [
-                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                    
                   ],
 
                   data : [
@@ -268,7 +268,7 @@ var main_breakdown_treetable_data = [
                         
 
                         mtw : [
-                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                            
                         ],
                         
                         data : [
@@ -277,7 +277,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -286,7 +286,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -296,13 +296,13 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "114.30"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "67.99"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "30.11"},
-                                                    {id : 4, mtw_sku : "4115", mtw_item : "Beton Readymix (K.450)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "829250.00", mtw_totalprice : "650961.25"},
-                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "1508100.80"},
-                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00", mtw_totalprice : "187633.00"},
-                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75", mtw_totalprice : "1919.42"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "4115", mtw_item : "Beton Readymix (K.450)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "829250.00"},
+                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00"},
+                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75"},
 
                                                 ],
                                                 
@@ -317,7 +317,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -327,9 +327,9 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "185874.41"},
-                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "10539.01"},
-                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17", mtw_totalprice : "245797.40"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17"},
 
                                                 ],
                                                 
@@ -341,7 +341,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -353,7 +353,7 @@ var main_breakdown_treetable_data = [
                                                
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -365,12 +365,12 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                                 ],
                                                 
@@ -389,7 +389,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -398,7 +398,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -408,13 +408,13 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "114.30"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "67.99"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "30.11"},
-                                                    {id : 4, mtw_sku : "4115", mtw_item : "Beton Readymix (K.450)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "829250.00", mtw_totalprice : "650961.25"},
-                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "1508100.80"},
-                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00", mtw_totalprice : "187633.00"},
-                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75", mtw_totalprice : "1919.42"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "4115", mtw_item : "Beton Readymix (K.450)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "829250.00"},
+                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00"},
+                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75"},
 
 
                                                 ],
@@ -429,7 +429,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -439,9 +439,9 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "185874.41"},
-                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "10539.01"},
-                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17", mtw_totalprice : "245797.40"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17"},
 
 
                                                 ],
@@ -454,7 +454,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -466,7 +466,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -478,12 +478,12 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                                 ],
                                                 
@@ -499,7 +499,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -508,7 +508,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -518,13 +518,13 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "114.30"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "67.99"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "30.11"},
-                                                    {id : 4, mtw_sku : "4115", mtw_item : "Beton Readymix (K.450)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "829250.00", mtw_totalprice : "650961.25"},
-                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "1508100.80"},
-                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00", mtw_totalprice : "187633.00"},
-                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75", mtw_totalprice : "1919.42"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "4115", mtw_item : "Beton Readymix (K.450)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "829250.00"},
+                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00"},
+                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75"},
 
 
                                                 ],
@@ -539,7 +539,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -549,9 +549,9 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "185874.41"},
-                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "10539.01"},
-                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17", mtw_totalprice : "245797.40"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17"},
 
 
                                                 ],
@@ -564,7 +564,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -576,7 +576,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -588,12 +588,12 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                                 ],
                                                 
@@ -609,7 +609,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -618,7 +618,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -628,13 +628,13 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "114.30"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "67.99"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "30.11"},
-                                                    {id : 4, mtw_sku : "4115", mtw_item : "Beton Readymix (K.450)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "829250.00", mtw_totalprice : "650961.25"},
-                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "1508100.80"},
-                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00", mtw_totalprice : "187633.00"},
-                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75", mtw_totalprice : "1919.42"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "4115", mtw_item : "Beton Readymix (K.450)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "829250.00"},
+                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00"},
+                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75"},
 
 
                                                 ],
@@ -649,7 +649,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -659,9 +659,9 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "185874.41"},
-                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "10539.01"},
-                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17", mtw_totalprice : "245797.40"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17"},
 
 
                                                 ],
@@ -674,7 +674,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -686,7 +686,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -698,12 +698,12 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                                 ],
                                                 
@@ -719,7 +719,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -728,7 +728,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -738,13 +738,13 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "114.30"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "67.99"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "30.11"},
-                                                    {id : 4, mtw_sku : "4113", mtw_item : "Beton Readymix (K.375)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "775750.00", mtw_totalprice : "608963.75"},
-                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "1508100.80"},
-                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00", mtw_totalprice : "187633.00"},
-                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75", mtw_totalprice : "1919.42"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0014", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0007", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0002", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "4113", mtw_item : "Beton Readymix (K.375)", mtw_index : "0.7850", mtw_unit : "m3", mtw_unitprice : "775750.00"},
+                                                    {id : 5, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "88.0900", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 6, mtw_sku : "668", mtw_item : "Bore Pile Machine", mtw_index : "0.2340", mtw_unit : "jam", mtw_unitprice : "374500.00"},
+                                                    {id : 7, mtw_sku : "610", mtw_item : "Concrete Pump", mtw_index : "0.0958", mtw_unit : "jam", mtw_unitprice : "20035.75"},
 
                                                 ],
                                                 
@@ -758,7 +758,7 @@ var main_breakdown_treetable_data = [
                                         
                                         mtw : [
 
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
 
                                         ],
                                         
@@ -768,9 +768,9 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "185874.41"},
-                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "10539.01"},
-                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17", mtw_totalprice : "245797.40"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "2.3000", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0850", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 3, mtw_sku : "1220", mtw_item : "Batu belah 15/20", mtw_index : "1.2000", mtw_unit : "m3", mtw_unitprice : "204831.17"},
 
 
                                                 ],
@@ -783,7 +783,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -795,7 +795,7 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                                    
 
                                                 ],
                                                 
@@ -807,12 +807,12 @@ var main_breakdown_treetable_data = [
                                                 
                                                 mtw : [
 
-                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                                    {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                                    {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                                    {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                                    {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                                    {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                                    {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                                 ],
                                                 
@@ -834,7 +834,7 @@ var main_breakdown_treetable_data = [
                         id:"3.2", br_item:"Pekerjaan Struktur Atas", br_index:"", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                         
                         mtw : [
-                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                            
                         ],
 
                         data : [
@@ -843,7 +843,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -852,7 +852,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -863,12 +863,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -880,7 +880,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -891,12 +891,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -912,7 +912,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -921,7 +921,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -932,12 +932,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -949,7 +949,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -960,12 +960,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -979,7 +979,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -988,7 +988,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -999,12 +999,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -1016,7 +1016,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1027,12 +1027,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -1046,7 +1046,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -1055,7 +1055,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1066,12 +1066,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -1083,7 +1083,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1094,12 +1094,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -1113,7 +1113,7 @@ var main_breakdown_treetable_data = [
                                 
 
                                 mtw : [
-                                    {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                    
                                 ],
                                 
                                 data : [
@@ -1122,7 +1122,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1133,12 +1133,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -1150,7 +1150,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1161,12 +1161,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -1178,7 +1178,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1189,12 +1189,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
@@ -1206,7 +1206,7 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {SKU : "", item : "", index : "", unit_price : "", unit : "", total : ""}
+                                            
                                         ],
                                         
                                         data : []
@@ -1217,12 +1217,12 @@ var main_breakdown_treetable_data = [
                                         
 
                                         mtw : [
-                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96", mtw_totalprice : "1212.22"},
-                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71", mtw_totalprice : "475.90"},
-                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39", mtw_totalprice : "619.94"},
-                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00", mtw_totalprice : "18832.00"},
-                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51", mtw_totalprice : "4530.37"},
-                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00", mtw_totalprice : "4387.00"},
+                                            {id : 1, mtw_sku : "201", mtw_item : "Pekerja", mtw_index : "0.0150", mtw_unit : "OH", mtw_unitprice : "80814.96"},
+                                            {id : 2, mtw_sku : "202", mtw_item : "Tukang", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "95179.71"},
+                                            {id : 3, mtw_sku : "206", mtw_item : "Mandor", mtw_index : "0.0050", mtw_unit : "OH", mtw_unitprice : "123988.39"},
+                                            {id : 4, mtw_sku : "2113", mtw_item : "Baja Tulangan Ulir D39", mtw_index : "1.1000", mtw_unit : "kg", mtw_unitprice : "17120.00"},
+                                            {id : 5, mtw_sku : "2304", mtw_item : "Kawat Beton / Bendrat RRT", mtw_index : "0.2150", mtw_unit : "kg", mtw_unitprice : "21071.51"},
+                                            {id : 6, mtw_sku : "802", mtw_item : "Alat Bantu", mtw_index : "1.0000", mtw_unit : "ls", mtw_unitprice : "4387.00"},
 
                                         ],
                                         
