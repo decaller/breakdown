@@ -1,6 +1,7 @@
 var logic ={
 	init: function(){
     
+<<<<<<< HEAD
     $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
         this.data.importData(obj.mtw, true);
@@ -18,6 +19,14 @@ var logic ={
                 else view.close(pos);
     }, $$("treetable_main_breakdown")); 	
         
+=======
+    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "mtw");  
+    
+    $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
+  $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
+});
+		
+>>>>>>> master
 	}
 };
 
@@ -93,3 +102,4 @@ function childTotal(item) {
   	//console.log(total);
   	return total;
 };
+
