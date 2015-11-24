@@ -80,35 +80,7 @@ var view_main_breakdown__breakdown_details =
             ],
             height : 200
           },
-          /**{
-            type : "line",
-            rows : [
-              {
-                view : "toolbar",
-                elements : [
-                  { label : "Dimension", view : "label" },
-                  { view : "button", type : "iconButton", icon : "plus", width : 28 }
-                ]
-              },
-              {
-                
-                view : "datatable",
-                height : 250,
-                id : "datatable_dimension_main_breakdown",
-                columns : [
-                  { id : "dt_dimension", header : "Dimension", fillspace : 1.2},
-                  { id : "dt_index", header : "Index", fillspace : 1},
-                  { id : "dt_unit", header : "Unit", fillspace : 1},
-                  { id : "dt_source", header : "Source", fillspace : 1.2},
-                  { id : "dt_use", header : "Use", fillspace : 0.5 }
-                ],
-                drag : false,
-                data : [
-          
-          ]
-              }
-            ]
-          },**/
+         
           {
             type : "line",
             rows : [

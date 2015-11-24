@@ -7,7 +7,7 @@ var view_add_breakdown__search =
       view : "toolbar",
       elements : [
         { click : back_to_main, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
-        { label : "Search", view : "search" , color : "white"}
+        { id : "searchbar_br_search",label : "Search", view : "search" , color : "white"}
       ]
     },
     {
@@ -27,6 +27,7 @@ var view_add_breakdown__search =
         { id : "br_search_menu", header : "", fillspace : 0.2  }
       ],
       view : "treetable",
+      id : "treetable_search_breakdown",
       data : search_breakdown_treetable_data,
       url : "demo->tree",
       
@@ -62,32 +63,7 @@ var view_add_breakdown__search_details =
             ],
             height : 200
           },
-          /**{
-            type : "line",
-            rows : [
-              {
-                view : "toolbar",
-                elements : [
-                  { label : "Dimension", view : "label" },
-                  
-                ]
-              },
-              {
-                
-                view : "datatable",
-                navigation : false,
-                height : 250,
-                columns : [
-                  { id : "dt_dimension", header : "Dimension", fillspace : 1.2},
-                  { id : "dt_index", header : "Index", fillspace : 1},
-                  { id : "dt_unit", header : "Unit", fillspace : 1},
-                  { id : "dt_source", header : "Source", fillspace : 1.2},
-                  { id : "dt_use", header : "Use", fillspace : 0.5 }
-                ],
-                drag : false
-              }
-            ]
-          },**/
+          
           {
             type : "line",
             rows : [

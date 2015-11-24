@@ -2,6 +2,10 @@ var logic ={
 	init: function(){
     
     $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", "mtw");  
+    
+    $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
+  $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
+});
 		
 	}
 };
@@ -41,3 +45,5 @@ function show_sidebar() {
   //var sidebar = document.getElementsByClassName("br-drawer mdl-layout__drawer");
  // sidebar.setAttribute("class", "is-visible");
 };
+
+
