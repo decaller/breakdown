@@ -1,5 +1,6 @@
 var logic ={
 	init: function(){
+    webix.i18n.setLocale("ind-IND");
     
     $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
@@ -75,11 +76,11 @@ function sumTotal(item) {
     if(records)
    	 	for (var i=0; i < records.length ; ++i) 
     	total += parseInt(records[i]["mtw_unitprice"])* parseInt(records[i]["mtw_index"]); 
-  	return total;
+  	return webix.i18n.priceFormat(total);
 };
 
 function priceTotal(item) {
-  	return sumTotal(item)*item.br_index + childTotal(item);
+  	return webix.i18n.priceFormat(sumTotal(item)*item.br_index + childTotal(item));
 };
 
 function childTotal(item) {
@@ -91,5 +92,5 @@ function childTotal(item) {
         total += priceTotal(obj);
       });
   	//console.log(total);
-  	return total;
+  	return webix.i18n.priceFormat(total);
 };

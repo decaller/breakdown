@@ -61,32 +61,7 @@ var view_add_breakdown__search_details =
             ],
             height : 200
           },
-          /**{
-            type : "line",
-            rows : [
-              {
-                view : "toolbar",
-                elements : [
-                  { label : "Dimension", view : "label" },
-                  
-                ]
-              },
-              {
-                
-                view : "datatable",
-                navigation : false,
-                height : 250,
-                columns : [
-                  { id : "dt_dimension", header : "Dimension", fillspace : 1.2},
-                  { id : "dt_index", header : "Index", fillspace : 1},
-                  { id : "dt_unit", header : "Unit", fillspace : 1},
-                  { id : "dt_source", header : "Source", fillspace : 1.2},
-                  { id : "dt_use", header : "Use", fillspace : 0.5 }
-                ],
-                drag : false
-              }
-            ]
-          },**/
+          
           {
             type : "line",
             rows : [
