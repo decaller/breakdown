@@ -29,9 +29,10 @@ var view_main_breakdown__project_breakdown =
         },
         { editor : "text", id : "br_index", header : "Index" , fillspace : 1 },
         { editor : "text", id : "br_unit", header : "Unit", fillspace : 0.8},
-        { id : "br_child+mtw_prc", header : "Child+MTW", fillspace : 1.5 },
-        { id : "br_total_prc", header : "Total", fillspace : 1.5, math: "[$r,br_child+mtw_prc] * [$r,br_index]"},
-        { id : "br_menu", header : "", fillspace : 0.1  }
+        { id : "br_child_prc", template: childTotal, header : "ChildPrice", fillspace : 1.5 },
+        { id : "br_mtw_prc", template: sumTotal, header : "MTWPrice", fillspace : 1.5 },
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal,},
+        { id : "br_menu",  header : "", fillspace : 0.1  }
       ],
       view : "treetable",
       select : "row",
@@ -96,36 +97,6 @@ var view_main_breakdown__breakdown_details =
           height : 200
             
           },
-          
-          /**{
-            type : "line",
-            rows : [
-              {
-                view : "toolbar",
-                elements : [
-                  { label : "Dimension", view : "label" },
-                  { view : "button", type : "iconButton", icon : "plus", width : 28 }
-                ]
-              },
-              {
-                
-                view : "datatable",
-                height : 250,
-                id : "datatable_dimension_main_breakdown",
-                columns : [
-                  { id : "dt_dimension", header : "Dimension", fillspace : 1.2},
-                  { id : "dt_index", header : "Index", fillspace : 1},
-                  { id : "dt_unit", header : "Unit", fillspace : 1},
-                  { id : "dt_source", header : "Source", fillspace : 1.2},
-                  { id : "dt_use", header : "Use", fillspace : 0.5 }
-                ],
-                drag : false,
-                data : [
-          
-          ]
-              }
-            ]
-          },**/
           {
             type : "line",
             rows : [

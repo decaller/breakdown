@@ -3,8 +3,7 @@ var logic ={
     
     $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
-        var fulldata = [].concat(obj.mtw);
-        this.data.importData(fulldata, true);
+        this.data.importData(obj.mtw, true);
   		$$("datatable_mtw_main_breakdown").refreshColumns();
     });
     
@@ -70,3 +69,27 @@ function add_child() {
 };
 
 
+function sumTotal(item) {
+  	var records = item.mtw;
+    var total = 0;
+    if(records)
+   	 	for (var i=0; i < records.length ; ++i) 
+    	total += parseInt(records[i]["mtw_unitprice"])* parseInt(records[i]["mtw_index"]); 
+  	return total;
+};
+
+function priceTotal(item) {
+  	return sumTotal(item)*item.br_index + childTotal(item);
+};
+
+function childTotal(item) {
+  	var total = 0;
+  	//console.log("my child!");
+  	//console.log(item);
+  	if(item) //how to check if has child? 
+      $$("treetable_main_breakdown").data.eachChild(item.id,function(obj){
+        total += priceTotal(obj);
+      });
+  	//console.log(total);
+  	return total;
+};
