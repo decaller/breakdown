@@ -21,12 +21,7 @@ var view_main_breakdown__project_breakdown =
     ,
     {
       columns : [
-        {
-          id : "br_item", header : "Item", 
-          fillspace : 3,
-          template : "{common.treetable()} #br_item#",
-          editor : "text"
-        },
+        {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
         { editor : "text", id : "br_index", header : "Index" , fillspace : 1 },
         { editor : "text", id : "br_unit", header : "Unit", fillspace : 0.8},
         { id : "br_child_prc", template: childTotal, header : "ChildPrice", fillspace : 1.5},
@@ -62,44 +57,30 @@ var view_main_breakdown__breakdown_details =
     {
       view : "toolbar", 
       borderless : true,
-   
       elements : [
         {id : "name_details_label", label : "Details", view : "label", width : 300 }
-
-        
-      ]
-
-      
-
+      ]           
     },
+    
     {
       view : "scrollview",
       scroll : "y",
       body : {
         rows : [
           {
-
-          cols : [
-            
-              { view:"textarea" , label:"Description", labelPosition:"top", gravity:5 },
-        
-              {
-                view : "carousel",
-                css : "webix_dark",
-               
-                gravity:5,
-                cols : [
-                  { view : "template", template : "View A" },
-                  { view : "template", template : "View B" }
-                ]
-                
-              }
+            cols : [
+                { view:"textarea" , label:"Description", labelPosition:"top", gravity:5 },
+                { 
+                  view : "carousel", css : "webix_dark", gravity:5, height : 200,
+                  cols : [
+                    { view : "template", template : "View A" },
+                    { view : "template", template : "View B" }
+                  ]
+               }
             ],
-          height : 200
-            
-          },
+           },
 
-          {
+           {
             type : "line",
             rows : [
               {
@@ -127,7 +108,6 @@ var view_main_breakdown__breakdown_details =
                 select : "row",
                 editmath:true,
                 drag : true,
-                
                 columns : [
                   { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 },
                   { editor : "text", id : "mtw_item", header : "Item", fillspace :2 },
@@ -140,11 +120,8 @@ var view_main_breakdown__breakdown_details =
                     onAfterEditStop: function () {
                       $$("datatable_mtw_main_breakdown").refreshColumns();
                       $$("treetable_main_breakdown").refresh();
-                      
                     }
-                    }
-                
-                
+                    }            
               }
             ]
           }
@@ -169,15 +146,10 @@ var view_main_breakdown__breakdown_cart =
 
       ]
     },
+    
     {
-      
       columns : [
-        {
-          id : "cart_item",
-          header : "Item",
-          fillspace : 2.5,
-          template : "{common.treetable()} #value#"
-        },
+        { id : "cart_item", header : "Item", fillspace : 2.5, template : "{common.treetable()} #cart_item#"},
         { id : "cart_index", header : "Index", fillspace : 0.7 },
         { id : "cart_unit", header : "Unit", fillspace : 1 },
         { id : "cart_child", header : "Child", fillspace : 1 },
