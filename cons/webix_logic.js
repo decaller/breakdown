@@ -2,6 +2,10 @@ var logic ={
 	init: function(){
     webix.i18n.setLocale("ind-IND");
     
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
         this.data.importData(obj.mtw, true);
@@ -18,14 +22,23 @@ var logic ={
 				if(!view.isBranchOpen(pos)) view.open(pos);
                 else view.close(pos);
     }, $$("treetable_main_breakdown")); 	
+<<<<<<< HEAD
         
+=======
+
+    
+>>>>>>> master
     $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
       $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
     });
 		
+<<<<<<< HEAD
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
     
+=======
+
+>>>>>>> master
 	}
 };
 
@@ -108,8 +121,14 @@ function priceTotal(item) {
 function childTotal(item) {
   	loop++;
   	var total = 0;
+<<<<<<< HEAD
   	
   	if($$("treetable_main_breakdown").isBranch(item.id)) 
+=======
+  	//console.log("my child!");
+  	//console.log(item);
+  	if($$("treetable_main_breakdown").isBranch(item.id)) //how to check if has child? 
+>>>>>>> master
       $$("treetable_main_breakdown").data.eachChild(item.id,function(obj){
         total += priceTotal(obj);
       });
