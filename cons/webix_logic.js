@@ -1,9 +1,6 @@
 var logic ={
 	init: function(){
     webix.i18n.setLocale("ind-IND");
-    
-    
-      
       
       $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
@@ -29,7 +26,6 @@ var logic ={
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
     
-
 	}
 };
 
