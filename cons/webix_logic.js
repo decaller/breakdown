@@ -1,8 +1,11 @@
 var logic ={
 	init: function(){
+    webix.i18n.setLocale("ind-IND");
     
-
-    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
+    
+      
+      
+      $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
         this.data.importData(obj.mtw, true);
   		$$("datatable_mtw_main_breakdown").refreshColumns();
@@ -19,11 +22,13 @@ var logic ={
                 else view.close(pos);
     }, $$("treetable_main_breakdown")); 	
 
-    
     $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
-  $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
-});
-		
+      $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
+    });
+
+    $$("datatable_mtw_main_breakdown").refreshColumns();
+    $$("treetable_main_breakdown").refresh();
+    
 
 	}
 };
@@ -75,29 +80,50 @@ function add_child() {
   webix.UIManager.setFocus( $$("treetable_main_breakdown") );
 };
 
-
+var loop = 0;
 function sumTotal(item) {
-  	var records = item.mtw;
+  	loop++;
+    var records = item.mtw;
     var total = 0;
     if(records)
    	 	for (var i=0; i < records.length ; ++i) 
-    	total += parseInt(records[i]["mtw_unitprice"])* parseInt(records[i]["mtw_index"]); 
+    	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
+    if(loop == 1){
+      loop = 0;
+      console.log(loop);
+      return webix.i18n.priceFormat(total);
+    };
+    loop--;
   	return total;
 };
 
 function priceTotal(item) {
-  	return sumTotal(item)*item.br_index + childTotal(item);
+  	loop++;
+    total = (sumTotal(item) + childTotal(item))*item.br_index;
+    if(loop ==  1){
+      loop = 0;
+      console.log(loop);
+      return webix.i18n.priceFormat(total);
+    }
+    loop--;
+    return total;
 };
 
 function childTotal(item) {
+  	loop++;
   	var total = 0;
-  	//console.log("my child!");
-  	//console.log(item);
-  	if($$("treetable_main_breakdown").isBranch(item.id)) //how to check if has child? 
+
+  	
+  	if($$("treetable_main_breakdown").isBranch(item.id)) 
       $$("treetable_main_breakdown").data.eachChild(item.id,function(obj){
         total += priceTotal(obj);
       });
-  	//console.log(total);
+  	if(loop == 1){
+      loop = 0;
+      console.log(loop);
+      return webix.i18n.priceFormat(total);
+    };
+    loop--;
   	return total;
 };
 
