@@ -29,9 +29,9 @@ var view_main_breakdown__project_breakdown =
         },
         { editor : "text", id : "br_index", header : "Index" , fillspace : 1 },
         { editor : "text", id : "br_unit", header : "Unit", fillspace : 0.8},
-        { id : "br_child_prc", template: childTotal, header : "ChildPrice", fillspace : 1.5 },
+        { id : "br_child_prc", template: childTotal, header : "ChildPrice", fillspace : 1.5},
         { id : "br_mtw_prc", template: sumTotal, header : "MTWPrice", fillspace : 1.5 },
-        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal,},
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
         { id : "br_menu",  header : "", fillspace : 0.1  }
       ],
       view : "treetable",
@@ -128,14 +128,22 @@ var view_main_breakdown__breakdown_details =
                 select : "row",
                 editmath:true,
                 drag : true,
+                
                 columns : [
                   { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 },
                   { editor : "text", id : "mtw_item", header : "Item", fillspace :2 },
                   { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 },
                   { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
-                  { editor : "text", id : "mtw_unitprice", header : "Price", fillspace : 1.5, footer:"Total" },
-                  { editor : "text", id : "mtw_totalprice", header : "Total", fillspace : 1.5, math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
-                ]
+                  { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" },
+                  { editor : "text", id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
+                ],
+                  on: {
+                    onAfterEditStop: function () {
+                      $$("datatable_mtw_main_breakdown").refreshColumns();
+                      $$("treetable_main_breakdown").refresh();
+                      
+                    }
+                    }
                 
                 
               }
