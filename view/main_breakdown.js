@@ -5,11 +5,19 @@ var view_main_breakdown__project_breakdown =
   borderless : true,
   rows : [
     {
-      view : "toolbar" ,
+      view : "toolbar" , id : "toolbar",
       borderless : true,
    
       elements : [
-        { view : "button", type : "iconButtonTop", icon : "navicon", width : 24, click:show_sidebar},
+        {view: "icon", icon: "bars",
+           click: function(){
+							if( $$("menu").config.hidden){
+								$$("menu").show();
+							}
+							else
+								$$("menu").hide();
+						}
+        },
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 24},
@@ -30,6 +38,7 @@ var view_main_breakdown__project_breakdown =
         { id : "br_menu",  header : "", fillspace : 0.1  }
       ],
       view : "treetable",
+      resizeColumn : true,
       select : "row",
       id:"treetable_main_breakdown",
       data : main_breakdown_treetable_data,
@@ -40,6 +49,7 @@ var view_main_breakdown__project_breakdown =
       navigation:true,
       drag : true,
       math : true,
+      
       on : {
         onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
         onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();}

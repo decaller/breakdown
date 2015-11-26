@@ -4,7 +4,6 @@ var app_structure =
   view : "multiview", 
   keepViews : true,
   animate : { direction : "top"},
-  container : "webix-content",
   cells : [
     {
       id : "breakdown_main",
