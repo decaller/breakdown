@@ -45,11 +45,12 @@ var logic ={
 
 				template: "<span class='webix_icon fa-#icon#'></span> #value#",
 				data:[
-					{id: 1, value: "Customers", icon: "user"},
-					{id: 2, value: "Products", icon: "cube"},
-					{id: 3, value: "Reports", icon: "line-chart"},
-					{id: 4, value: "Archives", icon: "database"},
-					{id: 5, value: "Settings", icon: "cog"}
+					{id: 1, value: "Your Name", icon: "user"},
+					{id: 2, value: "Home", icon: "home"},
+					{id: 3, value: "Share", icon: "share-alt"},
+					{id: 4, value: "Help", icon: "question-circle"},
+					{id: 5, value: "Settings", icon: "cog"},
+          {id: 6, value: "Sign Out", icon: "sign-out"}
 				],
 				select:true,
 				type:{
