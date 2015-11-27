@@ -6,7 +6,7 @@ var view_add_breakdown__search =
     {
       view : "toolbar",
       elements : [
-        { click : back_to_main, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },
+        { click : back_to_main, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 35 },
         { id : "searchbar_br_search",label : "Search", view : "search" , color : "white"}
       ]
     },

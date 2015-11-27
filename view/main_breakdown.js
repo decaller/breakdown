@@ -18,10 +18,10 @@ var view_main_breakdown__project_breakdown =
         },
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
-        { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 24},
-        { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 24},
-        { click : show_breakdown_cart, view : "button", type:"iconButtonTop", icon : "shopping-cart", width : 24},
-        { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 24}
+        { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
+        { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35},
+        { click : show_breakdown_cart, view : "button", type:"iconButtonTop", icon : "shopping-cart", width : 35},
+        { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 35}
       ]
     }
     ,
@@ -96,13 +96,13 @@ var view_main_breakdown__breakdown_details =
                 elements : [
                   { label : "Materials, Tools, Workers", view : "label" },
                   {
-                    type : "iconButton",
+                    type : "iconButtonTop",
                     icon : "shopping-cart",
-                    width : 31,
+                    width : 35,
                     view : "button",
                     click : show_mtw_cart
                   },
-                  { click : show_mtw_search, view : "button", type : "iconButton", icon : "search", width : 28 }
+                  { click : show_mtw_search, view : "button", type : "iconButtonTop", icon : "search", width : 35 }
                 ]
               },
               {
@@ -149,7 +149,7 @@ var view_main_breakdown__breakdown_cart =
       borderless : true,
       elements : [
              
-        { click : back_to_details, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 24 },
+        { click : back_to_details, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 35 },
         { label : "Breakdown's Cart", view : "label" }
 
       ]
@@ -183,7 +183,7 @@ var view_main_breakdown__mtw_cart =
       view : "toolbar",
       borderless : true,
       elements : [
-        { click : back_to_project_breakdown, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },      
+        { click : back_to_project_breakdown, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 35 },      
         { label : "Item's Cart", view : "label" }
       ]
     },
