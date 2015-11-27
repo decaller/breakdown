@@ -1,8 +1,6 @@
 var logic ={
 	init: function(){
-    webix.i18n.setLocale("ind-IND");
-    
-    
+    webix.i18n.setLocale("ind-IND");    
       
       
       $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
@@ -28,6 +26,33 @@ var logic ={
 
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
+
+    webix.ui({
+			view: "sidemenu",
+			id: "menu",
+			width: 200,
+			position: "left",
+			body:{
+
+				view:"list",
+				borderless:true,
+				scroll: false,
+
+				template: "<span class='webix_icon fa-#icon#'></span> #value#",
+				data:[
+					{id: 1, value: "Your Name", icon: "user"},
+					{id: 2, value: "Home", icon: "home"},
+					{id: 3, value: "Share", icon: "share-alt"},
+					{id: 4, value: "Help", icon: "question-circle"},
+					{id: 5, value: "Settings", icon: "cog"},
+          {id: 6, value: "Sign Out", icon: "sign-out"}
+				],
+				select:true,
+				type:{
+					height: 40
+				}
+			}
+		});
     
 
     webix.ui({
