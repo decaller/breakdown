@@ -97,16 +97,29 @@ function sumTotal(item) {
   	return total;
 };
 
+var mapPriceTotal = {};
+var mapChildTotal = {};
+
+
+
 function priceTotal(item) {
-  	loop++;
-    total = (sumTotal(item) + childTotal(item))*item.br_index;
-    if(loop ==  1){
-      loop = 0;
-      console.log(loop);
-      return webix.i18n.priceFormat(total);
-    }
-    loop--;
-    return total;
+  for (var key of mapPriceTotal.keys()) {
+      if (key == loop){
+        return mapPriceTotal.get(loop);
+      } 
+  }
+  loop++;
+  total = (sumTotal(item) + childTotal(item))*item.br_index;
+  
+  if(loop ==  1){
+    loop = 0;
+    console.log(loop);
+    return webix.i18n.priceFormat(total);
+  }
+  loop--;
+  
+  mapPriceTotal.set(loop, total);
+  return total;
 };
 
 function childTotal(item) {
@@ -118,12 +131,16 @@ function childTotal(item) {
       $$("treetable_main_breakdown").data.eachChild(item.id,function(obj){
         total += priceTotal(obj);
       });
+      
+      
   	if(loop == 1){
       loop = 0;
       console.log(loop);
       return webix.i18n.priceFormat(total);
     };
     loop--;
+    
+    
   	return total;
 };
 
