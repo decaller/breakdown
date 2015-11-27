@@ -5,28 +5,29 @@ var view_main_breakdown__project_breakdown =
   borderless : true,
   rows : [
     {
-      view : "toolbar" ,
+      view : "toolbar" , id : "toolbar",
       borderless : true,
    
       elements : [
-        { view : "button", type : "iconButtonTop", icon : "navicon", width : 24, click:show_sidebar},
+        {view: "icon", icon: "bars",
+           click: function(){
+							
+								$$("menu").show();
+							
+           }
+        },
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
-        { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 24},
-        { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 24},
-        { click : show_breakdown_cart, view : "button", type:"iconButtonTop", icon : "shopping-cart", width : 24},
-        { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 24}
+        { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
+        { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35},
+        { click : show_breakdown_cart, view : "button", type:"iconButtonTop", icon : "shopping-cart", width : 35},
+        { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 35}
       ]
     }
     ,
     {
       columns : [
-        {
-          id : "br_item", header : "Item", 
-          fillspace : 3,
-          template : "{common.treetable()} #br_item#",
-          editor : "text"
-        },
+        {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
         { editor : "text", id : "br_index", header : "Index" , fillspace : 1 },
         { editor : "text", id : "br_unit", header : "Unit", fillspace : 0.8},
         { id : "br_child_prc", template: childTotal, header : "ChildPrice", fillspace : 1.5},
@@ -35,6 +36,7 @@ var view_main_breakdown__project_breakdown =
         { id : "br_menu",  header : "", fillspace : 0.1  }
       ],
       view : "treetable",
+      resizeColumn : true,
       select : "row",
       id:"treetable_main_breakdown",
       data : main_breakdown_treetable_data,
@@ -45,6 +47,7 @@ var view_main_breakdown__project_breakdown =
       navigation:true,
       drag : true,
       math : true,
+      
       on : {
         onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
         onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();}
@@ -62,16 +65,11 @@ var view_main_breakdown__breakdown_details =
     {
       view : "toolbar", 
       borderless : true,
-   
       elements : [
         {id : "name_details_label", label : "Details", view : "label", width : 300 }
-
-        
-      ]
-
-      
-
+      ]           
     },
+    
     {
       view : "scrollview",
       scroll : "y",
@@ -79,6 +77,7 @@ var view_main_breakdown__breakdown_details =
         rows : [
           {view:"text", value:"" },
           {
+
 
           cols : [
             
@@ -101,6 +100,7 @@ var view_main_breakdown__breakdown_details =
           },
           {view:"resizer"},
           {
+
             type : "line",
             rows : [
               {
@@ -108,13 +108,13 @@ var view_main_breakdown__breakdown_details =
                 elements : [
                   { label : "Materials, Tools, Workers", view : "label" },
                   {
-                    type : "iconButton",
+                    type : "iconButtonTop",
                     icon : "shopping-cart",
-                    width : 31,
+                    width : 35,
                     view : "button",
                     click : show_mtw_cart
                   },
-                  { click : show_mtw_search, view : "button", type : "iconButton", icon : "search", width : 28 }
+                  { click : show_mtw_search, view : "button", type : "iconButtonTop", icon : "search", width : 35 }
                 ]
               },
               {
@@ -128,7 +128,6 @@ var view_main_breakdown__breakdown_details =
                 select : "row",
                 editmath:true,
                 drag : true,
-                
                 columns : [
                   { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 },
                   { editor : "text", id : "mtw_item", header : "Item", fillspace :2 },
@@ -141,11 +140,8 @@ var view_main_breakdown__breakdown_details =
                     onAfterEditStop: function () {
                       $$("datatable_mtw_main_breakdown").refreshColumns();
                       $$("treetable_main_breakdown").refresh();
-                      
                     }
-                    }
-                
-                
+                    }            
               }
             ]
           }
@@ -165,20 +161,15 @@ var view_main_breakdown__breakdown_cart =
       borderless : true,
       elements : [
              
-        { click : back_to_details, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 24 },
+        { click : back_to_details, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 35 },
         { label : "Breakdown's Cart", view : "label" }
 
       ]
     },
+    
     {
-      
       columns : [
-        {
-          id : "cart_item",
-          header : "Item",
-          fillspace : 2.5,
-          template : "{common.treetable()} #value#"
-        },
+        { id : "cart_item", header : "Item", fillspace : 2.5, template : "{common.treetable()} #cart_item#"},
         { id : "cart_index", header : "Index", fillspace : 0.7 },
         { id : "cart_unit", header : "Unit", fillspace : 1 },
         { id : "cart_child", header : "Child", fillspace : 1 },
@@ -204,7 +195,7 @@ var view_main_breakdown__mtw_cart =
       view : "toolbar",
       borderless : true,
       elements : [
-        { click : back_to_project_breakdown, view : "button", type : "iconButton", icon : "arrow-left", width : 28 },      
+        { click : back_to_project_breakdown, view : "button", type : "iconButtonTop", icon : "arrow-left", width : 35 },      
         { label : "Item's Cart", view : "label" }
       ]
     },

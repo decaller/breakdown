@@ -30,6 +30,33 @@ var logic ={
     $$("treetable_main_breakdown").refresh();
     
 
+    webix.ui({
+			view: "sidemenu",
+			id: "menu",
+			width: 200,
+			position: "left",
+			body:{
+
+				view:"list",
+				borderless:true,
+				scroll: false,
+
+				template: "<span class='webix_icon fa-#icon#'></span> #value#",
+				data:[
+					{id: 1, value: "Your Name", icon: "user"},
+					{id: 2, value: "Home", icon: "home"},
+					{id: 3, value: "Share", icon: "share-alt"},
+					{id: 4, value: "Help", icon: "question-circle"},
+					{id: 5, value: "Settings", icon: "cog"},
+          {id: 6, value: "Sign Out", icon: "sign-out"}
+				],
+				select:true,
+				type:{
+					height: 40
+				}
+			}
+		});
+
 	}
 };
 
