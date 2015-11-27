@@ -31,12 +31,6 @@ var logic ={
 			id: "menu",
 			width: 200,
 			position: "left",
-			state:function(state){
-				var toolbarHeight = $$("toolbar").$height;
-				state.top = toolbarHeight;
-				state.height -= toolbarHeight;
-			},
-			css: "my_menu",
 			body:{
 
 				view:"list",

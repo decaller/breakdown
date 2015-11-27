@@ -11,12 +11,10 @@ var view_main_breakdown__project_breakdown =
       elements : [
         {view: "icon", icon: "bars",
            click: function(){
-							if( $$("menu").config.hidden){
+							
 								$$("menu").show();
-							}
-							else
-								$$("menu").hide();
-						}
+							
+           }
         },
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
