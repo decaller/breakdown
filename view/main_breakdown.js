@@ -9,13 +9,7 @@ var view_main_breakdown__project_breakdown =
       borderless : true,
    
       elements : [
-        {view: "icon", icon: "bars",
-           click: function(){
-							
-								$$("menu").show();
-							
-           }
-        },
+        {view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
@@ -28,12 +22,12 @@ var view_main_breakdown__project_breakdown =
     {
       columns : [
         {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
-        { editor : "text", id : "br_index", header : "Index" , fillspace : 1 },
-        { editor : "text", id : "br_unit", header : "Unit", fillspace : 0.8},
-        { id : "br_child_prc", template: childTotal, header : "ChildPrice", fillspace : 1.5},
-        { id : "br_mtw_prc", template: sumTotal, header : "MTWPrice", fillspace : 1.5 },
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
+        { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
-        { id : "br_menu",  header : "", fillspace : 0.1  }
+        { id : "br_menu",  header : "", fillspace : 0.5, template:"<span class='webix_icon fa-ellipsis-v'></span>" }
       ],
       view : "treetable",
       resizeColumn : true,
@@ -77,8 +71,6 @@ var view_main_breakdown__breakdown_details =
         rows : [
           {view:"text", value:"" },
           {
-
-
           cols : [
             
               { view:"textarea" , gravity:5 },

@@ -12,7 +12,6 @@ var view_add_mtw__search =
       ]
     },
     {
-      url : "demo->table",
       
       view : "datatable",
       columns : [
@@ -46,42 +45,30 @@ var view_add_mtw__search_details =
       scroll : "y",
       body : {
         rows : [
+          {view:"text", value:"" , readonly: true},
           {
-            view : "carousel",
-            css : "webix_dark",
-            cols : [
-              { view : "template", template : "View A" },
-              { view : "template", template : "View B" }
-            ],
-            height : 200
-          },
-          {
-            type : "line",
-            rows : [
+          cols : [
+            
+              { view:"textarea" , gravity:5, readonly: true},
+        
               {
-                view : "toolbar",
-                elements : [
-                  { label : "Dimension", view : "label" },
-             
+                view : "carousel",
+                css : "webix_dark",
+                
+               
+                gravity:5,
+                cols : [
+                  { view : "template", template : "View A" },
+                  { view : "template", template : "View B" }
                 ]
-              },
-              {
                 
-                
-                view : "datatable",
-                navigation : false,
-                height : 250,
-                columns : [
-                  { id : "dt_dimension", header : "Dimension", fillspace : 1.2},
-                  { id : "dt_index", header : "Index", fillspace : 1},
-                  { id : "dt_unit", header : "Unit", fillspace : 1},
-                  { id : "dt_source", header : "Source", fillspace : 1.2},
-                  { id : "dt_use", header : "Use", fillspace : 0.5 }
-                ],
-                drag : false
               }
-            ]
+            ],
+          height : 200
+            
           },
+          {view:"resizer"},
+          
           
         ]
       }
