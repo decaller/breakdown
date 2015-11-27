@@ -1,8 +1,9 @@
 var logic ={
 	init: function(){
-    webix.i18n.setLocale("ind-IND");
-    
-    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
+    webix.i18n.setLocale("ind-IND");    
+      
+      
+      $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
         this.data.importData(obj.mtw, true);
   		$$("datatable_mtw_main_breakdown").refreshColumns();
@@ -18,14 +19,14 @@ var logic ={
 				if(!view.isBranchOpen(pos)) view.open(pos);
                 else view.close(pos);
     }, $$("treetable_main_breakdown")); 	
-        
+
     $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
       $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
     });
-		
+
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
-    
+
     webix.ui({
 			view: "sidemenu",
 			id: "menu",
@@ -53,6 +54,7 @@ var logic ={
 			}
 		});
     
+
 	}
 };
 
@@ -135,6 +137,7 @@ function priceTotal(item) {
 function childTotal(item) {
   	loop++;
   	var total = 0;
+
   	
   	if($$("treetable_main_breakdown").isBranch(item.id)) 
       $$("treetable_main_breakdown").data.eachChild(item.id,function(obj){

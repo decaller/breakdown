@@ -75,20 +75,31 @@ var view_main_breakdown__breakdown_details =
       scroll : "y",
       body : {
         rows : [
+          {view:"text", value:"" },
           {
-            cols : [
-                { view:"textarea" , label:"Description", labelPosition:"top", gravity:5 },
-                { 
-                  view : "carousel", css : "webix_dark", gravity:5, height : 200,
-                  cols : [
-                    { view : "template", template : "View A" },
-                    { view : "template", template : "View B" }
-                  ]
-               }
-            ],
-           },
 
-           {
+          cols : [
+            
+              { view:"textarea" , gravity:5 },
+        
+              {
+                view : "carousel",
+                css : "webix_dark",
+               
+                gravity:5,
+                cols : [
+                  { view : "template", template : "View A" },
+                  { view : "template", template : "View B" }
+                ]
+                
+              }
+            ],
+          height : 200
+            
+          },
+          {view:"resizer"},
+          {
+
             type : "line",
             rows : [
               {
