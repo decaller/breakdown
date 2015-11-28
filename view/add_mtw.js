@@ -15,6 +15,8 @@ var view_add_mtw__search =
       url : "demo->table",
       
       view : "datatable",
+      id : "datatable_search_mtw",
+      data : search_mtw_data,
       columns : [
         { id : "mtw_sku", header : "SKU", fillspace : 1 },
         { id : "mtw_item", header : "Item", fillspace :2 },
