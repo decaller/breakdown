@@ -32,6 +32,13 @@ var logic ={
 
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
+    
+    $$('treetable_search_breakdown').on_click.add_breakdown=function(e,id,trg){
+      $$('treetable_breakdown_cart').add($$('treetable_search_breakdown').getItem(id));
+      return false;
+    };
+    
+
 
     webix.ui({
 			view: "sidemenu",

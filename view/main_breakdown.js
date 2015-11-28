@@ -27,7 +27,7 @@ var view_main_breakdown__project_breakdown =
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
-        { id : "br_menu",  header : "", fillspace : 0.5, template:"<span class='webix_icon fa-ellipsis-v'></span>" }
+        { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v'></span>" }
       ],
       view : "treetable",
       resizeColumn : true,
@@ -161,15 +161,16 @@ var view_main_breakdown__breakdown_cart =
     
     {
       columns : [
-        { id : "cart_item", header : "Item", fillspace : 2.5, template : "{common.treetable()} #cart_item#"},
-        { id : "cart_index", header : "Index", fillspace : 0.7 },
-        { id : "cart_unit", header : "Unit", fillspace : 1 },
-        { id : "cart_child", header : "Child", fillspace : 1 },
-        { id : "cart_mtw", header : "MTW", fillspace : 1 },
-        { id : "cart_total", header : "Total Price", fillspace : 1.5 },
-        { id : "cart_menu", header : "", fillspace : 0.2 }
+        {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
+        { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
+        { id : "br_add",  header : "", fillspace : 0.1  }
       ],
       view : "treetable",
+      id:"treetable_breakdown_cart",
       drag : true
     }
   ],
@@ -198,12 +199,11 @@ var view_main_breakdown__mtw_cart =
       borderless : true,
       
       columns : [
-        { id : "mc_sku", header : "SKU", fillspace : 1 },
-        { id : "mc_item", header : "Item", fillspace : 2 },
-        { id : "mc_index", header : "Index", fillspace : 0.7 },
-        { id : "mc_unit", header : "Unit", fillspace : 1 },
-        { id : "mc_unitprice", header : "Unit Price", fillspace : 1.5 },
-        { id : "mc_totalprice", header : "Total Price", fillspace : 1.8 }
+        { id : "mtw_sku", header : "SKU", fillspace : 1 },
+        { id : "mtw_item", header : "Item", fillspace :2 },
+        { id : "mtw_index", header : "Index", fillspace : 0.7 },
+        { id : "mtw_unit", header : "Unit", fillspace : 1 },
+        { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
       ],
       drag : true
     }
