@@ -52,7 +52,7 @@ var logic ={
 				view:"contextmenu",
         id:"contextmenu_breakdown",
 				data:["Delete"],
-			  
+			  master: $$('treetable_main_breakdown'),
 				on:{
 					onItemClick:function(id){
             var context = this.getContext();
@@ -62,9 +62,20 @@ var logic ={
 					}
 				}
 			});
-      
-    $$('contextmenu_breakdown').attachTo($$('treetable_main_breakdown'));
-    
+    webix.ui({
+				view:"contextmenu",
+        id:"contextmenu_mtw",
+				data:["Delete"],
+			  master: $$('datatable_mtw_main_breakdown'),
+				on:{
+					onItemClick:function(id){
+            var context = this.getContext();
+            var listId = context.id;
+						webix.message($$("datatable_mtw_main_breakdown").getItem(listId).mtw_item + " deleted");
+            $$("datatable_mtw_main_breakdown").remove(listId);
+					}
+				}
+			});
     
     webix.ui({
 			view: "sidemenu",

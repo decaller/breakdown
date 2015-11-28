@@ -22,8 +22,8 @@ var view_main_breakdown__project_breakdown =
     {
       columns : [
         { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
-        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
-        { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
+        { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text"},
+        { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
