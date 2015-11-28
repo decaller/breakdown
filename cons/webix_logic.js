@@ -8,6 +8,7 @@ var logic ={
       this.data.importData(obj.mtw, true);
     $$("datatable_mtw_main_breakdown").refreshColumns();
     });
+    $$("item_properties").bind( $$("treetable_main_breakdown"));
     
     $$("datatable_mtw_search_breakdown").bind( $$("treetable_search_breakdown"), "$data", function(obj, source){
       if (!obj) return this.clearAll();

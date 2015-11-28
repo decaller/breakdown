@@ -21,11 +21,11 @@ var view_main_breakdown__project_breakdown =
     ,
     {
       columns : [
-        {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
         { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
         { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
-        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
         { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v'></span>" }
       ],
@@ -74,26 +74,17 @@ var view_main_breakdown__breakdown_details =
       scroll : "y",
       body : {
         rows : [
-          {view:"text", value:"" },
           {
-          cols : [
+            view:"property", 
+            id:"item_properties",
             
-              { view:"textarea" , gravity:5 },
-        
-              {
-                view : "carousel",
-                css : "webix_dark",
-               
-                gravity:5,
-                cols : [
-                  { view : "template", template : "View A" },
-                  { view : "template", template : "View B" }
-                ]
-                
-              }
-            ],
-          height : 200
-            
+            complexData : true,
+            elements : [
+              { id : "br_item", type:"text", label : "Name"},
+              { id : "br_index", type:"text", label : "Index"},
+              { id : "br_unit", type:"text", label : "Unit"},
+              
+            ]
           },
           {view:"resizer"},
           {
@@ -116,7 +107,8 @@ var view_main_breakdown__breakdown_details =
               },
               {
                 view : "datatable",
-                minHeight : 300,
+               
+                height:400,
                 id : "datatable_mtw_main_breakdown",
                 math: true,
                 editable:true,
