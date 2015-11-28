@@ -12,7 +12,7 @@ var view_add_breakdown__search =
     },
     {
       columns : [
-        {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
         { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
         { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},

@@ -43,9 +43,14 @@ var view_main_breakdown__project_breakdown =
       math : true,
       
       on : {
-        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
-        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();}
         
+        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
+        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();},
+        onBeforeDrop:function(context){
+            context.parent = context.target;    //drop as child
+            context.index = -1;                 //as last child
+            
+        }
       }
     }
   ]
@@ -132,6 +137,10 @@ var view_main_breakdown__breakdown_details =
                     onAfterEditStop: function () {
                       $$("datatable_mtw_main_breakdown").refreshColumns();
                       $$("treetable_main_breakdown").refresh();
+                    },
+                    onAfterDrop: function(){
+                      $$("datatable_mtw_main_breakdown").refreshColumns();
+                      $$("treetable_main_breakdown").refresh();
                     }
                     }            
               }
@@ -171,6 +180,7 @@ var view_main_breakdown__breakdown_cart =
       ],
       view : "treetable",
       id:"treetable_breakdown_cart",
+      select : "row",
       drag : true
     }
   ],
@@ -193,11 +203,11 @@ var view_main_breakdown__mtw_cart =
       ]
     },
     {
-      
+      id : "datatable_cart_mtw",
       autoConfig : true,
       view : "datatable",
       borderless : true,
-      
+      select : "row", 
       columns : [
         { id : "mtw_sku", header : "SKU", fillspace : 1 },
         { id : "mtw_item", header : "Item", fillspace :2 },

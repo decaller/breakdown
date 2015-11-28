@@ -34,10 +34,18 @@ var logic ={
     $$("treetable_main_breakdown").refresh();
     
     $$('treetable_search_breakdown').on_click.add_breakdown=function(e,id,trg){
-      $$('treetable_breakdown_cart').add($$('treetable_search_breakdown').getItem(id));
+      var copy = $$('treetable_search_breakdown').getItem(id);
+      $$('treetable_breakdown_cart').add(copy);
+      webix.message(copy.br_item + ' added to breakdown cart');
       return false;
     };
     
+    $$('datatable_search_mtw').on_click.add_mtw=function(e,id,trg){
+      var copy = $$('datatable_search_mtw').getItem(id);
+      $$('datatable_cart_mtw').add(copy);
+      webix.message(copy.mtw_item + ' added to breakdown cart');
+      return false;
+    };
 
 
     webix.ui({
