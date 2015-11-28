@@ -48,10 +48,9 @@ var logic ={
       return false;
     };
 
-    
     webix.ui({
 			view: "sidemenu",
-			id: "menu",
+			id: "menu_side",
 			width: 200,
 			position: "left",
 			body:{
@@ -75,7 +74,7 @@ var logic ={
 				}
 			}
 		});
-
+    
 	}
 };
 
