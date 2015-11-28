@@ -1,11 +1,7 @@
 var logic ={
 	init: function(){
-<<<<<<< HEAD
+
     webix.i18n.setLocale("ind-IND");
-=======
-    webix.i18n.setLocale("ind-IND");    
-      
->>>>>>> master
       
       $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
@@ -58,9 +54,6 @@ var logic ={
 			}
 		});
     
-<<<<<<< HEAD
-=======
-
     webix.ui({
 			view: "sidemenu",
 			id: "menu",
@@ -88,7 +81,6 @@ var logic ={
 			}
 		});
 
->>>>>>> master
 	}
 };
 
