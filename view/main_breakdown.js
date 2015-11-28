@@ -9,13 +9,7 @@ var view_main_breakdown__project_breakdown =
       borderless : true,
    
       elements : [
-        {view: "icon", icon: "bars",
-           click: function(){
-							
-								$$("menu").show();
-							
-           }
-        },
+        {view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
@@ -28,12 +22,12 @@ var view_main_breakdown__project_breakdown =
     {
       columns : [
         {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
-        { editor : "text", id : "br_index", header : "Index" , fillspace : 1 },
-        { editor : "text", id : "br_unit", header : "Unit", fillspace : 0.8},
-        { id : "br_child_prc", template: childTotal, header : "ChildPrice", fillspace : 1.5},
-        { id : "br_mtw_prc", template: sumTotal, header : "MTWPrice", fillspace : 1.5 },
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
+        { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
-        { id : "br_menu",  header : "", fillspace : 0.1  }
+        { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v'></span>" }
       ],
       view : "treetable",
       resizeColumn : true,
@@ -49,9 +43,14 @@ var view_main_breakdown__project_breakdown =
       math : true,
       
       on : {
-        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
-        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();}
         
+        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
+        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();},
+        onBeforeDrop:function(context){
+            context.parent = context.target;    //drop as child
+            context.index = -1;                 //as last child
+            
+        }
       }
     }
   ]
@@ -77,8 +76,6 @@ var view_main_breakdown__breakdown_details =
         rows : [
           {view:"text", value:"" },
           {
-
-
           cols : [
             
               { view:"textarea" , gravity:5 },
@@ -140,6 +137,10 @@ var view_main_breakdown__breakdown_details =
                     onAfterEditStop: function () {
                       $$("datatable_mtw_main_breakdown").refreshColumns();
                       $$("treetable_main_breakdown").refresh();
+                    },
+                    onAfterDrop: function(){
+                      $$("datatable_mtw_main_breakdown").refreshColumns();
+                      $$("treetable_main_breakdown").refresh();
                     }
                     }            
               }
@@ -169,15 +170,17 @@ var view_main_breakdown__breakdown_cart =
     
     {
       columns : [
-        { id : "cart_item", header : "Item", fillspace : 2.5, template : "{common.treetable()} #cart_item#"},
-        { id : "cart_index", header : "Index", fillspace : 0.7 },
-        { id : "cart_unit", header : "Unit", fillspace : 1 },
-        { id : "cart_child", header : "Child", fillspace : 1 },
-        { id : "cart_mtw", header : "MTW", fillspace : 1 },
-        { id : "cart_total", header : "Total Price", fillspace : 1.5 },
-        { id : "cart_menu", header : "", fillspace : 0.2 }
+        {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
+        { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
+        { id : "br_add",  header : "", fillspace : 0.1  }
       ],
       view : "treetable",
+      id:"treetable_breakdown_cart",
+      select : "row",
       drag : true
     }
   ],
@@ -200,18 +203,17 @@ var view_main_breakdown__mtw_cart =
       ]
     },
     {
-      
+      id : "datatable_cart_mtw",
       autoConfig : true,
       view : "datatable",
       borderless : true,
-      
+      select : "row", 
       columns : [
-        { id : "mc_sku", header : "SKU", fillspace : 1 },
-        { id : "mc_item", header : "Item", fillspace : 2 },
-        { id : "mc_index", header : "Index", fillspace : 0.7 },
-        { id : "mc_unit", header : "Unit", fillspace : 1 },
-        { id : "mc_unitprice", header : "Unit Price", fillspace : 1.5 },
-        { id : "mc_totalprice", header : "Total Price", fillspace : 1.8 }
+        { id : "mtw_sku", header : "SKU", fillspace : 1 },
+        { id : "mtw_item", header : "Item", fillspace :2 },
+        { id : "mtw_index", header : "Index", fillspace : 0.7 },
+        { id : "mtw_unit", header : "Unit", fillspace : 1 },
+        { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
       ],
       drag : true
     }

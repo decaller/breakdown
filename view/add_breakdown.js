@@ -12,28 +12,24 @@ var view_add_breakdown__search =
     },
     {
       columns : [
-        {
-          id : "br_search_item",
-          header : "Item",
-          fillspace : 2,
-          template : "{common.treetable()} #br_search_item#"
-        },
-
-        { id : "br_search_index", header : "Index" , fillspace : 0.7},
-        { id : "br_search_unit", header : "Unit", fillspace : 1},
-        { id : "br_search_child_prc", header : "Child", fillspace : 1 },
-        { id : "br_search_mtw_prc", header : "MTW", fillspace : 1 },
-        { id : "br_search_total_prc", header : "Total", fillspace : 1.5 },
-        { id : "br_search_menu", header : "", fillspace : 0.2  }
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
+        { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
+        { id : "br_add",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-plus add_breakdown'></span>" }
       ],
       view : "treetable",
       id : "treetable_search_breakdown",
       data : search_breakdown_treetable_data,
-      url : "demo->tree",
-      
-      on : {}
-    }
+      select : "row",
+      resizeColumn : true,
+      borderless : true,
+      math : true
+      }
   ]
+  
 };
 
 var view_add_breakdown__search_details = 
@@ -52,18 +48,28 @@ var view_add_breakdown__search_details =
       scroll : "y",
       body : {
         rows : [
-        { view:"textarea" , height:150, label:"Description", labelPosition:"top" },
+         {view:"text", value:"" , readonly: true},
           {
-
-            view : "carousel",
-            css : "webix_dark",
-            cols : [
-              { view : "template", template : "View A" },
-              { view : "template", template : "View B" }
+          cols : [
+            
+              { view:"textarea" , gravity:5 , readonly: true},
+        
+              {
+                view : "carousel",
+                css : "webix_dark",
+               
+                gravity:5,
+                cols : [
+                  { view : "template", template : "View A" },
+                  { view : "template", template : "View B" }
+                ]
+                
+              }
             ],
-            height : 200
+          height : 200
+            
           },
-          
+          {view:"resizer"},
           {
             type : "line",
             rows : [
@@ -78,16 +84,20 @@ var view_add_breakdown__search_details =
                 
                 autoConfig : true,
                 view : "datatable",
-                height : 350,
+                minHeight : 300,
+                id : "datatable_mtw_search_breakdown",
+                math: true,
+                select:"row",
+                footer:true,
                 columns : [
-                  { id : "mtw_sku", header : "SKU", fillspace : 1 },
-                  { id : "mtw_item", header : "Item", fillspace :2 },
-                  { id : "mtw_index", header : "Index", fillspace : 0.7 },
-                  { id : "mtw_unit", header : "Unit", fillspace : 1 },
-                  { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
-                  { id : "mtw_totalprice", header : "Total Price", fillspace : 1.8 }
-                ],
-                drag : true
+                  {id : "mtw_sku", header : "SKU", fillspace : 1 },
+                  {id : "mtw_item", header : "Item", fillspace :2 },
+                  {id : "mtw_index", header : "Index", fillspace : 1 },
+                  {id : "mtw_unit", header : "Unit", fillspace : 1 },
+                  {id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" },
+                  {id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
+                ]
+                
               }
             ]
           }

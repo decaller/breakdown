@@ -3,10 +3,16 @@ var logic ={
 
     webix.i18n.setLocale("ind-IND");
       
-      $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
-        if (!obj) return this.clearAll();
-        this.data.importData(obj.mtw, true);
-  		$$("datatable_mtw_main_breakdown").refreshColumns();
+    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
+      if (!obj) return this.clearAll();
+      this.data.importData(obj.mtw, true);
+    $$("datatable_mtw_main_breakdown").refreshColumns();
+    });
+    
+    $$("datatable_mtw_search_breakdown").bind( $$("treetable_search_breakdown"), "$data", function(obj, source){
+      if (!obj) return this.clearAll();
+      this.data.importData(obj.mtw, true);
+    $$("datatable_mtw_search_breakdown").refreshColumns();
     });
     
     webix.UIManager.addHotKey("any", function(view){
@@ -21,15 +27,30 @@ var logic ={
     }, $$("treetable_main_breakdown")); 	
 
     $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
-      $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
+      $$("treetable_search_breakdown").filter("#br_item#",this.getValue());
     });
 
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
+    
+    $$('treetable_search_breakdown').on_click.add_breakdown=function(e,id,trg){
+      var copy = $$('treetable_search_breakdown').getItem(id);
+      $$('treetable_breakdown_cart').add(copy);
+      webix.message(copy.br_item + ' added to breakdown cart');
+      return false;
+    };
+    
+    $$('datatable_search_mtw').on_click.add_mtw=function(e,id,trg){
+      var copy = $$('datatable_search_mtw').getItem(id);
+      $$('datatable_cart_mtw').add(copy);
+      webix.message(copy.mtw_item + ' added to breakdown cart');
+      return false;
+    };
+
 
     webix.ui({
 			view: "sidemenu",
-			id: "menu",
+			id: "menu_side",
 			width: 200,
 			position: "left",
 			body:{
@@ -132,8 +153,10 @@ function add_child() {
 };
 
 var loop = 0;
+var loopArr = [];
 function sumTotal(item) {
   	loop++;
+    loopArr.push(loop);
     var records = item.mtw;
     var total = 0;
     if(records)
@@ -141,27 +164,33 @@ function sumTotal(item) {
     	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
     if(loop == 1){
       loop = 0;
-      console.log(loop);
+      console.log(loopArr);
+      loopArr = [];
       return webix.i18n.priceFormat(total);
     };
     loop--;
+    loopArr.push(loop);
   	return total;
 };
 
 function priceTotal(item) {
   	loop++;
+    loopArr.push(loop);
     total = (sumTotal(item) + childTotal(item))*item.br_index;
     if(loop ==  1){
       loop = 0;
-      console.log(loop);
+      console.log(loopArr);
+      loopArr = [];
       return webix.i18n.priceFormat(total);
     }
     loop--;
+    loopArr.push(loop);
     return total;
 };
 
 function childTotal(item) {
   	loop++;
+    loopArr.push(loop);
   	var total = 0;
 
   	
@@ -171,10 +200,12 @@ function childTotal(item) {
       });
   	if(loop == 1){
       loop = 0;
-      console.log(loop);
+      console.log(loopArr);
+      loopArr = [];
       return webix.i18n.priceFormat(total);
     };
     loop--;
+    loopArr.push(loop);
   	return total;
 };
 
