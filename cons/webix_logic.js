@@ -49,6 +49,24 @@ var logic ={
     };
 
     webix.ui({
+				view:"contextmenu",
+        id:"contextmenu_breakdown",
+				data:["Delete"],
+			  
+				on:{
+					onItemClick:function(id){
+            var context = this.getContext();
+            var listId = context.id;
+						webix.message($$("treetable_main_breakdown").getItem(listId).br_item + " deleted");
+            $$("treetable_main_breakdown").remove(listId);
+					}
+				}
+			});
+      
+    $$('contextmenu_breakdown').attachTo($$('treetable_main_breakdown'));
+    
+    
+    webix.ui({
 			view: "sidemenu",
 			id: "menu_side",
 			width: 200,
@@ -126,10 +144,11 @@ function add_child() {
 };
 
 var loop = 0;
-var loopArr = [];
+var loopTot = 0;
 function sumTotal(item) {
   	loop++;
-    loopArr.push(loop);
+    loopTot++;
+    
     var records = item.mtw;
     var total = 0;
     if(records)
@@ -137,33 +156,39 @@ function sumTotal(item) {
     	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
     if(loop == 1){
       loop = 0;
-      console.log(loopArr);
-      loopArr = [];
+      
+      console.log(loopTot);
+      loopTot = 0;
+      
       return webix.i18n.priceFormat(total);
     };
     loop--;
-    loopArr.push(loop);
+    
   	return total;
 };
 
 function priceTotal(item) {
   	loop++;
-    loopArr.push(loop);
+    loopTot++;
+    
     total = (sumTotal(item) + childTotal(item))*item.br_index;
     if(loop ==  1){
       loop = 0;
-      console.log(loopArr);
-      loopArr = [];
+      
+      console.log(loopTot);
+      loopTot = 0;
+      
       return webix.i18n.priceFormat(total);
     }
     loop--;
-    loopArr.push(loop);
+    
     return total;
 };
 
 function childTotal(item) {
   	loop++;
-    loopArr.push(loop);
+    loopTot++;
+    
   	var total = 0;
 
   	
@@ -173,12 +198,14 @@ function childTotal(item) {
       });
   	if(loop == 1){
       loop = 0;
-      console.log(loopArr);
-      loopArr = [];
+      
+      console.log(loopTot);
+      loopTot = 0;
+      
       return webix.i18n.priceFormat(total);
     };
     loop--;
-    loopArr.push(loop);
+    
   	return total;
 };
 

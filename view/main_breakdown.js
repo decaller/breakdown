@@ -27,7 +27,6 @@ var view_main_breakdown__project_breakdown =
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
-        { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v'></span>" }
       ],
       view : "treetable",
       resizeColumn : true,
@@ -41,6 +40,8 @@ var view_main_breakdown__project_breakdown =
       navigation:true,
       drag : true,
       math : true,
+      
+      onContext:{},
       
       on : {
         
