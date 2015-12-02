@@ -30,15 +30,58 @@ var logic ={
       $$("treetable_search_breakdown").filter("#br_item#",this.getValue());
     });
 
-    $$("datatable_mtw_main_breakdown").refreshColumns();
-    $$("treetable_main_breakdown").refresh();
-    
-    $$('treetable_search_breakdown').on_click.add_breakdown=function(e,id,trg){
-      var copy = $$('treetable_search_breakdown').getItem(id);
-      $$('treetable_breakdown_cart').add(copy);
-      webix.message(copy.br_item + ' added to breakdown cart');
+    $$("treetable_search_breakdown").refresh();
+    $$("treetable_search_breakdown").on_click.add_breakdown=function(e,id,trg){
+	      
+      copyChild(0,id);
+      webix.message($$('treetable_search_breakdown').getItem(id).br_item + ' added to breakdown cart');
+      
+      //refresh
+      $$('treetable_search_breakdown').refresh();
+      $$('treetable_breakdown_cart').refresh();       
+      
+      
       return false;
     };
+    
+   function copyChild(parentId,id){
+
+    var item = $$('treetable_search_breakdown').getItem(id);
+    
+    var copy = webix.copy(item);
+    copy.id = webix.uid();
+    
+    $$('treetable_breakdown_cart').add(copy,0,parentId);
+    
+
+    
+    if($$("treetable_search_breakdown").isBranch(id)){
+        $$("treetable_search_breakdown").data.eachChild(id, function(obj){
+    		
+    	  copyChild(copy.id,obj.id);	
+        
+    	  
+          
+        });
+	}
+    
+}
+    
+    /**$$('treetable_search_breakdown').on_click.add_breakdown=function(e,id,trg){
+      var copy = $$('treetable_search_breakdown').getItem(id);
+      copy.id = webix.uid();
+      $$('treetable_breakdown_cart').add(copy);
+      webix.message(copy.br_item + ' added to breakdown cart');
+      
+      if($$("treetable_search_breakdown").isBranch(id)){
+        $$("treetable_search_breakdown").data.eachChild(id, function(obj){
+          obj.id = webix.uid();
+          $$("treetable_breakdown_cart").add(obj, 0, copy.id);
+        });
+      }
+      
+      return false;
+    };**/
     
     $$('datatable_search_mtw').on_click.add_mtw=function(e,id,trg){
       var copy = $$('datatable_search_mtw').getItem(id);
@@ -101,7 +144,9 @@ var logic ={
 				}
 			}
 		});
-
+    $$('treetable_main_breakdown').refresh();
+    $$('treetable_main_breakdown').select('root');
+    $$('treetable_main_breakdown').isSelected('root');
 	}
 };
 
