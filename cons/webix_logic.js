@@ -3,10 +3,10 @@ var logic ={
 
     webix.i18n.setLocale("ind-IND");
       
-    $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
-      if (!obj) return this.clearAll();
-      this.data.importData(obj.mtw, true);
-    $$("datatable_mtw_main_breakdown").refreshColumns();
+      $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
+        if (!obj) return this.clearAll();
+        this.data.importData(obj.mtw, true);
+  		$$("datatable_mtw_main_breakdown").refreshColumns();
     });
     $$("item_properties").bind( $$("treetable_main_breakdown"));
     
@@ -33,7 +33,7 @@ var logic ={
 
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
-    
+
     $$('treetable_search_breakdown').on_click.add_breakdown=function(e,id,trg){
       var copy = $$('treetable_search_breakdown').getItem(id);
       $$('treetable_breakdown_cart').add(copy);
@@ -103,7 +103,7 @@ var logic ={
 				}
 			}
 		});
-    
+
 	}
 };
 
@@ -155,11 +155,8 @@ function add_child() {
 };
 
 var loop = 0;
-var loopTot = 0;
 function sumTotal(item) {
   	loop++;
-    loopTot++;
-    
     var records = item.mtw;
     var total = 0;
     if(records)
@@ -168,38 +165,26 @@ function sumTotal(item) {
     if(loop == 1){
       loop = 0;
       
-      console.log(loopTot);
-      loopTot = 0;
-      
       return webix.i18n.priceFormat(total);
     };
     loop--;
-    
   	return total;
 };
 
 function priceTotal(item) {
   	loop++;
-    loopTot++;
-    
     total = (sumTotal(item) + childTotal(item))*item.br_index;
     if(loop ==  1){
       loop = 0;
-      
-      console.log(loopTot);
-      loopTot = 0;
-      
+  
       return webix.i18n.priceFormat(total);
     }
     loop--;
-    
     return total;
 };
 
 function childTotal(item) {
   	loop++;
-    loopTot++;
-    
   	var total = 0;
 
   	
@@ -209,14 +194,10 @@ function childTotal(item) {
       });
   	if(loop == 1){
       loop = 0;
-      
-      console.log(loopTot);
-      loopTot = 0;
-      
+    
       return webix.i18n.priceFormat(total);
     };
     loop--;
-    
   	return total;
 };
 
