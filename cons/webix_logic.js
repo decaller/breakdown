@@ -237,3 +237,99 @@ function childTotal(item) {
   	return total;
 };
 
+
+var loop = 0;
+function sumTotal(item) {
+  	loop++;
+    var records = item.mtw;
+    var total = 0;
+    if(records)
+   	 	for (var i=0; i < records.length ; ++i) 
+    	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
+    if(loop == 1){
+      loop = 0;
+      
+      return webix.i18n.priceFormat(total);
+    };
+    loop--;
+  	return total;
+};
+
+function priceTotal(item) {
+  	loop++;
+    total = (sumTotal(item) + childTotal(item))*item.br_index;
+    if(loop ==  1){
+      loop = 0;
+  
+      return webix.i18n.priceFormat(total);
+    }
+    loop--;
+    return total;
+};
+
+function childTotal(item) {
+  	loop++;
+  	var total = 0;
+
+  	
+  	if($$("treetable_main_breakdown").isBranch(item.id)) 
+      $$("treetable_main_breakdown").data.eachChild(item.id,function(obj){
+        total += priceTotal(obj);
+      });
+  	if(loop == 1){
+      loop = 0;
+    
+      return webix.i18n.priceFormat(total);
+    };
+    loop--;
+  	return total;
+};
+
+
+var loop_search = 0;
+function sumTotal_search(item) {
+  	loop_search++;
+    var records = item.mtw;
+    var total = 0;
+    if(records)
+   	 	for (var i=0; i < records.length ; ++i) 
+    	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
+    if(loop_search == 1){
+      loop_search = 0;
+      
+      return webix.i18n.priceFormat(total);
+    };
+    loop_search--;
+  	return total;
+};
+
+function priceTotal_search(item) {
+  	loop_search++;
+    total = (sumTotal_search(item) + childTotal_search(item))*item.br_index;
+    if(loop_search ==  1){
+      loop_search = 0;
+  
+      return webix.i18n.priceFormat(total);
+    }
+    loop_search--;
+    return total;
+};
+
+function childTotal_search(item) {
+  	loop_search++;
+  	var total = 0;
+
+  	
+  	if($$("treetable_search_breakdown").isBranch(item.id)) 
+      $$("treetable_search_breakdown").data.eachChild(item.id,function(obj){
+        total += priceTotal_search(obj);
+      });
+  	if(loop_search == 1){
+      loop_search = 0;
+    
+      return webix.i18n.priceFormat(total);
+    };
+    loop_search--;
+  	return total;
+};
+

@@ -32,6 +32,7 @@ var view_main_breakdown__project_breakdown =
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
+        { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_breakdown'></span>" }
       ],
       view : "treetable",
       resizeColumn : true,
@@ -175,7 +176,7 @@ var view_main_breakdown__breakdown_cart =
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
-        { id : "br_add",  header : "", fillspace : 0.1  }
+        { id : "br_delete",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-times delete_breakdown'></span>" }
       ],
       view : "treetable",
       id:"treetable_breakdown_cart",
@@ -213,6 +214,7 @@ var view_main_breakdown__mtw_cart =
         { id : "mtw_index", header : "Index", fillspace : 0.7 },
         { id : "mtw_unit", header : "Unit", fillspace : 1 },
         { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
+        { id : "mtw_delete",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-times delete_mtw'></span>" }
       ],
       drag : true
     }
