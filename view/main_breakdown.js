@@ -12,12 +12,17 @@ var view_main_breakdown__project_breakdown =
         {view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
+        {view : "button", label : "export", click: function (){ webix.toExcel($$("treetable_main_breakdown"));}},
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35},
         { click : show_breakdown_cart, view : "button", type:"iconButtonTop", icon : "shopping-cart", width : 35},
         { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 35}
-      ]
+      ],
+      
+      
     }
+    
+  
     ,
     {
       columns : [
@@ -53,6 +58,7 @@ var view_main_breakdown__project_breakdown =
         }
       }
     }
+    
   ]
 };
 
@@ -131,7 +137,7 @@ var view_main_breakdown__breakdown_details =
                   { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 },
                   { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
                   { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" },
-                  { editor : "text", id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
+                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
                 ],
                   on: {
                     onAfterEditStop: function () {

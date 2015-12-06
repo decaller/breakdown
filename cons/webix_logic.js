@@ -1,6 +1,6 @@
 var logic ={
 	init: function(){
-
+  
     webix.i18n.setLocale("ind-IND");
       
     $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
@@ -67,21 +67,7 @@ var logic ={
     
 }
     
-    /**$$('treetable_search_breakdown').on_click.add_breakdown=function(e,id,trg){
-      var copy = $$('treetable_search_breakdown').getItem(id);
-      copy.id = webix.uid();
-      $$('treetable_breakdown_cart').add(copy);
-      webix.message(copy.br_item + ' added to breakdown cart');
-      
-      if($$("treetable_search_breakdown").isBranch(id)){
-        $$("treetable_search_breakdown").data.eachChild(id, function(obj){
-          obj.id = webix.uid();
-          $$("treetable_breakdown_cart").add(obj, 0, copy.id);
-        });
-      }
-      
-      return false;
-    };**/
+
     
     $$('datatable_search_mtw').on_click.add_mtw=function(e,id,trg){
       var copy = $$('datatable_search_mtw').getItem(id);
@@ -147,6 +133,7 @@ var logic ={
     $$('treetable_main_breakdown').refresh();
     $$('treetable_main_breakdown').select('root');
     $$('treetable_main_breakdown').isSelected('root');
+
 	}
 };
 
