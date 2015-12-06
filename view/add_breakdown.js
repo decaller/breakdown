@@ -18,7 +18,7 @@ var view_add_breakdown__search =
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
-        { id : "br_add",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-plus add_breakdown'></span>" }
+        { id : "br_copy",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-plus add_breakdown'></span>" }
       ],
       view : "treetable",
       id : "treetable_search_breakdown",
