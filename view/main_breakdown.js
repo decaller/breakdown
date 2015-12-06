@@ -9,31 +9,30 @@ var view_main_breakdown__project_breakdown =
       borderless : true,
    
       elements : [
-        {view: "icon", icon: "bars",
-           click: function(){
-							
-								$$("menu").show();
-							
-           }
-        },
+        {view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
         { label : "Project's Breakdown", view : "label", width : 300 },
         { view : "spacer" },
+        {view : "button", label : "export", click: function (){ webix.toExcel($$("treetable_main_breakdown"));}},
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35},
         { click : show_breakdown_cart, view : "button", type:"iconButtonTop", icon : "shopping-cart", width : 35},
         { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 35}
-      ]
+      ],
+      
+      
     }
+    
+  
     ,
     {
       columns : [
-        {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
-        { editor : "text", id : "br_index", header : "Index" , fillspace : 1 },
-        { editor : "text", id : "br_unit", header : "Unit", fillspace : 0.8},
-        { id : "br_child_prc", template: childTotal, header : "ChildPrice", fillspace : 1.5},
-        { id : "br_mtw_prc", template: sumTotal, header : "MTWPrice", fillspace : 1.5 },
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
+        { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text"},
+        { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text"},
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
-        { id : "br_menu",  header : "", fillspace : 0.1  }
+        { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_breakdown'></span>" }
       ],
       view : "treetable",
       resizeColumn : true,
@@ -48,12 +47,20 @@ var view_main_breakdown__project_breakdown =
       drag : true,
       math : true,
       
+      onContext:{},
+      
       on : {
-        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
-        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();}
         
+        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
+        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();},
+        onBeforeDrop:function(context){
+            context.parent = context.target;    //drop as child
+            context.index = -1;                 //as last child
+            
+        }
       }
     }
+    
   ]
 };
 
@@ -75,28 +82,17 @@ var view_main_breakdown__breakdown_details =
       scroll : "y",
       body : {
         rows : [
-          {view:"text", value:"" },
           {
-
-
-          cols : [
+            view:"property", 
+            id:"item_properties",
             
-              { view:"textarea" , gravity:5 },
-        
-              {
-                view : "carousel",
-                css : "webix_dark",
-               
-                gravity:5,
-                cols : [
-                  { view : "template", template : "View A" },
-                  { view : "template", template : "View B" }
-                ]
-                
-              }
-            ],
-          height : 200
-            
+            complexData : true,
+            elements : [
+              { id : "br_item", type:"text", label : "Name"},
+              { id : "br_index", type:"text", label : "Index"},
+              { id : "br_unit", type:"text", label : "Unit"},
+              
+            ]
           },
           {view:"resizer"},
           {
@@ -119,7 +115,8 @@ var view_main_breakdown__breakdown_details =
               },
               {
                 view : "datatable",
-                minHeight : 300,
+               
+                height:400,
                 id : "datatable_mtw_main_breakdown",
                 math: true,
                 editable:true,
@@ -134,10 +131,14 @@ var view_main_breakdown__breakdown_details =
                   { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 },
                   { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
                   { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" },
-                  { editor : "text", id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
+                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
                 ],
                   on: {
                     onAfterEditStop: function () {
+                      $$("datatable_mtw_main_breakdown").refreshColumns();
+                      $$("treetable_main_breakdown").refresh();
+                    },
+                    onAfterDrop: function(){
                       $$("datatable_mtw_main_breakdown").refreshColumns();
                       $$("treetable_main_breakdown").refresh();
                     }
@@ -169,15 +170,17 @@ var view_main_breakdown__breakdown_cart =
     
     {
       columns : [
-        { id : "cart_item", header : "Item", fillspace : 2.5, template : "{common.treetable()} #cart_item#"},
-        { id : "cart_index", header : "Index", fillspace : 0.7 },
-        { id : "cart_unit", header : "Unit", fillspace : 1 },
-        { id : "cart_child", header : "Child", fillspace : 1 },
-        { id : "cart_mtw", header : "MTW", fillspace : 1 },
-        { id : "cart_total", header : "Total Price", fillspace : 1.5 },
-        { id : "cart_menu", header : "", fillspace : 0.2 }
+        {id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
+        { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
+        { id : "br_delete",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-times delete_breakdown'></span>" }
       ],
       view : "treetable",
+      id:"treetable_breakdown_cart",
+      select : "row",
       drag : true
     }
   ],
@@ -200,18 +203,18 @@ var view_main_breakdown__mtw_cart =
       ]
     },
     {
-      
+      id : "datatable_cart_mtw",
       autoConfig : true,
       view : "datatable",
       borderless : true,
-      
+      select : "row", 
       columns : [
-        { id : "mc_sku", header : "SKU", fillspace : 1 },
-        { id : "mc_item", header : "Item", fillspace : 2 },
-        { id : "mc_index", header : "Index", fillspace : 0.7 },
-        { id : "mc_unit", header : "Unit", fillspace : 1 },
-        { id : "mc_unitprice", header : "Unit Price", fillspace : 1.5 },
-        { id : "mc_totalprice", header : "Total Price", fillspace : 1.8 }
+        { id : "mtw_sku", header : "SKU", fillspace : 1 },
+        { id : "mtw_item", header : "Item", fillspace :2 },
+        { id : "mtw_index", header : "Index", fillspace : 0.7 },
+        { id : "mtw_unit", header : "Unit", fillspace : 1 },
+        { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
+        { id : "mtw_delete",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-times delete_mtw'></span>" }
       ],
       drag : true
     }

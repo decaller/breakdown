@@ -12,8 +12,8 @@ var view_add_mtw__search =
       ]
     },
     {
-      url : "demo->table",
-      
+      select:"row",
+      id : "datatable_search_mtw",
       view : "datatable",
       id : "datatable_search_mtw",
       data : search_mtw_data,
@@ -23,7 +23,7 @@ var view_add_mtw__search =
         { id : "mtw_index", header : "Index", fillspace : 0.7 },
         { id : "mtw_unit", header : "Unit", fillspace : 1 },
         { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 },
-                  
+        { id : "mtw_add",  header : "", fillspace : 0.5, template:"<span class='webix_icon fa-plus add_mtw'></span>" }          
       ]
     }
   ]
@@ -48,42 +48,10 @@ var view_add_mtw__search_details =
       scroll : "y",
       body : {
         rows : [
-          {
-            view : "carousel",
-            css : "webix_dark",
-            cols : [
-              { view : "template", template : "View A" },
-              { view : "template", template : "View B" }
-            ],
-            height : 200
-          },
-          {
-            type : "line",
-            rows : [
-              {
-                view : "toolbar",
-                elements : [
-                  { label : "Dimension", view : "label" },
-             
-                ]
-              },
-              {
-                
-                
-                view : "datatable",
-                navigation : false,
-                height : 250,
-                columns : [
-                  { id : "dt_dimension", header : "Dimension", fillspace : 1.2},
-                  { id : "dt_index", header : "Index", fillspace : 1},
-                  { id : "dt_unit", header : "Unit", fillspace : 1},
-                  { id : "dt_source", header : "Source", fillspace : 1.2},
-                  { id : "dt_use", header : "Use", fillspace : 0.5 }
-                ],
-                drag : false
-              }
-            ]
-          },
+          {view:"text", value:"" , readonly: true},
+          
+          {view:"resizer"},
+          
           
         ]
       }

@@ -1,12 +1,19 @@
 var logic ={
 	init: function(){
-
+  
     webix.i18n.setLocale("ind-IND");
       
       $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
         this.data.importData(obj.mtw, true);
   		$$("datatable_mtw_main_breakdown").refreshColumns();
+    });
+    $$("item_properties").bind( $$("treetable_main_breakdown"));
+    
+    $$("datatable_mtw_search_breakdown").bind( $$("treetable_search_breakdown"), "$data", function(obj, source){
+      if (!obj) return this.clearAll();
+      this.data.importData(obj.mtw, true);
+    $$("datatable_mtw_search_breakdown").refreshColumns();
     });
     
     webix.UIManager.addHotKey("any", function(view){
@@ -21,42 +28,90 @@ var logic ={
     }, $$("treetable_main_breakdown")); 	
 
     $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
-      $$("treetable_search_breakdown").filter("#br_search_item#",this.getValue());
+      $$("treetable_search_breakdown").filter("#br_item#",this.getValue());
     });
 
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
 
+
+    $$("treetable_search_breakdown").refresh();
+    $$("treetable_search_breakdown").on_click.add_breakdown=function(e,id,trg){
+	      
+      copyChild(0,id);
+      webix.message($$('treetable_search_breakdown').getItem(id).br_item + ' added to breakdown cart');
+      
+      //refresh
+      $$('treetable_search_breakdown').refresh();
+      $$('treetable_breakdown_cart').refresh();       
+
+      return false;
+    };
+    
+   function copyChild(parentId,id){
+
+    var item = $$('treetable_search_breakdown').getItem(id);
+    
+    var copy = webix.copy(item);
+    copy.id = webix.uid();
+    
+    $$('treetable_breakdown_cart').add(copy,0,parentId);
+    
+
+    
+    if($$("treetable_search_breakdown").isBranch(id)){
+        $$("treetable_search_breakdown").data.eachChild(id, function(obj){
+    		
+    	  copyChild(copy.id,obj.id);	
+        
+    	  
+          
+        });
+	}
+    
+}
+    
+
+    
+    $$('datatable_search_mtw').on_click.add_mtw=function(e,id,trg){
+      var copy = $$('datatable_search_mtw').getItem(id);
+      $$('datatable_cart_mtw').add(copy);
+      webix.message(copy.mtw_item + ' added to breakdown cart');
+      return false;
+    };
+
     webix.ui({
-			view: "sidemenu",
-			id: "menu",
-			width: 200,
-			position: "left",
-			body:{
-
-				view:"list",
-				borderless:true,
-				scroll: false,
-
-				template: "<span class='webix_icon fa-#icon#'></span> #value#",
-				data:[
-					{id: 1, value: "Your Name", icon: "user"},
-					{id: 2, value: "Home", icon: "home"},
-					{id: 3, value: "Share", icon: "share-alt"},
-					{id: 4, value: "Help", icon: "question-circle"},
-					{id: 5, value: "Settings", icon: "cog"},
-          {id: 6, value: "Sign Out", icon: "sign-out"}
-				],
-				select:true,
-				type:{
-					height: 40
+				view:"contextmenu",
+        id:"contextmenu_breakdown",
+				data:["Delete"],
+			  master: $$('treetable_main_breakdown'),
+				on:{
+					onItemClick:function(id){
+            var context = this.getContext();
+            var listId = context.id;
+						webix.message($$("treetable_main_breakdown").getItem(listId).br_item + " deleted");
+            $$("treetable_main_breakdown").remove(listId);
+					}
 				}
-			}
-		});
+			});
+    webix.ui({
+				view:"contextmenu",
+        id:"contextmenu_mtw",
+				data:["Delete"],
+			  master: $$('datatable_mtw_main_breakdown'),
+				on:{
+					onItemClick:function(id){
+            var context = this.getContext();
+            var listId = context.id;
+						webix.message($$("datatable_mtw_main_breakdown").getItem(listId).mtw_item + " deleted");
+            $$("datatable_mtw_main_breakdown").remove(listId);
+					}
+				}
+			});
     
     webix.ui({
 			view: "sidemenu",
-			id: "menu",
+			id: "menu_side",
 			width: 200,
 			position: "left",
 			body:{
@@ -80,6 +135,10 @@ var logic ={
 				}
 			}
 		});
+
+    $$('treetable_main_breakdown').refresh();
+    $$('treetable_main_breakdown').select('root');
+    $$('treetable_main_breakdown').isSelected('root');
 
 	}
 };
@@ -141,7 +200,7 @@ function sumTotal(item) {
     	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
     if(loop == 1){
       loop = 0;
-      console.log(loop);
+      
       return webix.i18n.priceFormat(total);
     };
     loop--;
@@ -153,7 +212,7 @@ function priceTotal(item) {
     total = (sumTotal(item) + childTotal(item))*item.br_index;
     if(loop ==  1){
       loop = 0;
-      console.log(loop);
+  
       return webix.i18n.priceFormat(total);
     }
     loop--;
@@ -171,10 +230,106 @@ function childTotal(item) {
       });
   	if(loop == 1){
       loop = 0;
-      console.log(loop);
+    
       return webix.i18n.priceFormat(total);
     };
     loop--;
+  	return total;
+};
+
+
+var loop = 0;
+function sumTotal(item) {
+  	loop++;
+    var records = item.mtw;
+    var total = 0;
+    if(records)
+   	 	for (var i=0; i < records.length ; ++i) 
+    	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
+    if(loop == 1){
+      loop = 0;
+      
+      return webix.i18n.priceFormat(total);
+    };
+    loop--;
+  	return total;
+};
+
+function priceTotal(item) {
+  	loop++;
+    total = (sumTotal(item) + childTotal(item))*item.br_index;
+    if(loop ==  1){
+      loop = 0;
+  
+      return webix.i18n.priceFormat(total);
+    }
+    loop--;
+    return total;
+};
+
+function childTotal(item) {
+  	loop++;
+  	var total = 0;
+
+  	
+  	if($$("treetable_main_breakdown").isBranch(item.id)) 
+      $$("treetable_main_breakdown").data.eachChild(item.id,function(obj){
+        total += priceTotal(obj);
+      });
+  	if(loop == 1){
+      loop = 0;
+    
+      return webix.i18n.priceFormat(total);
+    };
+    loop--;
+  	return total;
+};
+
+
+var loop_search = 0;
+function sumTotal_search(item) {
+  	loop_search++;
+    var records = item.mtw;
+    var total = 0;
+    if(records)
+   	 	for (var i=0; i < records.length ; ++i) 
+    	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
+    if(loop_search == 1){
+      loop_search = 0;
+      
+      return webix.i18n.priceFormat(total);
+    };
+    loop_search--;
+  	return total;
+};
+
+function priceTotal_search(item) {
+  	loop_search++;
+    total = (sumTotal_search(item) + childTotal_search(item))*item.br_index;
+    if(loop_search ==  1){
+      loop_search = 0;
+  
+      return webix.i18n.priceFormat(total);
+    }
+    loop_search--;
+    return total;
+};
+
+function childTotal_search(item) {
+  	loop_search++;
+  	var total = 0;
+
+  	
+  	if($$("treetable_search_breakdown").isBranch(item.id)) 
+      $$("treetable_search_breakdown").data.eachChild(item.id,function(obj){
+        total += priceTotal_search(obj);
+      });
+  	if(loop_search == 1){
+      loop_search = 0;
+    
+      return webix.i18n.priceFormat(total);
+    };
+    loop_search--;
   	return total;
 };
 
