@@ -49,27 +49,7 @@ var view_add_mtw__search_details =
       body : {
         rows : [
           {view:"text", value:"" , readonly: true},
-          {
-          cols : [
-            
-              { view:"textarea" , gravity:5, readonly: true},
-        
-              {
-                view : "carousel",
-                css : "webix_dark",
-                
-               
-                gravity:5,
-                cols : [
-                  { view : "template", template : "View A" },
-                  { view : "template", template : "View B" }
-                ]
-                
-              }
-            ],
-          height : 200
-            
-          },
+          
           {view:"resizer"},
           
           
