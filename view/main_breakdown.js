@@ -78,9 +78,7 @@ var view_main_breakdown__breakdown_details =
     },
     
     {
-      view : "scrollview",
-      scroll : "y",
-      body : {
+        type : "line",
         rows : [
           {
             view:"property", 
@@ -113,6 +111,7 @@ var view_main_breakdown__breakdown_details =
                   { click : show_mtw_search, view : "button", type : "iconButtonTop", icon : "search", width : 35 }
                 ]
               },
+              
               {
                 view : "datatable",
                
@@ -147,7 +146,7 @@ var view_main_breakdown__breakdown_details =
             ]
           }
         ]
-      }
+      
     }
   ]
 };

@@ -44,30 +44,19 @@ var view_add_breakdown__search_details =
       ]
     },
     {
-      view : "scrollview",
-      scroll : "y",
-      body : {
+        type : "line",
         rows : [
-         {view:"text", value:"" , readonly: true},
-          {
-          cols : [
+         {
+            view:"property", 
+            id:"item_search_properties",
             
-              { view:"textarea" , gravity:5 , readonly: true},
-        
-              {
-                view : "carousel",
-                css : "webix_dark",
-               
-                gravity:5,
-                cols : [
-                  { view : "template", template : "View A" },
-                  { view : "template", template : "View B" }
-                ]
-                
-              }
-            ],
-          height : 200
-            
+            complexData : true,
+            elements : [
+              { id : "br_item", type:"text", label : "Name"},
+              { id : "br_index", type:"text", label : "Index"},
+              { id : "br_unit", type:"text", label : "Unit"},
+              
+            ]
           },
           {view:"resizer"},
           {
@@ -76,7 +65,7 @@ var view_add_breakdown__search_details =
               {
                 view : "toolbar",
                 elements : [
-                  { label : "Items", view : "label" },
+                  { label : "Materials, Tools, Workers", view : "label" },
                   
                 ]
               },
@@ -84,7 +73,7 @@ var view_add_breakdown__search_details =
                 
                 autoConfig : true,
                 view : "datatable",
-                minHeight : 300,
+                minHeight : 400,
                 id : "datatable_mtw_search_breakdown",
                 math: true,
                 select:"row",
@@ -102,7 +91,7 @@ var view_add_breakdown__search_details =
             ]
           }
         ]
-      }
+      
     }
   ]
 };

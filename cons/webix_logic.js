@@ -1,8 +1,9 @@
 var logic ={
 	init: function(){
-  
+    //set webix logic
     webix.i18n.setLocale("ind-IND");
       
+    //binding main breakdown  
       $$("datatable_mtw_main_breakdown").bind( $$("treetable_main_breakdown"), "$data", function(obj, source){
         if (!obj) return this.clearAll();
         this.data.importData(obj.mtw, true);
@@ -10,11 +11,15 @@ var logic ={
     });
     $$("item_properties").bind( $$("treetable_main_breakdown"));
     
+    //binding search breakdown
     $$("datatable_mtw_search_breakdown").bind( $$("treetable_search_breakdown"), "$data", function(obj, source){
       if (!obj) return this.clearAll();
       this.data.importData(obj.mtw, true);
     $$("datatable_mtw_search_breakdown").refreshColumns();
     });
+    $$("item_search_properties").bind( $$("treetable_search_breakdown"));
+    
+    //binding search mtw
     
     webix.UIManager.addHotKey("any", function(view){
 				var pos = view.getSelectedId();
