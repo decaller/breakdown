@@ -15,10 +15,10 @@ var view_add_breakdown__search =
         { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
         { id : "br_index", header : "Index" , fillspace : 1 , editor : "text"},
         { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
-        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
-        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal },
-        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
-        { id : "br_add",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-plus add_breakdown'></span>" }
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal_search},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal_search},
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal_search},
+        { id : "br_copy",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-plus add_breakdown'></span>" }
       ],
       view : "treetable",
       id : "treetable_search_breakdown",

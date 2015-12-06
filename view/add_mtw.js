@@ -15,6 +15,8 @@ var view_add_mtw__search =
       select:"row",
       id : "datatable_search_mtw",
       view : "datatable",
+      id : "datatable_search_mtw",
+      data : search_mtw_data,
       columns : [
         { id : "mtw_sku", header : "SKU", fillspace : 1 },
         { id : "mtw_item", header : "Item", fillspace :2 },
@@ -47,27 +49,7 @@ var view_add_mtw__search_details =
       body : {
         rows : [
           {view:"text", value:"" , readonly: true},
-          {
-          cols : [
-            
-              { view:"textarea" , gravity:5, readonly: true},
-        
-              {
-                view : "carousel",
-                css : "webix_dark",
-                
-               
-                gravity:5,
-                cols : [
-                  { view : "template", template : "View A" },
-                  { view : "template", template : "View B" }
-                ]
-                
-              }
-            ],
-          height : 200
-            
-          },
+          
           {view:"resizer"},
           
           
