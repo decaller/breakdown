@@ -31,6 +31,9 @@ var view_add_breakdown__search =
         onBeforeDragIn:function(context){
           return false;
         },
+        onBeforeSelect:function(context){
+          $$("treetable_main_breakdown").clearSelection();
+        },
       }
       }
   ]

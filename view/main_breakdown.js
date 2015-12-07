@@ -21,7 +21,7 @@ var view_main_breakdown__project_breakdown =
     },
     {
       columns : [
-        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#"},
         { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text" , sort:"string"},
         { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal, sort:"int"},
@@ -53,7 +53,8 @@ var view_main_breakdown__project_breakdown =
         onBeforeDragIn:function(context){
            if (!(context.from.config.id == "treetable_search_breakdown")) return false;
          },
-        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
+         
+        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns();$$("treetable_search_breakdown").clearSelection();},
         onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();},
         onBeforeDrop:function(context){
             context.parent = context.target;    //drop as child
