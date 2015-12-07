@@ -14,8 +14,8 @@ var view_main_breakdown__project_breakdown =
         { view : "spacer" },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35},
-        { click : open_search, view : "toggle", type : "iconButtonTop", icon : "search", width : 35},
-        { click : open_details, view : "toggle", type : "iconButtonTop", icon : "info", width : 35}
+        { click : open_search,id:"open_search", view : "toggle", type : "iconButtonTop", icon : "search", width : 35},
+        { click : open_details,id:"open_details", view : "toggle", type : "iconButtonTop", icon : "info", width : 35}
       ],
       
     },
@@ -71,6 +71,12 @@ var view_main_breakdown__breakdown_details =
       body : {
         rows : [
           {
+                view : "toolbar",
+                elements : [
+                  { label : "Details", view : "label" },
+                ]
+              },
+          {
             view:"property", 
             id:"item_properties",
             
@@ -91,7 +97,6 @@ var view_main_breakdown__breakdown_details =
                 view : "toolbar",
                 elements : [
                   { label : "Materials, Tools, Workers", view : "label" },
-                  { click : show_mtw_search, view : "button", type : "iconButtonTop", icon : "search", width : 35 }
                 ]
               },
               {

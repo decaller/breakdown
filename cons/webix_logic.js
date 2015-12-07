@@ -54,6 +54,7 @@ var logic ={
     //disable resizer onf first (no search_pane)
     $$("details-search_resizer").disable();
     $$("breakdown_resizer").disable();
+       
   }  
 }; //logic done
 

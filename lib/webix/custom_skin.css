@@ -7246,3 +7246,7 @@ label.webix_required:after {
 }
 
 /** Accordion Search Button Hide **/
+
+.smooth .webix_accordionitem {
+   transition: width 0.5s;
+}
