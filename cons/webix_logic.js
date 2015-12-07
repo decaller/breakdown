@@ -49,18 +49,71 @@ var logic ={
     //select root
     $$('treetable_main_breakdown').select('root');
 
+
+    //VIEW CONFIG
+    //disable resizer onf first (no search_pane)
+    $$("details-search_resizer").disable();
+    $$("breakdown_resizer").disable();
   }  
 }; //logic done
 
 //BUTTON FUNCTION
 //show search breakdown
-function search_breakdown(){
+function show_breakdown_search(){
     $$("breakdown_search").show();
 };
 //show search mtw
 function show_mtw_search(){
     $$("mtw_search").show();
 };
+//toggle collapsed search accordion
+function open_search(){
+    if($$("search_pane").config.collapsed){
+        $$('search_pane').expand();
+        $$("breakdown_resizer").enable();
+        
+        if($$("details_pane").config.collapsed){
+          $$("details-search_resizer").disable();  
+        } else {
+          $$("details-search_resizer").enable();
+        }
+        
+    } else {
+        $$('search_pane').collapse();
+     
+        if(!$$("details_pane").config.collapsed){
+          $$("details-search_resizer").disable();
+          $$("breakdown_resizer").enable();  
+        } else {
+          $$("breakdown_resizer").disable();
+        }
+        
+    }
+}
+//toggle collapsed details accordion
+function open_details(){
+    if($$("details_pane").config.collapsed){
+        $$('details_pane').expand();
+        $$("breakdown_resizer").enable();
+        
+        if($$("search_pane").config.collapsed){
+          $$("details-search_resizer").disable();  
+        } else {
+          $$("details-search_resizer").enable();
+        }
+        
+    } else {
+        $$('details_pane').collapse();
+     
+        if(!$$("search_pane").config.collapsed){
+          $$("details-search_resizer").disable();
+          $$("breakdown_resizer").enable();  
+        } else {
+          $$("breakdown_resizer").disable();
+        }
+        
+    }
+}
 
 //TREE FUNCTION
 //add siblings item

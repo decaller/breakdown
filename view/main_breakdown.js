@@ -14,14 +14,11 @@ var view_main_breakdown__project_breakdown =
         { view : "spacer" },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35},
-        { click : search_breakdown, view : "button", type : "iconButtonTop", icon : "search", width : 35}
+        { click : open_search, view : "toggle", type : "iconButtonTop", icon : "search", width : 35},
+        { click : open_details, view : "toggle", type : "iconButtonTop", icon : "info", width : 35}
       ],
       
-      
-    }
-    
-  
-    ,
+    },
     {
       columns : [
         { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
