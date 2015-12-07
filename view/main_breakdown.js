@@ -41,7 +41,12 @@ var view_main_breakdown__project_breakdown =
       navigation:true,
       drag : true,
       math : true,
-      
+      onClick:{
+       "menu_breakdown":function(e, id, node){
+       	$$("contextmenu_breakdown").show(e.target);
+         $$("contextmenu_breakdown").$context = { obj:this, id:id };
+        }
+       },
       onContext:{},
       
       on : {
@@ -117,8 +122,15 @@ var view_main_breakdown__breakdown_details =
                   { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 },
                   { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
                   { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" },
-                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}}
+                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}},
+                  { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
                 ],
+                onClick:{
+                    "menu_mtw":function(e, id, node){
+                      $$("contextmenu_mtw").show(e.target);
+                      $$("contextmenu_mtw").$context = { obj:this, id:id };
+                      }
+                    },
                   on: {
                     onAfterEditStop: function () {
                       $$("datatable_mtw_main_breakdown").refreshColumns();

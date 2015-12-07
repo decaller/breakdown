@@ -2,15 +2,13 @@
 var context_menu_breakdown = {
     view:"contextmenu",
     id:"contextmenu_breakdown",
-    data:["Delete"],
-    master: $$('treetable_main_breakdown'),
-    on:{
-        onItemClick:function(id){
-        var context = this.getContext();
-        var listId = context.id;
-        webix.message($$("treetable_main_breakdown").getItem(listId).br_item + " deleted");
-        $$("treetable_main_breakdown").remove(listId);
-        }
+    data:["Remove"],
+    click:function(id){ 
+        var context = this.$context;
+        var item = $$('treetable_main_breakdown').getItem(context.id);
+        webix.message(id+" on row "+item.br_item);
+        if(id === "Remove" )
+            context.obj.remove(context.id);
     }
 };
     
@@ -18,15 +16,13 @@ var context_menu_breakdown = {
 var context_menu_mtw = {
     view:"contextmenu",
     id:"contextmenu_mtw",
-    data:["Delete"],
-    master: $$('datatable_mtw_main_breakdown'),
-    on:{
-        onItemClick:function(id){
-        var context = this.getContext();
-        var listId = context.id;
-        webix.message($$("datatable_mtw_main_breakdown").getItem(listId).mtw_item + " deleted");
-        $$("datatable_mtw_main_breakdown").remove(listId);
-        }
+    data:["Remove"],
+    click:function(id){ 
+        var context = this.$context;
+        var item = $$('datatable_mtw_main_breakdown').getItem(context.id);
+        webix.message(id+" on row "+item.mtw_item);
+        if(id === "Remove" )
+            context.obj.remove(context.id);
     }
 };
 
