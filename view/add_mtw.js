@@ -8,7 +8,7 @@ var view_add_mtw__search =
       borderless : true,
       elements : [
         { label : "Search", view : "search" , color : "white"},
-        { view : "button", click:show_breakdown_search,  type : "iconButtonTop", icon : "pagelines", width : 35},
+        { view : "button", click:show_breakdown_search,  type : "iconButtonTop", icon : "tree", width : 35},
       ]
     },
     {
