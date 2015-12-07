@@ -10,7 +10,7 @@ var view_main_breakdown__project_breakdown =
    
       elements : [
         { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
-        { label : "Project's Breakdown", view : "label", width : 300 },
+        { label : "Project's Breakdown", view : "label" },
         { view : "spacer" },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35},
@@ -50,14 +50,22 @@ var view_main_breakdown__project_breakdown =
       onContext:{},
       
       on : {
-        onBeforeDragIn:function(config, id){
-          
-        },
+        onBeforeDragIn:function(context){
+           if (!(context.from.config.id == "treetable_search_breakdown")) return false;
+         },
         onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
         onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();},
         onBeforeDrop:function(context){
             context.parent = context.target;    //drop as child
             context.index = -1;                 //as last child
+            if (!context.target || context.target.row == "root"){
+             context.index = -1;
+             context.parent = context.target = "root";
+            };
+            var details = { parent:context.parent,newId:webix.uid() };
+            context.from.copy( context.source, context.index, context.to, details);
+            return false;
+            
             
         }
       }
@@ -124,7 +132,7 @@ var view_main_breakdown__breakdown_details =
                   { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
                   { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
                   { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
-                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}},
+                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
                   { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
                 ],
                 onClick:{
@@ -134,6 +142,9 @@ var view_main_breakdown__breakdown_details =
                       }
                     },
                   on: {
+                    onBeforeDragIn:function(context){
+                      if (!(context.from.config.id == "datatable_search_mtw")) return false;
+                    },
                     onAfterEditStop: function () {
                       $$("datatable_mtw_main_breakdown").refreshColumns();
                       $$("treetable_main_breakdown").refresh();
@@ -141,6 +152,13 @@ var view_main_breakdown__breakdown_details =
                     onAfterDrop: function(){
                       $$("datatable_mtw_main_breakdown").refreshColumns();
                       $$("treetable_main_breakdown").refresh();
+                    },
+                    onBeforeDrop:function(context){
+                        var details = { parent:context.parent,newId:webix.uid() };
+                        context.from.copy( context.source, context.index, context.to, details);
+                        return false;
+                        
+                        
                     }
                     }            
               }

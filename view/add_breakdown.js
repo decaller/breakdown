@@ -17,8 +17,7 @@ var view_add_breakdown__search =
         { id : "br_unit", header : "Unit", fillspace : 0.8, editor : "text"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal_search, sort:"int"},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal_search, sort:"int"},
-        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal_search, sort:"int"},
-        { id : "br_copy",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-plus add_breakdown'></span>" }
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal_search, sort:"int"}
       ],
       view : "treetable",
       id : "treetable_search_breakdown",
@@ -27,7 +26,12 @@ var view_add_breakdown__search =
       resizeColumn : true,
       borderless : true,
       math : true,
-      drag : true
+      drag : true,
+      on: {
+        onBeforeDragIn:function(context){
+          return false;
+        },
+      }
       }
   ]
   
