@@ -233,7 +233,7 @@ x\:ui {
   position: relative;
   z-index: 2;
   font-family: Roboto, Arial;
-  color: #757575;
+  color: #757575 !important;
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
@@ -7221,8 +7221,32 @@ label.webix_required:after {
 }
 
 /** Custom **/
-
+/** Search Label Fix **/
 .webix_inp_top_label {
   color : #757575;
   font-size: 14px;
+}
+
+/** Accordion Arrow Fix **/
+.webix_accordionitem .webix_accordionitem_header .webix_accordionitem_button:before{
+  content: "";
+}
+.webix_accordionitem .webix_accordionitem_header.collapsed .webix_accordionitem_button:before{
+  content: "";
+}
+.webix_accordionitem.horizontal.collapsed:last-child>.webix_accordionitem_header .webix_accordionitem_button:before{
+  content: "";
+}
+.webix_accordionitem.horizontal:last-child>.webix_accordionitem_header .webix_accordionitem_button:before{
+  content: "";
+}
+.webix_accordionitem.horizontal > .webix_accordionitem_header .webix_accordionitem_button{
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAQMAAAC3/F3+AAAABlBMVEUAAABUVFR8AzIeAAAAAXRSTlMAQObYZgAAABZJREFUCNdjgIN6BgY7BgYZBgYOhBgAEAgA4ojunUoAAAAASUVORK5CYII=) !important;
+  top:20px;
+}
+
+/** Accordion Search Button Hide **/
+
+.smooth .webix_accordionitem {
+   transition: width 0.5s;
 }

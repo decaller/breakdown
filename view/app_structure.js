@@ -1,49 +1,34 @@
 
 var app_structure = 
 {
-  view : "multiview", 
-  keepViews : true,
-  animate : { direction : "top"},
-  cells : [
+  view : "accordion", 
+  multi:true,
+  borderless:true,
+  css:"smooth",
+  cols : [
+    {body:view_main_breakdown__project_breakdown},
+    {view:"resizer", id:"breakdown_resizer",borderless:true},
     {
-      id : "breakdown_main",
-      cols : [
-        {
+      header:"",
+      body:{
+      cols:[
+        {header: "",id:"search_pane" ,borderless:true,headerAltHeight:0,collapsed: true, css:"pane", body:
+          {
           view : "multiview",
+          borderless:true,
           keepViews : true,
-          animate : { direction : "right" },
           cells : [
-            view_main_breakdown__project_breakdown,
-            view_main_breakdown__mtw_cart
+            view_add_breakdown__search,
+            view_add_mtw__search
           ]
+          }
         },
-        { view : "resizer" },
-        {
-          view : "multiview",
-          keepViews : true,
-          animate : {  direction : "left" },
-          cells : [
-            view_main_breakdown__breakdown_details,
-            view_main_breakdown__breakdown_cart
-          ]
-        }
-      ]
-    },
-    {
-      id : "breakdown_search",
-      cols : [
-        view_add_breakdown__search ,
-        { view : "resizer" },
-        view_add_breakdown__search_details
-      ]
-    },
-    {
-      id : "mtw_search",
-      cols : [
-        view_add_mtw__search,
-        { view : "resizer" },
-        view_add_mtw__search_details
-      ]
+        {view:"resizer",borderless:true, id:"details-search_resizer"},
+        {header: "",id:"details_pane", css:"pane",borderless:true,headerAltHeight:0,collapsed: true, body: view_main_breakdown__breakdown_details}  
+    ]}
     }
-  ]
-};
+    ]
+          
+}
+        
+ 
