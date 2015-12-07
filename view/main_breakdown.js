@@ -22,11 +22,11 @@ var view_main_breakdown__project_breakdown =
     {
       columns : [
         { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
-        { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text"},
+        { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text" , sort:"string"},
         { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text"},
-        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal},
-        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal},
-        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal},
+        { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal, sort:"int"},
+        { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal, sort:"int"},
+        { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal , sort:"int"},
         { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_breakdown'></span>" }
       ],
       view : "treetable",
@@ -50,7 +50,9 @@ var view_main_breakdown__project_breakdown =
       onContext:{},
       
       on : {
-        
+        onBeforeDragIn:function(config, id){
+          
+        },
         onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns()},
         onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();},
         onBeforeDrop:function(context){
@@ -117,12 +119,12 @@ var view_main_breakdown__breakdown_details =
                 editmath:true,
                 drag : true,
                 columns : [
-                  { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 },
-                  { editor : "text", id : "mtw_item", header : "Item", fillspace :2 },
-                  { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 },
+                  { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
+                  { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
+                  { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
                   { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
-                  { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" },
-                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}},
+                  { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
+                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn"}},
                   { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
                 ],
                 onClick:{
