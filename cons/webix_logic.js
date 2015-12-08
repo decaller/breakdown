@@ -21,12 +21,17 @@ var logic ={
     $$("item_properties").bind( $$("treetable_search_breakdown"));
     
     //shortcut for main breakdown
-    //edit shortcut
+    //edit shortcut for treetable
     webix.UIManager.addHotKey("any", function(view){
 				var pos = view.getSelectedId();
 				view.editRow(pos);
-    }, $$("treetable_main_breakdown")); 
-	
+    }, $$("treetable_main_breakdown"));
+    //editshortcut for datatable 
+    webix.UIManager.addHotKey("any", function(view){
+				var pos = view.getSelectedId();
+				view.editRow(pos);
+    }, $$("datatable_mtw_main_breakdown")); 
+		
     //add open child
     webix.UIManager.addHotKey("=", function(view){
 				var pos = view.getSelectedId();

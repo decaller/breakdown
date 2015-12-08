@@ -113,6 +113,7 @@ var view_main_breakdown__breakdown_details =
             ]
           },
           {view:"resizer"},
+          {rows:[
             {
               view : "toolbar",
               elements : [
@@ -122,7 +123,7 @@ var view_main_breakdown__breakdown_details =
             {
               view : "datatable",
               
-              height:400,
+              minheight:300,
               id : "datatable_mtw_main_breakdown",
               math: true,
               editable:true,
@@ -173,5 +174,7 @@ var view_main_breakdown__breakdown_details =
                   }
                 }            
             }
+          ]}
+            
           ]  
 };
