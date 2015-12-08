@@ -50,7 +50,10 @@
                 
             });
 
-            
+            //prevent accidental refresh
+            $(window).bind('beforeunload', function(){
+                return '>>>>>Before You Go<<<<<<<<';
+            });
         </script>
     </body>
 </html>
