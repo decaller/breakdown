@@ -12,22 +12,22 @@ var view_main_breakdown__project_breakdown =
         { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
         { label : "Project's Breakdown", view : "label" },
         { view : "spacer" },
-        { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35},
-        { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35},
-        { click : open_search,id:"open_search", view : "toggle", type : "iconButtonTop", icon : "search", width : 35},
-        { click : open_details,id:"open_details", view : "toggle", type : "iconButtonTop", icon : "info", width : 35}
+        { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35, tooltip: "Add New Breakdown Item (Crtl + Up)"},
+        { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35, tooltip: "Add Breakdown Child (Ctrl + Down)"},
+        { click : open_search,id:"open_search", view : "toggle", type : "iconButtonTop", icon : "search", width : 35, tooltip:"Search an Item"},
+        { click : open_details,id:"open_details", view : "toggle", type : "iconButtonTop", icon : "info", width : 35, tooltip: "View Item Details"}
       ],
       
     },
     {
       columns : [
-        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#"},
-        { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text" , sort:"string"},
-        { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text"},
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
+        { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
+        { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal, sort:"int"},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal, sort:"int"},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal , sort:"int"},
-        { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_breakdown'></span>" }
+        { id : "br_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_breakdown'></span>", tooltip : "Row Menu" }
       ],
       view : "treetable",
       resizeColumn : true,
@@ -41,6 +41,7 @@ var view_main_breakdown__project_breakdown =
       navigation:true,
       drag : true,
       math : true,
+      tooltip : true,
       onClick:{
        "menu_breakdown":function(e, id, node){
        	$$("contextmenu_breakdown").show(e.target);
