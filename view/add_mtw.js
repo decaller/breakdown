@@ -7,7 +7,7 @@ var view_add_mtw__search =
       view : "toolbar",
       borderless : true,
       elements : [
-        { label : "Search", view : "search" , color : "white"},
+        { label : "Search", view : "search", id:"searchbar_mtw_search", color : "white"},
         { view : "button", click:show_breakdown_search,  type : "iconButtonTop", icon : "tree", width : 35},
       ]
     },
