@@ -39,11 +39,15 @@ var logic ={
                 else view.close(pos);
     }, $$("treetable_main_breakdown")); 	
 
-    //search function
+    //search function for breakdown
     $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
       $$("treetable_search_breakdown").filter("#br_item#",this.getValue());
     });
-
+    //search function for mtw
+    $$("searchbar_mtw_search").attachEvent("onTimedKeyPress",function(){
+      $$("datatable_search_mtw").filter("#mtw_item#",this.getValue());
+    });
+    
     //refresh main to calculate
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();
