@@ -33,9 +33,18 @@ var view_add_breakdown__search =
           return false;
         },
         onBeforeSelect:function(context){
-          //clear selection form main if selected
+          //clear selection from main if selected
           $$("treetable_main_breakdown").clearSelection();
+          
+          //set property sheet and mtw table to non-editable
+          $$("item_properties").config.editable = false;
+          $$("datatable_mtw_main_breakdown").config.editable = false;
+          
+          //refresh mtw table
+          $$("datatable_mtw_main_breakdown").refresh();
+          
         },
+        
       }
       }
   ]

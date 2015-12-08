@@ -55,7 +55,18 @@ var view_main_breakdown__project_breakdown =
             //disable dro from other place except treetable search
            if (!(context.from.config.id == "treetable_search_breakdown")) return false;
          },
-         
+        onBeforeSelect:function(context){
+          //clear selection from treetable search 
+          $$("treetable_search_breakdown").clearSelection();
+          
+          //set property sheet and mtw table to editable
+          $$("item_properties").config.editable = true;
+          $$("datatable_mtw_main_breakdown").config.editable = true;
+          
+          //refresh mtw table
+          $$("datatable_mtw_main_breakdown").refresh();
+          
+        },
         onAfterSelect:function(){
           //after select refresh mtw to calculate new binding
           $$("datatable_mtw_main_breakdown").refreshColumns();
