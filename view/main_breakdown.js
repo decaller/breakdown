@@ -80,12 +80,6 @@ var view_main_breakdown__breakdown_details =
   id : "breakdown_details",
   type : "line",
   rows : [
-    
-    {
-      view : "scrollview",
-      scroll : "y",
-      body : {
-        rows : [
           {
                 view : "toolbar",
                 elements : [
@@ -105,68 +99,59 @@ var view_main_breakdown__breakdown_details =
             ]
           },
           {view:"resizer"},
-          {
-
-            type : "line",
-            rows : [
-              {
-                view : "toolbar",
-                elements : [
-                  { label : "Materials, Tools, Workers", view : "label" },
-                ]
-              },
-              {
-                view : "datatable",
-               
-                height:400,
-                id : "datatable_mtw_main_breakdown",
-                math: true,
-                editable:true,
-                editaction:"dblclick",
-                footer:true,
-                select : "row",
-                editmath:true,
-                drag : true,
-                columns : [
-                  { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
-                  { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
-                  { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
-                  { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
-                  { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
-                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
-                  { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
-                ],
-                onClick:{
-                    "menu_mtw":function(e, id, node){
-                      $$("contextmenu_mtw").show(e.target);
-                      $$("contextmenu_mtw").$context = { obj:this, id:id };
-                      }
-                    },
-                  on: {
-                    onBeforeDragIn:function(context){
-                      if (!(context.from.config.id == "datatable_search_mtw")) return false;
-                    },
-                    onAfterEditStop: function () {
-                      $$("datatable_mtw_main_breakdown").refreshColumns();
-                      $$("treetable_main_breakdown").refresh();
-                    },
-                    onAfterDrop: function(){
-                      $$("datatable_mtw_main_breakdown").refreshColumns();
-                      $$("treetable_main_breakdown").refresh();
-                    },
-                    onBeforeDrop:function(context){
-                        var details = { parent:context.parent,newId:webix.uid() };
-                        context.from.copy( context.source, context.index, context.to, details);
-                        return false;
-                        
-                        
+            {
+              view : "toolbar",
+              elements : [
+                { label : "Materials, Tools, Workers", view : "label" },
+              ]
+            },
+            {
+              view : "datatable",
+              
+              height:400,
+              id : "datatable_mtw_main_breakdown",
+              math: true,
+              editable:true,
+              editaction:"dblclick",
+              footer:true,
+              select : "row",
+              editmath:true,
+              drag : true,
+              columns : [
+                { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
+                { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
+                { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
+                { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
+                { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
+                { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
+                { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
+              ],
+              onClick:{
+                  "menu_mtw":function(e, id, node){
+                    $$("contextmenu_mtw").show(e.target);
+                    $$("contextmenu_mtw").$context = { obj:this, id:id };
                     }
-                    }            
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
+                  },
+                on: {
+                  onBeforeDragIn:function(context){
+                    if (!(context.from.config.id == "datatable_search_mtw")) return false;
+                  },
+                  onAfterEditStop: function () {
+                    $$("datatable_mtw_main_breakdown").refreshColumns();
+                    $$("treetable_main_breakdown").refresh();
+                  },
+                  onAfterDrop: function(){
+                    $$("datatable_mtw_main_breakdown").refreshColumns();
+                    $$("treetable_main_breakdown").refresh();
+                  },
+                  onBeforeDrop:function(context){
+                      var details = { parent:context.parent,newId:webix.uid() };
+                      context.from.copy( context.source, context.index, context.to, details);
+                      return false;
+                      
+                      
+                  }
+                }            
+            }
+          ]  
 };
