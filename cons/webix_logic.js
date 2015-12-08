@@ -24,7 +24,7 @@ var logic ={
     //edit shortcut
     webix.UIManager.addHotKey("any", function(view){
 				var pos = view.getSelectedId();
-				view.edit(pos);
+				view.editRow(pos);
     }, $$("treetable_main_breakdown")); 
 	
     //add open child

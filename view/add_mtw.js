@@ -25,6 +25,7 @@ var view_add_mtw__search =
       ],
       on: {
         onBeforeDragIn:function(context){
+          // do not recieve any drop
           return false;
         },
       }

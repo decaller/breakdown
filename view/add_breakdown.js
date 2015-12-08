@@ -29,9 +29,11 @@ var view_add_breakdown__search =
       drag : true,
       on: {
         onBeforeDragIn:function(context){
+          //do not recieve any drop
           return false;
         },
         onBeforeSelect:function(context){
+          //clear selection form main if selected
           $$("treetable_main_breakdown").clearSelection();
         },
       }

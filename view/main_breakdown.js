@@ -21,7 +21,7 @@ var view_main_breakdown__project_breakdown =
     },
     {
       columns : [
-        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#"},
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text"},
         { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text" , sort:"string"},
         { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal, sort:"int"},
@@ -42,6 +42,7 @@ var view_main_breakdown__project_breakdown =
       drag : true,
       math : true,
       onClick:{
+        //show context menu
        "menu_breakdown":function(e, id, node){
        	$$("contextmenu_breakdown").show(e.target);
          $$("contextmenu_breakdown").$context = { obj:this, id:id };
@@ -51,23 +52,36 @@ var view_main_breakdown__project_breakdown =
       
       on : {
         onBeforeDragIn:function(context){
+            //disable dro from other place except treetable search
            if (!(context.from.config.id == "treetable_search_breakdown")) return false;
          },
          
-        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns();$$("treetable_search_breakdown").clearSelection();},
-        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();},
+        onAfterSelect:function(){
+          //after select refresh mtw to calculate new binding
+          $$("datatable_mtw_main_breakdown").refreshColumns();
+          
+          //clear selection from treetable search 
+          $$("treetable_search_breakdown").clearSelection();
+          },
+        onAfterEditStop: function () {
+          //refresh after editing
+          $$("datatable_mtw_main_breakdown").refreshColumns();
+          },
         onBeforeDrop:function(context){
+            //config drop placement
             context.parent = context.target;    //drop as child
             context.index = -1;                 //as last child
+            
+            //only place as child of root
             if (!context.target || context.target.row == "root"){
              context.index = -1;
              context.parent = context.target = "root";
             };
+            
+            //instead move, do copy
             var details = { parent:context.parent,newId:webix.uid() };
             context.from.copy( context.source, context.index, context.to, details);
             return false;
-            
-            
         }
       }
     }
@@ -127,24 +141,30 @@ var view_main_breakdown__breakdown_details =
                 { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
               ],
               onClick:{
+                  //show context menu
                   "menu_mtw":function(e, id, node){
                     $$("contextmenu_mtw").show(e.target);
                     $$("contextmenu_mtw").$context = { obj:this, id:id };
                     }
                   },
                 on: {
+                  
                   onBeforeDragIn:function(context){
+                    //only accept drop from mtw search
                     if (!(context.from.config.id == "datatable_search_mtw")) return false;
                   },
                   onAfterEditStop: function () {
+                    //refresh table after edit to recalculate
                     $$("datatable_mtw_main_breakdown").refreshColumns();
                     $$("treetable_main_breakdown").refresh();
                   },
                   onAfterDrop: function(){
+                    //refresh table after edit to recalculate
                     $$("datatable_mtw_main_breakdown").refreshColumns();
                     $$("treetable_main_breakdown").refresh();
                   },
                   onBeforeDrop:function(context){
+                      //instead move, do copy
                       var details = { parent:context.parent,newId:webix.uid() };
                       context.from.copy( context.source, context.index, context.to, details);
                       return false;
