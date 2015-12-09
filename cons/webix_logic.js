@@ -397,7 +397,6 @@ function newProject(){
     var value = $$("makeNewProjectForm").getValues();
     $$("project_list_dataview").add({
       name : value.name,
-      id : value.id,
       date : new Date()
     })
 }
