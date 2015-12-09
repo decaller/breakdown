@@ -6,8 +6,8 @@ var view_add_breakdown__search =
     {
       view : "toolbar",
       elements : [
-        { id : "searchbar_br_search",label : "Search", view : "search" , color : "white"},
-        { view : "button", click:show_mtw_search,  type : "iconButtonTop", icon : "leaf", width : 35},
+        { id : "searchbar_br_search",label : "Search", view : "search" , color : "white", tooltip: "Type to Search Breakdown Item"},
+        { view : "button", click:show_mtw_search,  type : "iconButtonTop", icon : "leaf", width : 35, tooltip: "Switch to Search MTW"},
       ]
     },
     {
@@ -27,6 +27,10 @@ var view_add_breakdown__search =
       borderless : true,
       math : true,
       drag : true,
+      hover: "rowHover",
+      tooltip:{ 
+        template: "<span class='webix_strong'>Item: </span> #br_item#<br/><span class='webix_strong'>Index: </span> #br_index#</br><span class='webix_strong'>Unit: </span> #br_unit#</br>"
+      },
       on: {
         onBeforeDragIn:function(context){
           //do not recieve any drop

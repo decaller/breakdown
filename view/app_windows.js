@@ -40,16 +40,37 @@ var side_menu  = {
 
     template: "<span class='webix_icon fa-#icon#'></span> #value#",
     data:[
-        {id: 1, value: "Your Name", icon: "user"},
-        {id: 2, value: "Home", icon: "home"},
-        {id: 3, value: "Share", icon: "share-alt"},
-        {id: 4, value: "Help", icon: "question-circle"},
-        {id: 5, value: "Settings", icon: "cog"},
-        {id: 6, value: "Sign Out", icon: "sign-out"}
+        { id: 1,  icon : "file-excel-o", value: "Export TreeTable"},
+        { id: 2, value: "Export All", icon: "file-excel-o"},
+   
     ],
     select:true,
     type:{
         height: 40
+    },
+    on: {
+        onItemClick:function(id){
+						webix.message("Click: "+this.getItem(id).value);
+                        if(this.getItem(id).id==1){
+                             webix.toExcel("treetable_main_breakdown", {
+                                columns:{
+                                    "br_item": {header: "Item", width: 200, template: webix.template("#br_item#"), exportAsTree:true},
+                                    "br_index": true,
+                                    "br_unit": true,
+                                    "br_child_prc": true,
+                                    "br_mtw_prc": true,
+                                    "br_total_prc": true
+                                }}
+                            )
+                            
+                        };
+                            if(this.getItem(id).id==2){
+                            window.export()
+                            
+                        }
+                        
+                        
+					}
     }
     }
 };
