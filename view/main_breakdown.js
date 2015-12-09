@@ -32,6 +32,7 @@ var view_main_breakdown__project_breakdown =
     },
     {
       columns : [
+
         { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
         { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
         { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
@@ -55,6 +56,7 @@ var view_main_breakdown__project_breakdown =
       tooltip : true,
       hover : "rowHover",
       onClick:{
+        //show context menu
        "menu_breakdown":function(e, id, node){
        	$$("contextmenu_breakdown").show(e.target);
          $$("contextmenu_breakdown").$context = { obj:this, id:id };
@@ -64,23 +66,47 @@ var view_main_breakdown__project_breakdown =
       
       on : {
         onBeforeDragIn:function(context){
+            //disable dro from other place except treetable search
            if (!(context.from.config.id == "treetable_search_breakdown")) return false;
          },
-         
-        onAfterSelect:function(){$$("datatable_mtw_main_breakdown").refreshColumns();$$("treetable_search_breakdown").clearSelection();},
-        onAfterEditStop: function () {$$("datatable_mtw_main_breakdown").refreshColumns();},
+        onBeforeSelect:function(context){
+          //clear selection from treetable search 
+          $$("treetable_search_breakdown").clearSelection();
+          
+          //set property sheet and mtw table to editable
+          $$("item_properties").config.editable = true;
+          $$("datatable_mtw_main_breakdown").config.editable = true;
+          
+          //refresh mtw table
+          $$("datatable_mtw_main_breakdown").refresh();
+          
+        },
+        onAfterSelect:function(){
+          //after select refresh mtw to calculate new binding
+          $$("datatable_mtw_main_breakdown").refreshColumns();
+          
+          //clear selection from treetable search 
+          $$("treetable_search_breakdown").clearSelection();
+          },
+        onAfterEditStop: function () {
+          //refresh after editing
+          $$("datatable_mtw_main_breakdown").refreshColumns();
+          },
         onBeforeDrop:function(context){
+            //config drop placement
             context.parent = context.target;    //drop as child
             context.index = -1;                 //as last child
+            
+            //only place as child of root
             if (!context.target || context.target.row == "root"){
              context.index = -1;
              context.parent = context.target = "root";
             };
+            
+            //instead move, do copy
             var details = { parent:context.parent,newId:webix.uid() };
             context.from.copy( context.source, context.index, context.to, details);
             return false;
-            
-            
         }
       }
     }
@@ -93,12 +119,6 @@ var view_main_breakdown__breakdown_details =
   id : "breakdown_details",
   type : "line",
   rows : [
-    
-    {
-      view : "scrollview",
-      scroll : "y",
-      body : {
-        rows : [
           {
                 view : "toolbar",
                 elements : [
@@ -118,69 +138,70 @@ var view_main_breakdown__breakdown_details =
             ]
           },
           {view:"resizer"},
-          {
 
-            type : "line",
-            rows : [
-              {
-                view : "toolbar",
-                elements : [
-                  { label : "Materials, Tools, Workers", view : "label" },
-                ]
-              },
-              {
-                view : "datatable",
-               
-                height:400,
-                id : "datatable_mtw_main_breakdown",
-                math: true,
-                editable:true,
-                editaction:"dblclick",
-                footer:true,
-                select : "row",
-                editmath:true,
-                drag : true,
-                hover: "rowHover",
-                columns : [
-                  { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
-                  { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
-                  { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
-                  { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
-                  { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
-                  { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
-                  { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
-                ],
-                onClick:{
-                    "menu_mtw":function(e, id, node){
-                      $$("contextmenu_mtw").show(e.target);
-                      $$("contextmenu_mtw").$context = { obj:this, id:id };
-                      }
-                    },
-                  on: {
-                    onBeforeDragIn:function(context){
-                      if (!(context.from.config.id == "datatable_search_mtw")) return false;
-                    },
-                    onAfterEditStop: function () {
-                      $$("datatable_mtw_main_breakdown").refreshColumns();
-                      $$("treetable_main_breakdown").refresh();
-                    },
-                    onAfterDrop: function(){
-                      $$("datatable_mtw_main_breakdown").refreshColumns();
-                      $$("treetable_main_breakdown").refresh();
-                    },
-                    onBeforeDrop:function(context){
-                        var details = { parent:context.parent,newId:webix.uid() };
-                        context.from.copy( context.source, context.index, context.to, details);
-                        return false;
-                        
-                        
+          {rows:[
+            {
+              view : "toolbar",
+              elements : [
+                { label : "Materials, Tools, Workers", view : "label" },
+              ]
+            },
+            {
+              view : "datatable",
+              
+              minheight:300,
+              id : "datatable_mtw_main_breakdown",
+              math: true,
+              editable:true,
+              editaction:"dblclick",
+              footer:true,
+              select : "row",
+              hover: "rowHover",
+              editmath:true,
+              drag : true,
+              columns : [
+                { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
+                { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
+                { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
+                { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
+                { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
+                { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
+                { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
+              ],
+              onClick:{
+                  //show context menu
+                  "menu_mtw":function(e, id, node){
+                    $$("contextmenu_mtw").show(e.target);
+                    $$("contextmenu_mtw").$context = { obj:this, id:id };
                     }
-                    }            
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
+                  },
+                on: {
+                  
+                  onBeforeDragIn:function(context){
+                    //only accept drop from mtw search
+                    if (!(context.from.config.id == "datatable_search_mtw")) return false;
+                  },
+                  onAfterEditStop: function () {
+                    //refresh table after edit to recalculate
+                    $$("datatable_mtw_main_breakdown").refreshColumns();
+                    $$("treetable_main_breakdown").refresh();
+                  },
+                  onAfterDrop: function(){
+                    //refresh table after edit to recalculate
+                    $$("datatable_mtw_main_breakdown").refreshColumns();
+                    $$("treetable_main_breakdown").refresh();
+                  },
+                  onBeforeDrop:function(context){
+                      //instead move, do copy
+                      var details = { parent:context.parent,newId:webix.uid() };
+                      context.from.copy( context.source, context.index, context.to, details);
+                      return false;
+                      
+                      
+                  }
+                }            
+            }
+          ]}
+            
+          ]  
 };

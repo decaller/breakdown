@@ -21,12 +21,17 @@ var logic ={
     $$("item_properties").bind( $$("treetable_search_breakdown"));
     
     //shortcut for main breakdown
-    //edit shortcut
+    //edit shortcut for treetable
     webix.UIManager.addHotKey("any", function(view){
 				var pos = view.getSelectedId();
-				view.edit(pos);
-    }, $$("treetable_main_breakdown")); 
-	
+				view.editRow(pos);
+    }, $$("treetable_main_breakdown"));
+    //editshortcut for datatable 
+    webix.UIManager.addHotKey("any", function(view){
+				var pos = view.getSelectedId();
+				view.editRow(pos);
+    }, $$("datatable_mtw_main_breakdown")); 
+		
     //add open child
     webix.UIManager.addHotKey("=", function(view){
 				var pos = view.getSelectedId();
@@ -34,11 +39,15 @@ var logic ={
                 else view.close(pos);
     }, $$("treetable_main_breakdown")); 	
 
-    //search function
+    //search function for breakdown
     $$("searchbar_br_search").attachEvent("onTimedKeyPress",function(){
       $$("treetable_search_breakdown").filter("#br_item#",this.getValue());
     });
-
+    //search function for mtw
+    $$("searchbar_mtw_search").attachEvent("onTimedKeyPress",function(){
+      $$("datatable_search_mtw").filter("#mtw_item#",this.getValue());
+    });
+    
     //refresh main to calculate
     $$("datatable_mtw_main_breakdown").refreshColumns();
     $$("treetable_main_breakdown").refresh();

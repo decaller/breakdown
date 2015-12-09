@@ -7,8 +7,10 @@ var view_add_mtw__search =
       view : "toolbar",
       borderless : true,
       elements : [
+
         { label : "Search", view : "search" , color : "white", tooltip : "Type to Search MTW"},
         { view : "button", click:show_breakdown_search,  type : "iconButtonTop", icon : "tree", width : 35, tooltip : "Switch to Search Breakdown Item"},
+
       ]
     },
     {
@@ -26,6 +28,7 @@ var view_add_mtw__search =
       ],
       on: {
         onBeforeDragIn:function(context){
+          // do not recieve any drop
           return false;
         },
       }
