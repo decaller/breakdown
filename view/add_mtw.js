@@ -17,6 +17,7 @@ var view_add_mtw__search =
       view : "datatable",
       data : search_mtw_data,
       drag:true,
+      hover: "rowHover",
       columns : [
         { id : "mtw_sku", header : "SKU", fillspace : 1, sort:"int" },
         { id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},

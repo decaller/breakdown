@@ -238,3 +238,46 @@ function childTotal_search(item) {
   	return total;
 };
 
+
+//window export function
+window.export = function(){
+  var temp_data = [];
+  
+ $$("treetable_main_breakdown").data.each(function(obj){
+   $$("treetable_main_breakdown").select(obj.id);
+
+ 
+ var head = {Breakdown : obj.br_item};
+ temp_data = temp_data.concat(head);
+ 
+ dataTable = $$("datatable_mtw_main_breakdown").serialize();
+ temp_data = temp_data.concat(dataTable);
+ 
+ var space = {};
+ temp_data = temp_data.concat(space);
+ 
+ 
+ });
+ 
+ var temp_grid = new webix.DataCollection({
+   data:temp_data
+
+ }); 
+ 
+ webix.toExcel(temp_grid,{
+   columns:{
+     Breakdown : true,
+     "mtw_sku" : {header: "SKU", width: 200},
+     "mtw_item" : {header: "Item", width: 200},
+     "mtw_index" : {header: "Index", width: 200},
+     "mtw_unit" : {header: "Unit", width: 200},
+     "mtw_unitprice" : {header: "Unit Price", width: 200},
+     "mtw_totalprice" : {header: "Total Price", width: 200},
+   }
+ });
+ 
+ webix.delay(function(){
+  	temp_grid.destructor();
+  }, 0, 0, 5000); //destroy it after 5 seconds
+  
+};

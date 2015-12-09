@@ -12,6 +12,17 @@ var view_main_breakdown__project_breakdown =
         { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
         { label : "Project's Breakdown", view : "label" },
         { view : "spacer" },
+        { view : "button", type: "iconButtonTop", icon : "file-excel-o", width: 35, tooltip: "Export Tree Table to Excel", click:function(){ webix.toExcel("treetable_main_breakdown", {
+            columns:{
+                "br_item": {header: "Item", width: 200, template: webix.template("#br_item#"), exportAsTree:true},
+                "br_index": true,
+                "br_unit": true,
+                "br_child_prc": true,
+                "br_mtw_prc": true,
+                "br_total_prc": true
+            }}
+           )}
+        },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35, tooltip: "Add New Breakdown Item (Crtl + Up)"},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35, tooltip: "Add Breakdown Child (Ctrl + Down)"},
         { click : open_search,id:"open_search", view : "toggle", type : "iconButtonTop", icon : "search", width : 35, tooltip:"Search an Item"},
@@ -42,6 +53,7 @@ var view_main_breakdown__project_breakdown =
       drag : true,
       math : true,
       tooltip : true,
+      hover : "rowHover",
       onClick:{
        "menu_breakdown":function(e, id, node){
        	$$("contextmenu_breakdown").show(e.target);
@@ -128,6 +140,7 @@ var view_main_breakdown__breakdown_details =
                 select : "row",
                 editmath:true,
                 drag : true,
+                hover: "rowHover",
                 columns : [
                   { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
                   { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},

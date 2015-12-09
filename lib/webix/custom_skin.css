@@ -7250,3 +7250,10 @@ label.webix_required:after {
 .smooth .webix_accordionitem {
    transition: width 0.5s;
 }
+
+
+/**Hover**/
+
+.rowHover {
+  background: #FFD180
+}
