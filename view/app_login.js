@@ -20,7 +20,7 @@ var view_login_breakdown = {
 							{ view : "text", label : "URL", name : "url", value: "https://t099.databoom.space" },
 							{ view : "text", label : "Database", name : "db", value: "b099" },
 							{ view : "text", label : "User", name : "user", value:"t099" },
-							{ view : "text", label : "Password", name : "pass", value:"4614" },
+							{ view : "text",type:'password', label : "Password", name : "pass", value:"4614" },
 							{ view : "button", label : "Connect", click:connect}
 						]
 					},
@@ -35,6 +35,7 @@ var view_login_breakdown = {
 						rows : [
 							
 							{ view : "text", label : "Name", name : "name"},
+							{ view : "text", label : "Id Coll", name : "project_coll"},
 							{ view : "button", label : "Build", click:newProject }
 						]
 					},
@@ -77,8 +78,23 @@ var view_login_breakdown = {
 								type: {
 									height: 60
 								},
-								template:"<div class='webix_strong'>#name#</div> Date: #date#",
-								
+								template:"<div class='webix_strong'>#name#</div> Collection : #project_coll#",
+								on:{
+									//open a project function
+									onItemClick:function(id, e, node){
+										var item = this.getItem(id);
+										
+										var url = "odata->" + account.url + "/api1/" + account.db + "/collections/"+ item.project_coll + "_main_breakdown";
+										$$("treetable_main_breakdown").load(url);
+											var dp = new webix.DataProcessor({  
+											master:$$("treetable_main_breakdown"), 
+											url:url
+											});
+										$$("treetable_main_breakdown").refresh;
+										$$("edit_breakdown").show();
+										
+									}
+								}
 								
 							}
 						]

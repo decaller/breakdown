@@ -397,6 +397,10 @@ function newProject(){
     var value = $$("makeNewProjectForm").getValues();
     $$("project_list_dataview").add({
       name : value.name,
+      project_coll : value.project_coll,
       date : new Date()
     })
+    
 }
+
+
