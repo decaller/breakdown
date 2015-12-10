@@ -7251,6 +7251,7 @@ label.webix_required:after {
    transition: width 0.5s;
 }
 
+
 .webix_el_button input, .webix_el_toggle input, .webixbutton input, .webix_el_button button, .webix_el_toggle button, .webixbutton button {
   background-color: #78909C
 }
@@ -7261,5 +7262,13 @@ label.webix_required:after {
 
 .webix_el_button input:focus, .webix_el_toggle input:focus, .webixbutton input:focus, .webix_el_button button:focus, .webix_el_toggle button:focus, .webixbutton button:focus {
   background-color: #455a64
+}
+
+
+
+/**Hover**/
+
+.rowHover {
+  background: #FFD180
 }
 

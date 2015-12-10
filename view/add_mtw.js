@@ -7,8 +7,10 @@ var view_add_mtw__search =
       view : "toolbar",
       borderless : true,
       elements : [
-        { label : "Search", view : "search", id:"searchbar_mtw_search", color : "white"},
-        { view : "button", click:show_breakdown_search,  type : "iconButtonTop", icon : "tree", width : 35},
+
+        { label : "Search", view : "search" , color : "white", tooltip : "Type to Search MTW"},
+        { view : "button", click:show_breakdown_search,  type : "iconButtonTop", icon : "tree", width : 35, tooltip : "Switch to Search Breakdown Item"},
+
       ]
     },
     {
@@ -17,6 +19,7 @@ var view_add_mtw__search =
       view : "datatable",
       data : search_mtw_data,
       drag:true,
+      hover: "rowHover",
       columns : [
         { id : "mtw_sku", header : "SKU", fillspace : 1, sort:"int" },
         { id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
