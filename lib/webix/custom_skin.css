@@ -7252,8 +7252,23 @@ label.webix_required:after {
 }
 
 
+.webix_el_button input, .webix_el_toggle input, .webixbutton input, .webix_el_button button, .webix_el_toggle button, .webixbutton button {
+  background-color: #78909C
+}
+
+.webix_el_button input:hover, .webix_el_toggle input:hover, .webixbutton input:hover, .webix_el_button button:hover, .webix_el_toggle button:hover, .webixbutton button:hover {
+  background-color: #F57C00
+}
+
+.webix_el_button input:focus, .webix_el_toggle input:focus, .webixbutton input:focus, .webix_el_button button:focus, .webix_el_toggle button:focus, .webixbutton button:focus {
+  background-color: #455a64
+}
+
+
+
 /**Hover**/
 
 .rowHover {
   background: #FFD180
 }
+

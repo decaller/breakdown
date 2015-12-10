@@ -70,12 +70,19 @@ var view_main_breakdown__project_breakdown =
            if (!(context.from.config.id == "treetable_search_breakdown")) return false;
          },
         onBeforeSelect:function(context){
+          //save data to treetable
+          $$("treetable_main_breakdown").saveBatch(function(){
+              $$("datatable_mtw_main_breakdown").save();
+              $$("item_properties").save();
+          });
+          
           //clear selection from treetable search 
           $$("treetable_search_breakdown").clearSelection();
           
           //set property sheet and mtw table to editable
           $$("item_properties").config.editable = true;
           $$("datatable_mtw_main_breakdown").config.editable = true;
+          
           
           //refresh mtw table
           $$("datatable_mtw_main_breakdown").refresh();
