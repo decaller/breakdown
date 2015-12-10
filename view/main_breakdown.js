@@ -12,17 +12,6 @@ var view_main_breakdown__project_breakdown =
         { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
         { label : "Project's Breakdown", view : "label" },
         { view : "spacer" },
-        { view : "button", type: "iconButtonTop", icon : "file-excel-o", width: 35, tooltip: "Export Tree Table to Excel", click:function(){ webix.toExcel("treetable_main_breakdown", {
-            columns:{
-                "br_item": {header: "Item", width: 200, template: webix.template("#br_item#"), exportAsTree:true},
-                "br_index": true,
-                "br_unit": true,
-                "br_child_prc": true,
-                "br_mtw_prc": true,
-                "br_total_prc": true
-            }}
-           )}
-        },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35, tooltip: "Add New Breakdown Item (Crtl + Up)"},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35, tooltip: "Add Breakdown Child (Ctrl + Down)"},
         { click : open_search,id:"open_search", view : "toggle", type : "iconButtonTop", icon : "search", width : 35, tooltip:"Search an Item"},
@@ -166,11 +155,12 @@ var view_main_breakdown__breakdown_details =
               hover: "rowHover",
               editmath:true,
               drag : true,
+              tooltip : true,
               columns : [
-                { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
-                { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
-                { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
-                { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
+                { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int", tooltip : "SKU: #mtw_sku#</br>Item: #mtw_item#</br>Index: #mtw_index#</br>Unit: #mtw_unit#"},
+                { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string", tooltip : "SKU: #mtw_sku#</br>Item: #mtw_item#</br>Index: #mtw_index#</br>Unit: #mtw_unit#"},
+                { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int", tooltip : "SKU: #mtw_sku#</br>Item: #mtw_item#</br>Index: #mtw_index#</br>Unit: #mtw_unit#"},
+                { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1, tooltip : "SKU: #mtw_sku#</br>Item: #mtw_item#</br>Index: #mtw_index#</br>Unit: #mtw_unit#" },
                 { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
                 { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
                 { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
