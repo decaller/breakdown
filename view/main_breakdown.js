@@ -55,7 +55,7 @@ var view_main_breakdown__project_breakdown =
       on : {
         onBeforeDragIn:function(context){
             //disable dro from other place except treetable search
-           if (!(context.from.config.id == "treetable_search_breakdown") && !(context.from.config.id == "treetable_main_breakdown")) return false;
+           if ((context.from.config.id != "treetable_search_breakdown") && (context.from.config.id != "treetable_main_breakdown")) return false;
          },
         onBeforeSelect:function(context){
           //clear selection from treetable search 
@@ -173,7 +173,7 @@ var view_main_breakdown__breakdown_details =
                   
                   onBeforeDragIn:function(context){
                     //only accept drop from mtw search
-                    if (!(context.from.config.id == "datatable_search_mtw")) return false;
+                    if ((context.from.config.id != "datatable_search_mtw") && (context.from.config.id != "datatable_mtw_main_breakdown")) return false;
                   },
                   onAfterEditStop: function () {
                     //refresh table after edit to recalculate
@@ -187,9 +187,24 @@ var view_main_breakdown__breakdown_details =
                   },
                   onBeforeDrop:function(context){
                       //instead move, do copy
-                      var details = { parent:context.parent,newId:webix.uid() };
-                      context.from.copy( context.source, context.index, context.to, details);
-                      return false;
+                      if (context.from.config.id == "datatable_search_mtw"){
+                                                
+                        var selected = $$("treetable_main_breakdown").getSelectedItem();
+                        //console.log(selected.id);
+                        var records = selected.mtw;   
+                        //console.log(records);
+                                              
+                        //instead move, do copy
+                        var copiedId =  context.from.copy(context.source,context.index,this,{newId:webix.uid()});
+                        var copiedItem = $$("datatable_mtw_main_breakdown").getItem(copiedId);
+                        
+                        console.log(records);
+                        records.push(copiedItem);
+                        console.log(records);
+                        $$("datatable_mtw_main_breakdown").refresh();
+                        return false;
+                      }
+                      
                       
                       
                   }
