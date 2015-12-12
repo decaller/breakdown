@@ -1,6 +1,7 @@
-var view_edit_breakdown = 
+
+var app_structure = 
 {
-  id:"edit_breakdown",
+  view : "accordion", 
   multi:true,
   borderless:true,
   css:"smooth",
@@ -28,18 +29,6 @@ var view_edit_breakdown =
     }
     ]
           
-};
+}
         
-var app_structure = 
-{
-  view : "multiview",
-  borderless:true,
-  keepViews : true,
-  animate:{
-      direction: "top"
-   },
-  cells : [
-    view_login_breakdown,
-    view_edit_breakdown
-  ]
-};
+ 

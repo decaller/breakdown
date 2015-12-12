@@ -40,37 +40,37 @@ var side_menu  = {
 
     template: "<span class='webix_icon fa-#icon#'></span> #value#",
     data:[
-        { id: 1,  icon : "file-excel-o", value: "Export TreeTable"},
-        { id: 2, value: "Export All", icon: "file-excel-o"},
-   
+       { id: 1,  icon : "file-excel-o", value: "Export TreeTable"},
+       { id: 2, value: "Export Detail", icon: "file-excel-o"},
     ],
-    select:true,
+    select:false,
     type:{
-        height: 40
+        height: 40,
     },
-    on: {
+        on: {
         onItemClick:function(id){
 						webix.message("Click: "+this.getItem(id).value);
                         if(this.getItem(id).id==1){
                              webix.toExcel("treetable_main_breakdown", {
                                 columns:{
-                                    "br_item": {header: "Item", width: 200, template: webix.template("#br_item#"), exportAsTree:true},
-                                    "br_index": true,
-                                    "br_unit": true,
-                                    "br_child_prc": true,
-                                    "br_mtw_prc": true,
-                                    "br_total_prc": true
+                                    "br_item": {header: "Item", width: 350, template: webix.template("#br_item#")},
+                                    "br_index": {header: "Index", width: 70, template: webix.template("#br_index#")},
+                                    "br_unit": {header: "Unit", width: 70, template: webix.template("#br_unit#")},
+                                    "br_child_prc": {header: "Child Price", width: 250},
+                                    "br_mtw_prc": {header: "MTW Price", width: 250},
+                                    "br_total_prc": {header: "Total", width: 250}
                                 }}
                             )
                             
-                        };
-                            if(this.getItem(id).id==2){
+                        }
+                        if(this.getItem(id).id==2){
                             window.export()
                             
                         }
                         
                         
 					}
-    }
-    }
+            }
+        }
+    
 };

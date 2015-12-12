@@ -9,7 +9,7 @@ var view_main_breakdown__project_breakdown =
       borderless : true,
    
       elements : [
-        { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35},
+        { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35, tooltip: "Export Menu"},
         { label : "Project's Breakdown", view : "label" },
         { view : "spacer" },
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35, tooltip: "Add New Breakdown Item (Crtl + Up)"},
@@ -21,10 +21,9 @@ var view_main_breakdown__project_breakdown =
     },
     {
       columns : [
-
-        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
-        { id : "br_index", header : "Index" , fillspace : 0.5 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
-        { id : "br_unit", header : "Unit", fillspace : 0.5, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
+        { id : "br_unit", header : "Unit", fillspace : 1, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal, sort:"int"},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal, sort:"int"},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal , sort:"int"},
@@ -56,22 +55,15 @@ var view_main_breakdown__project_breakdown =
       on : {
         onBeforeDragIn:function(context){
             //disable dro from other place except treetable search
-           if (!(context.from.config.id == "treetable_search_breakdown")) return false;
+           if (!(context.from.config.id == "treetable_search_breakdown") && !(context.from.config.id == "treetable_main_breakdown")) return false;
          },
         onBeforeSelect:function(context){
-          //save data to treetable
-          $$("treetable_main_breakdown").saveBatch(function(){
-              $$("datatable_mtw_main_breakdown").save();
-              $$("item_properties").save();
-          });
-          
           //clear selection from treetable search 
           $$("treetable_search_breakdown").clearSelection();
           
           //set property sheet and mtw table to editable
           $$("item_properties").config.editable = true;
           $$("datatable_mtw_main_breakdown").config.editable = true;
-          
           
           //refresh mtw table
           $$("datatable_mtw_main_breakdown").refresh();
@@ -87,6 +79,9 @@ var view_main_breakdown__project_breakdown =
         onAfterEditStop: function () {
           //refresh after editing
           $$("datatable_mtw_main_breakdown").refreshColumns();
+        
+           $$("treetable_main_breakdown").refreshColumns();
+          
           },
         onBeforeDrop:function(context){
             //config drop placement
@@ -100,9 +95,12 @@ var view_main_breakdown__project_breakdown =
             };
             
             //instead move, do copy
-            var details = { parent:context.parent,newId:webix.uid() };
-            context.from.copy( context.source, context.index, context.to, details);
-            return false;
+            if (context.from.config.id == "treetable_search_breakdown"){
+              var details = { parent:context.parent,newId:webix.uid() };
+              context.from.copy( context.source, context.index, context.to, details);
+              return false;
+            }
+            
         }
       }
     }
@@ -124,6 +122,7 @@ var view_main_breakdown__breakdown_details =
           {
             view:"property", 
             id:"item_properties",
+            height: 80,
             
             complexData : true,
             elements : [
@@ -134,7 +133,6 @@ var view_main_breakdown__breakdown_details =
             ]
           },
           {view:"resizer"},
-
           {rows:[
             {
               view : "toolbar",
@@ -152,15 +150,14 @@ var view_main_breakdown__breakdown_details =
               editaction:"dblclick",
               footer:true,
               select : "row",
-              hover: "rowHover",
               editmath:true,
               drag : true,
-              tooltip : true,
+              hover : "rowHover",
               columns : [
-                { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int", tooltip : "SKU: #mtw_sku#</br>Item: #mtw_item#</br>Index: #mtw_index#</br>Unit: #mtw_unit#"},
-                { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string", tooltip : "SKU: #mtw_sku#</br>Item: #mtw_item#</br>Index: #mtw_index#</br>Unit: #mtw_unit#"},
-                { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int", tooltip : "SKU: #mtw_sku#</br>Item: #mtw_item#</br>Index: #mtw_index#</br>Unit: #mtw_unit#"},
-                { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1, tooltip : "SKU: #mtw_sku#</br>Item: #mtw_item#</br>Index: #mtw_index#</br>Unit: #mtw_unit#" },
+                { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
+                { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
+                { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
+                { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
                 { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
                 { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
                 { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }

@@ -13,7 +13,9 @@ var search_breakdown_treetable_data = [
                     {
                         id:"1.1", br_item:"Membuat dan memasang papan proyek", br_index:"1", br_unit: "bh", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                         
-                        mtw : [],
+                        mtw : [
+                            {id : 1, mtw_sku : "", mtw_item : "", mtw_index : "1", mtw_unit : "", mtw_unitprice : "1312500"},
+     ],
                         data : []
                     },
 
@@ -36,7 +38,9 @@ var search_breakdown_treetable_data = [
                     {
                         id:"1.3", br_item:"Perlengkapan Direksikeet", br_index:"1", br_unit: "ls", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                        
-                        mtw : [],
+                        mtw : [
+                            {id : 1, mtw_sku : "", mtw_item : "", mtw_index : "1", mtw_unit : "", mtw_unitprice : "1646400"},
+                        ],
                         data : []    
                     },
                     
@@ -65,14 +69,18 @@ var search_breakdown_treetable_data = [
                     {
                         id:"1.5", br_item:"Access Road", br_index:"1", br_unit: "ls", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                         
-                        mtw : [],
+                        mtw : [
+                            {id : 1, mtw_sku : "", mtw_item : "", mtw_index : "1", mtw_unit : "", mtw_unitprice : "250000000"},
+                        ],
                         data : []   
                     },
                     
                     {
                         id:"1.6", br_item:"Mobilisasi dan Demobilisasi", br_index:"1", br_unit: "ls", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                         
-                        mtw : [],
+                        mtw : [
+                            {id : 1, mtw_sku : "", mtw_item : "", mtw_index : "1", mtw_unit : "", mtw_unitprice : "150000000"},
+                        ],
                         data : []
 
                         
@@ -1813,7 +1821,7 @@ var search_breakdown_treetable_data = [
                         
                         mtw : [
                 
-                        {id : 1, mtw_sku : "", mtw_item : "", mtw_index : "", mtw_unit : "", mtw_unitprice : "", mtw_totalprice : ""},
+                        {id : 1, mtw_sku : "", mtw_item : "", mtw_index : "1", mtw_unit : "", mtw_unitprice : "7854000", mtw_totalprice : ""},
                                         
                 
                         ],
@@ -1824,7 +1832,7 @@ var search_breakdown_treetable_data = [
                         
                         mtw : [
                 
-                        {id : 1, mtw_sku : "", mtw_item : "", mtw_index : "", mtw_unit : "", mtw_unitprice : "", mtw_totalprice : ""},
+                        {id : 1, mtw_sku : "", mtw_item : "", mtw_index : "1", mtw_unit : "", mtw_unitprice : "10290000", mtw_totalprice : ""},
                                         
                 
                         ],

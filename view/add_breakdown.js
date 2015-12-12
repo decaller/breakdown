@@ -28,7 +28,7 @@ var view_add_breakdown__search =
       math : true,
       drag : true,
       hover: "rowHover",
-      tooltip:{ 
+     tooltip:{ 
         template: "<span class='webix_strong'>Item: </span> #br_item#<br/><span class='webix_strong'>Index: </span> #br_index#</br><span class='webix_strong'>Unit: </span> #br_unit#</br>"
       },
       on: {
