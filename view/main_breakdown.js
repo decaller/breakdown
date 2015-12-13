@@ -154,7 +154,7 @@ var view_main_breakdown__breakdown_details =
               drag : true,
               hover : "rowHover",
               columns : [
-                { editor : "text", id : "mtw_sku", header : "SKU", fillspace : 1 , sort:"int"},
+                
                 { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
                 { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
                 { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },

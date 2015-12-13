@@ -64,8 +64,7 @@ var logic ={
     $$("details-search_resizer").disable();
     $$("breakdown_resizer").disable();
        
-       webix.message ("all loaded");
-       console.log("all loaded");
+      
   }  
 }; //logic done
 

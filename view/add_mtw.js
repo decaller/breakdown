@@ -19,7 +19,7 @@ var view_add_mtw__search =
       drag: true,
       hover : "rowHover",
       columns : [
-        { id : "mtw_sku", header : "SKU", fillspace : 1, sort:"int" },
+        
         { id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
         { id : "mtw_unit", header : "Unit", fillspace : 1 },
         { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 , sort:"int"}        
