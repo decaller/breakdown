@@ -249,6 +249,15 @@ function childTotal_search(item) {
   	return total;
 };
 
+//function for mtw
+function mtw_unit(item){
+  return webix.i18n.priceFormat(item.mtw_unitprice);
+}
+function mtw_total(item){
+  var total = item.mtw_unitprice * item.mtw_index;
+  return  webix.i18n.priceFormat(total);
+}
+//EXPORT
 //window export function
 window.export = function(){
   //randomize all first 
@@ -294,12 +303,13 @@ window.export = function(){
      "mtw_item" : {header: "Item", width: 200},
      "mtw_index" : {header: "Index", width: 200},
      "mtw_unit" : {header: "Unit", width: 200},
-     "mtw_unitprice" : {header: "Unit Price", width: 200, format : webix.i18n.priceFormat},
-     "mtw_totalprice" : {header: "Total Price", width: 200, format : webix.i18n.priceFormat},
+     "mtw_unitprice" : {header: "Unit Price", width: 200},
+     "mtw_totalprice" : {header: "Total Price", width: 200},
    }
  });
  
- //reselct back 
+
+ //reselect back 
  $$("treetable_main_breakdown").select(selectedId);
  
  webix.delay(function(){
@@ -307,7 +317,11 @@ window.export = function(){
   }, 0, 0, 5000); //destroy it after 5 seconds
   
 };
-
+//export datatable
+function exportDtbl(){
+  console.log($$('datatable_mtw_main_breakdown').serialize());
+}
+ 
 //HELPER FUNCTION
 //random id
 function randomizeId(table){
@@ -315,11 +329,11 @@ function randomizeId(table){
     $$(table).data.each(function(obj){
       var newId = webix.uid();
       $$(table).data.changeId(obj.id, newId);
-      console.log(newId);
+      //console.log(newId);
     })  
   } 
 }
-
+//randomize ALLLLLL
 function randomizeTree(){
   randomizeId("treetable_main_breakdown");
   $$("treetable_main_breakdown").data.each(function(obj){

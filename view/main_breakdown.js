@@ -12,9 +12,11 @@ var view_main_breakdown__project_breakdown =
         { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35, tooltip: "Export Menu"},
         { label : "Project's Breakdown", view : "label" },
         { view : "spacer" },
-        { view : "button", click:randomizeTree, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "refresh", width : 35, tooltip: "Refresh"},
+        //{ view : "button", click:exportDtbl,  type : "iconButtonTop", icon : "code", width : 35, tooltip: "Serialize MTW"},
+        
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35, tooltip: "Add New Breakdown Item (Crtl + Up)"},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35, tooltip: "Add Breakdown Child (Ctrl + Down)"},
+        { view : "button", click:randomizeTree,  type : "iconButtonTop", icon : "refresh", width : 35, tooltip: "Refresh"},
         { click : open_search,id:"open_search", view : "toggle", type : "iconButtonTop", icon : "search", width : 35, tooltip:"Search an Item"},
         { click : open_details,id:"open_details", view : "toggle", type : "iconButtonTop", icon : "info", width : 35, tooltip: "View Item Details"}
       ],
@@ -100,15 +102,28 @@ var view_main_breakdown__project_breakdown =
               var newId = webix.uid();
               var details = { parent:context.parent,newId:newId };
               context.from.copy( context.source, context.index, context.to, details);
-                           
-                           
+              $$("treetable_main_breakdown").select(newId);
+              $$("datatable_mtw_main_breakdown").refresh(); 
+              randomizeId("datatable_mtw_main_breakdown");             
+              
+              $$("treetable_main_breakdown").data.eachSubItem(newId,function(obj){
+                $$("treetable_main_breakdown").select(obj.id); 
+                randomizeId("datatable_mtw_main_breakdown");
+              })
+              
+              $$("treetable_main_breakdown").select(newId);
+              $$("datatable_mtw_main_breakdown").refresh();
+               
+              $$("treetable_main_breakdown").refreshColumns();
+              $$("treetable_main_breakdown").refresh();
+              
+               
               return false;
             }
             
         },
         onAfterDrop:function(){
-              $$("treetable_main_breakdown").refreshColumns();
-              $$("treetable_main_breakdown").refresh();
+              
         }
         
       }
@@ -157,7 +172,6 @@ var view_main_breakdown__breakdown_details =
               math: false,
               editable:true,
               editaction:"custom",
-              footer:true,
               select : "row",
               drag : true,
               hover : "rowHover",
@@ -166,8 +180,8 @@ var view_main_breakdown__breakdown_details =
                 { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
                 { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
                 { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
-                { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
-                { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
+                { editor : "text", id : "mtw_unitprice", template: mtw_unit, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
+                { id : "mtw_totalprice", template: mtw_total, header : "Total", fillspace : 1.5, sort:"int" },
                 { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
               ],
               onClick:{
