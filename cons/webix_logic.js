@@ -254,11 +254,17 @@ function childTotal_search(item) {
 
 //function for mtw
 function mtw_unit(item){
-  return webix.i18n.priceFormat(item.mtw_unitprice);
+  if(item.mtw_unitprice){
+    return webix.i18n.priceFormat(item.mtw_unitprice);  
+  }
+  
 }
 function mtw_total(item){
-  var total = item.mtw_unitprice * item.mtw_index;
-  return  webix.i18n.priceFormat(total);
+  if(item.mtw_unitprice && item.mtw_index){
+    var total = item.mtw_unitprice * item.mtw_index;
+    return  webix.i18n.priceFormat(total);
+  }
+  
 }
 //EXPORT
 //window export function
@@ -285,6 +291,12 @@ window.export = function(){
     dataTable = $$("datatable_mtw_main_breakdown").serialize();
     temp_data = temp_data.concat(dataTable);
     
+    //pasang total
+    var total = {Total : sumTotal(obj)};
+    temp_data = temp_data.concat(total);
+    
+    
+    
     //kasih space
     var space = {};
     temp_data = temp_data.concat(space);
@@ -306,8 +318,9 @@ window.export = function(){
      "mtw_item" : {header: "Item", width: 200},
      "mtw_index" : {header: "Index", width: 200},
      "mtw_unit" : {header: "Unit", width: 200},
-     "mtw_unitprice" : {header: "Unit Price", width: 200},
-     "mtw_totalprice" : {header: "Total Price", width: 200},
+     "mtw_unitprice" : {header: "Unit Price", width: 200, template: mtw_unit},
+     "mtw_totalprice" : {header: "Total Price", width: 200, template: mtw_total},
+     Total : true
    }
  });
  
