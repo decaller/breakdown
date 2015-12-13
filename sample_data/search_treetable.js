@@ -1925,7 +1925,7 @@ var search_breakdown_treetable_data = [
                     
                                 mtw : [
                                         {id : 1, mtw_sku : "", mtw_item : "Bata Merah", mtw_index : "140.00", mtw_unit : "buah", mtw_unitprice : "507.60", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "43.5000", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "43.5000", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.0800", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.6000", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Tukang Batu", mtw_index : "0.2000", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
@@ -1938,7 +1938,7 @@ var search_breakdown_treetable_data = [
                             {id:"b.3.2",  br_item:"Plesteran (1 pc : 5 ps); t=1.5 cm", br_index:"1", br_unit: "m2", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                     
                                 mtw : [
-                                        {id : 1, mtw_sku : "", mtw_item : "PC", mtw_index : "5.184", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 1, mtw_sku : "", mtw_item : "PC", mtw_index : "5.184", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 2, mtw_sku : "", mtw_item : "PP", mtw_index : "0.0260", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.3000", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Tukang Batu", mtw_index : "0.1500", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
@@ -1951,7 +1951,7 @@ var search_breakdown_treetable_data = [
                             {id:"b.3.3",  br_item:"Plesteran Sudut / Benangan Sudut (1 pc : 3 ps)", br_index:"1", br_unit: "m2", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                     
                                 mtw : [
-                                        {id : 1, mtw_sku : "", mtw_item : "PC", mtw_index : "1.0000", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 1, mtw_sku : "", mtw_item : "PC", mtw_index : "1.0000", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 2, mtw_sku : "", mtw_item : "PP", mtw_index : "0.0030", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.3000", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Tukang Batu", mtw_index : "0.1500", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
@@ -1964,7 +1964,7 @@ var search_breakdown_treetable_data = [
                     
                                 mtw : [
                                         {id : 1, mtw_sku : "", mtw_item : "Ubin Keramik", mtw_index : "11870.00", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "10000.00", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "10000.00", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.045", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Semen Warna", mtw_index : "1500.00", mtw_unit : "kg", mtw_unitprice : "63200.00", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.700", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
@@ -1978,7 +1978,7 @@ var search_breakdown_treetable_data = [
                     
                                 mtw : [
                                         {id : 1, mtw_sku : "", mtw_item : "Ubin Keramik", mtw_index : "26.500", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "10400.00", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "10400.00", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.045", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Semen Warna", mtw_index : "1620.00", mtw_unit : "kg", mtw_unitprice : "63200.00", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.700", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
@@ -1993,7 +1993,7 @@ var search_breakdown_treetable_data = [
                     
                                 mtw : [
                                         {id : 1, mtw_sku : "", mtw_item : "Ubin Keramik", mtw_index : "26.500", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "9300.00", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "9300.00", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.018", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Semen Warna", mtw_index : "1940.00", mtw_unit : "kg", mtw_unitprice : "63200.00", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.900", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
@@ -2008,7 +2008,7 @@ var search_breakdown_treetable_data = [
                     
                                 mtw : [
                                         {id : 1, mtw_sku : "", mtw_item : "Batu Paras", mtw_index : "1.100", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "11750.00", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "11750.00", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.035", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         
                                         {id : 4, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.700", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
@@ -2023,7 +2023,7 @@ var search_breakdown_treetable_data = [
                     
                                 mtw : [
                                         {id : 1, mtw_sku : "", mtw_item : "Ubin Keramik", mtw_index : "26.500", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "9300.00", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "9300.00", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.018", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Semen Warna", mtw_index : "1940.00", mtw_unit : "kg", mtw_unitprice : "63200.00", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.900", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
@@ -2038,7 +2038,7 @@ var search_breakdown_treetable_data = [
                     
                                 mtw : [
                                         {id : 1, mtw_sku : "", mtw_item : "Plin Keramik Artistik", mtw_index : "5.300", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "1.1400", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "1.1400", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.003", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Semen Warna", mtw_index : "0.025", mtw_unit : "kg", mtw_unitprice : "63200.00", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.090", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
@@ -2129,12 +2129,12 @@ var search_breakdown_treetable_data = [
                                         {id : 3, mtw_sku : "", mtw_item : "Minyak Bekisitng", mtw_index : "0.400", mtw_unit : "liter", mtw_unitprice : "9000.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Besi beton polos", mtw_index : "157.500", mtw_unit : "kg", mtw_unitprice : "9583.36", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Kawat beton", mtw_index : "2.250", mtw_unit : "kg", mtw_unitprice : "65568.00", mtw_totalprice : ""},
-                                        {id : 6, mtw_sku : "", mtw_item : "PC", mtw_index : "336.000", mtw_unit : "kg", mtw_unitprice : "632.00", mtw_totalprice : ""},
-                                        {id : 7, mtw_sku : "", mtw_item : "PB", mtw_index : "0.540", mtw_unit : "m3", mtw_unitprice : "150382.00", mtw_totalprice : ""},
+                                        {id : 6, mtw_sku : "", mtw_item : "PC", mtw_index : "336.000", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
+                                        {id : 7, mtw_sku : "", mtw_item : "PB", mtw_index : "0.540", mtw_unit : "m3", mtw_unitprice : "248770.00", mtw_totalprice : ""},
                                         {id : 8, mtw_sku : "", mtw_item : "KR", mtw_index : "0.810", mtw_unit : "m3", mtw_unitprice : "87438.00", mtw_totalprice : ""},
-                                        {id : 9, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "5.300", mtw_unit : "OH", mtw_unitprice : "36580.00", mtw_totalprice : ""},
-                                        {id : 10, mtw_sku : "", mtw_item : "Tukang Batu", mtw_index : "0.275", mtw_unit : "OH", mtw_unitprice : "15300.00", mtw_totalprice : ""},
-                                        {id : 11, mtw_sku : "", mtw_item : "Tukang Kayu", mtw_index : "1.300", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
+                                        {id : 9, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "5.300", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
+                                        {id : 10, mtw_sku : "", mtw_item : "Tukang Batu", mtw_index : "0.275", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 11, mtw_sku : "", mtw_item : "Tukang Kayu", mtw_index : "1.300", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
                                         {id : 12, mtw_sku : "", mtw_item : "Tukang Besi", mtw_index : "1.050", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
                                         {id : 13, mtw_sku : "", mtw_item : "Kepala Tukang", mtw_index : "0.260", mtw_unit : "OH", mtw_unitprice : "132928.00", mtw_totalprice : ""},
                                         {id : 14, mtw_sku : "", mtw_item : "Mandor", mtw_index : "0.265", mtw_unit : "OH", mtw_unitprice : "150382.00", mtw_totalprice : ""},
@@ -2142,19 +2142,76 @@ var search_breakdown_treetable_data = [
                                 ],
                                 data : []
                             },
-                            {id:"b.6.2",  br_item:"Pekerjaan Struktur Beton", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                            {id:"b.6.2",  br_item:"Sloof Beton Bertulang (200 kg besi + bekisting)", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
             
-                                mtw : [],
+                                mtw : [
+                                        {id : 1, mtw_sku : "", mtw_item : "Kayu Kelas III", mtw_index : "0.270", mtw_unit : "m3", mtw_unitprice : "8819166.67", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "Paku 5 -12 cm", mtw_index : "2.000", mtw_unit : "kg", mtw_unitprice : "14800.00", mtw_totalprice : ""},
+                                        {id : 3, mtw_sku : "", mtw_item : "Minyak Bekisitng", mtw_index : "0.600", mtw_unit : "liter", mtw_unitprice : "9000.00", mtw_totalprice : ""},
+                                        {id : 4, mtw_sku : "", mtw_item : "Besi beton polos", mtw_index : "210.000", mtw_unit : "kg", mtw_unitprice : "9583.36", mtw_totalprice : ""},
+                                        {id : 5, mtw_sku : "", mtw_item : "Kawat beton", mtw_index : "3.000", mtw_unit : "kg", mtw_unitprice : "65568.00", mtw_totalprice : ""},
+                                        {id : 6, mtw_sku : "", mtw_item : "PC", mtw_index : "336.000", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
+                                        {id : 7, mtw_sku : "", mtw_item : "PB", mtw_index : "0.540", mtw_unit : "m3", mtw_unitprice : "248770.00", mtw_totalprice : ""},
+                                        {id : 8, mtw_sku : "", mtw_item : "KR", mtw_index : "0.810", mtw_unit : "m3", mtw_unitprice : "87438.00", mtw_totalprice : ""},
+                                        {id : 9, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "5.650", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
+                                        {id : 10, mtw_sku : "", mtw_item : "Tukang Batu", mtw_index : "0.275", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 11, mtw_sku : "", mtw_item : "Tukang Kayu", mtw_index : "1.560", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 12, mtw_sku : "", mtw_item : "Tukang Besi", mtw_index : "1.400", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 13, mtw_sku : "", mtw_item : "Kepala Tukang", mtw_index : "0.323", mtw_unit : "OH", mtw_unitprice : "132928.00", mtw_totalprice : ""},
+                                        {id : 14, mtw_sku : "", mtw_item : "Mandor", mtw_index : "0.283", mtw_unit : "OH", mtw_unitprice : "150382.00", mtw_totalprice : ""},
+
+                                ],
                                 data : []
                             },
-                            {id:"b.6.3",  br_item:"Pekerjaan Struktur Beton", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                            {id:"b.6.3",  br_item:"Kolom Beton Bertulang (300 kg besi + bekisting)", br_index:"1", br_unit: "m3", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
             
-                                mtw : [],
+                                mtw : [
+                                        {id : 1, mtw_sku : "", mtw_item : "Kayu Kelas III", mtw_index : "0.400", mtw_unit : "m3", mtw_unitprice : "8819166.67", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "Paku 5 -12 cm", mtw_index : "4.000", mtw_unit : "kg", mtw_unitprice : "14800.00", mtw_totalprice : ""},
+                                        {id : 3, mtw_sku : "", mtw_item : "Minyak Bekisitng", mtw_index : "2.000", mtw_unit : "liter", mtw_unitprice : "9000.00", mtw_totalprice : ""},
+                                        {id : 4, mtw_sku : "", mtw_item : "Besi beton polos", mtw_index : "315.000", mtw_unit : "kg", mtw_unitprice : "9583.36", mtw_totalprice : ""},
+                                        {id : 5, mtw_sku : "", mtw_item : "Kawat beton", mtw_index : "4.500", mtw_unit : "kg", mtw_unitprice : "65568.00", mtw_totalprice : ""},
+                                        {id : 6, mtw_sku : "", mtw_item : "PC", mtw_index : "336.000", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
+                                        {id : 7, mtw_sku : "", mtw_item : "PB", mtw_index : "0.540", mtw_unit : "m3", mtw_unitprice : "248770.00", mtw_totalprice : ""},
+                                        {id : 8, mtw_sku : "", mtw_item : "KR", mtw_index : "0.810", mtw_unit : "m3", mtw_unitprice : "87438.00", mtw_totalprice : ""},
+                                        {id : 9, mtw_sku : "", mtw_item : "Kayu Kelas II balok", mtw_index : "0.150", mtw_unit : "m3", mtw_unitprice : "8819166.67", mtw_totalprice : ""},
+                                        {id : 10, mtw_sku : "", mtw_item : "Plywood 9 mm", mtw_index : "3.500", mtw_unit : "lembar", mtw_unitprice : "228333.00", mtw_totalprice : ""},
+                                        {id : 11, mtw_sku : "", mtw_item : "Dolkan Kayu Galam dia. (8-10)cm, panjang 4m", mtw_index : "20.000", mtw_unit : "batang", mtw_unitprice : "3016666.67", mtw_totalprice : ""},
+                                       
+                                        {id : 12, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "7.050", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
+                                        {id : 13, mtw_sku : "", mtw_item : "Tukang Batu", mtw_index : "0.275", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 14, mtw_sku : "", mtw_item : "Tukang Kayu", mtw_index : "1.650", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 15, mtw_sku : "", mtw_item : "Tukang Besi", mtw_index : "2.100", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 16, mtw_sku : "", mtw_item : "Kepala Tukang", mtw_index : "0.403", mtw_unit : "OH", mtw_unitprice : "132928.00", mtw_totalprice : ""},
+                                        {id : 17, mtw_sku : "", mtw_item : "Mandor", mtw_index : "0.353", mtw_unit : "OH", mtw_unitprice : "150382.00", mtw_totalprice : ""},
+
+                                ],
                                 data : []
                             },
-                            {id:"b.6.4",  br_item:"Pekerjaan Struktur Beton", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                            {id:"b.6.4",  br_item:"Balok Beton Bertulang (200 kg besi + bekisting)", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
             
-                                mtw : [],
+                                mtw : [
+                                    
+                                        {id : 1, mtw_sku : "", mtw_item : "Kayu Kelas III", mtw_index : "0.320", mtw_unit : "m3", mtw_unitprice : "8819166.67", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "Paku 5 -12 cm", mtw_index : "3.200", mtw_unit : "kg", mtw_unitprice : "14800.00", mtw_totalprice : ""},
+                                        {id : 3, mtw_sku : "", mtw_item : "Minyak Bekisitng", mtw_index : "1.600", mtw_unit : "liter", mtw_unitprice : "9000.00", mtw_totalprice : ""},
+                                        {id : 4, mtw_sku : "", mtw_item : "Besi beton polos", mtw_index : "210.000", mtw_unit : "kg", mtw_unitprice : "9583.36", mtw_totalprice : ""},
+                                        {id : 5, mtw_sku : "", mtw_item : "Kawat beton", mtw_index : "3.000", mtw_unit : "kg", mtw_unitprice : "65568.00", mtw_totalprice : ""},
+                                        {id : 6, mtw_sku : "", mtw_item : "PC", mtw_index : "336.000", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
+                                        {id : 7, mtw_sku : "", mtw_item : "PB", mtw_index : "0.540", mtw_unit : "m3", mtw_unitprice : "248770.00", mtw_totalprice : ""},
+                                        {id : 8, mtw_sku : "", mtw_item : "KR", mtw_index : "0.810", mtw_unit : "m3", mtw_unitprice : "87438.00", mtw_totalprice : ""},
+                                        {id : 9, mtw_sku : "", mtw_item : "Kayu Kelas II balok", mtw_index : "0.140", mtw_unit : "m3", mtw_unitprice : "8819166.67", mtw_totalprice : ""},
+                                        {id : 10, mtw_sku : "", mtw_item : "Plywood 9 mm", mtw_index : "2.800", mtw_unit : "lembar", mtw_unitprice : "228333.00", mtw_totalprice : ""},
+                                        {id : 11, mtw_sku : "", mtw_item : "Dolkan Kayu Galam dia. (8-10)cm, panjang 4m", mtw_index : "16.000", mtw_unit : "batang", mtw_unitprice : "3016666.67", mtw_totalprice : ""},
+                                       
+                                        {id : 12, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "6.350", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
+                                        {id : 13, mtw_sku : "", mtw_item : "Tukang Batu", mtw_index : "0.75", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 14, mtw_sku : "", mtw_item : "Tukang Kayu", mtw_index : "1.650", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 15, mtw_sku : "", mtw_item : "Tukang Besi", mtw_index : "1.400", mtw_unit : "OH", mtw_unitprice : "115457.00", mtw_totalprice : ""},
+                                        {id : 16, mtw_sku : "", mtw_item : "Kepala Tukang", mtw_index : "0.333", mtw_unit : "OH", mtw_unitprice : "132928.00", mtw_totalprice : ""},
+                                        {id : 17, mtw_sku : "", mtw_item : "Mandor", mtw_index : "0.318", mtw_unit : "OH", mtw_unitprice : "150382.00", mtw_totalprice : ""},
+
+                                ],
                                 data : []
                             },
                             {id:"b.6.5",  br_item:"Pekerjaan Struktur Beton", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
