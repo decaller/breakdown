@@ -64,8 +64,8 @@ var logic ={
     $$("details-search_resizer").disable();
     $$("breakdown_resizer").disable();
        
-       webix.message ("all loaded");
-       console.log("all loaded");
+       //webix.message ("all loaded");
+       //console.log("all loaded");
   }  
 }; //logic done
 
@@ -251,29 +251,42 @@ function childTotal_search(item) {
 
 //window export function
 window.export = function(){
-  var temp_data = [];
+  //randomize all first 
+  randomizeTree();
   
+  var temp_data = [];
+ 
+ //reserve selected id
+ var selectedId = $$("treetable_main_breakdown").getSelectedId(); 
+ 
+ //go to each data in table
  $$("treetable_main_breakdown").data.each(function(obj){
-   $$("treetable_main_breakdown").select(obj.id);
+   
+    //get selected 
+    $$("treetable_main_breakdown").select(obj.id);
 
- 
- var head = {Breakdown : obj.br_item};
- temp_data = temp_data.concat(head);
- 
- dataTable = $$("datatable_mtw_main_breakdown").serialize();
- temp_data = temp_data.concat(dataTable);
- 
- var space = {};
- temp_data = temp_data.concat(space);
+    //pasang head isi dari tree nya
+    var head = {Breakdown : obj.br_item};
+    temp_data = temp_data.concat(head);
+    
+    //pasang mtw nya
+    dataTable = $$("datatable_mtw_main_breakdown").serialize();
+    temp_data = temp_data.concat(dataTable);
+    
+    //kasih space
+    var space = {};
+    temp_data = temp_data.concat(space);
  
  
  });
  
+ //put the data in imaginary view
  var temp_grid = new webix.DataCollection({
    data:temp_data
 
  }); 
  
+ //export data
  webix.toExcel(temp_grid,{
    columns:{
      Breakdown : true,
@@ -286,9 +299,32 @@ window.export = function(){
    }
  });
  
+ //reselct back 
+ $$("treetable_main_breakdown").select(selectedId);
+ 
  webix.delay(function(){
   	temp_grid.destructor();
   }, 0, 0, 5000); //destroy it after 5 seconds
   
 };
+
+//HELPER FUNCTION
+//random id
+function randomizeId(table){
+  if($$(table).data){
+    $$(table).data.each(function(obj){
+      var newId = webix.uid();
+      $$(table).data.changeId(obj.id, newId);
+      console.log(newId);
+    })  
+  } 
+}
+
+function randomizeTree(){
+  randomizeId("treetable_main_breakdown");
+  $$("treetable_main_breakdown").data.each(function(obj){
+    $$("treetable_main_breakdown").select(obj.id);
+    randomizeId("datatable_mtw_main_breakdown");
+  })
+}
 

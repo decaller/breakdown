@@ -12,6 +12,7 @@ var view_main_breakdown__project_breakdown =
         { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35, tooltip: "Export Menu"},
         { label : "Project's Breakdown", view : "label" },
         { view : "spacer" },
+        { view : "button", click:randomizeTree, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "refresh", width : 35, tooltip: "Refresh"},
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35, tooltip: "Add New Breakdown Item (Crtl + Up)"},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35, tooltip: "Add Breakdown Child (Ctrl + Down)"},
         { click : open_search,id:"open_search", view : "toggle", type : "iconButtonTop", icon : "search", width : 35, tooltip:"Search an Item"},
@@ -21,9 +22,9 @@ var view_main_breakdown__project_breakdown =
     },
     {
       columns : [
-        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
-        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
-        { id : "br_unit", header : "Unit", fillspace : 1, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#"},
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
+        { id : "br_unit", header : "Unit", fillspace : 1, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal, sort:"int"},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal, sort:"int"},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal , sort:"int"},
@@ -34,13 +35,13 @@ var view_main_breakdown__project_breakdown =
       select : "row",
       id:"treetable_main_breakdown",
       data : main_breakdown_treetable_data,
-      editaction:"dblclick",
+      editaction:"custom",
       multiselect : true,
       borderless : true,
       editable : true,
       navigation:true,
       drag : true,
-      math : true,
+      math : false,
       tooltip : true,
       hover : "rowHover",
       onClick:{
@@ -76,11 +77,11 @@ var view_main_breakdown__project_breakdown =
           //clear selection from treetable search 
           $$("treetable_search_breakdown").clearSelection();
           },
-        onAfterEditStop: function () {
+        onAfterEditStop: function(){
           //refresh after editing
           $$("datatable_mtw_main_breakdown").refreshColumns();
         
-           $$("treetable_main_breakdown").refreshColumns();
+          $$("treetable_main_breakdown").refreshColumns();
           
           },
         onBeforeDrop:function(context){
@@ -96,12 +97,20 @@ var view_main_breakdown__project_breakdown =
             
             //instead move, do copy
             if (context.from.config.id == "treetable_search_breakdown"){
-              var details = { parent:context.parent,newId:webix.uid() };
+              var newId = webix.uid();
+              var details = { parent:context.parent,newId:newId };
               context.from.copy( context.source, context.index, context.to, details);
+                           
+                           
               return false;
             }
             
+        },
+        onAfterDrop:function(){
+              $$("treetable_main_breakdown").refreshColumns();
+              $$("treetable_main_breakdown").refresh();
         }
+        
       }
     }
     
@@ -145,12 +154,11 @@ var view_main_breakdown__breakdown_details =
               
               minheight:300,
               id : "datatable_mtw_main_breakdown",
-              math: true,
+              math: false,
               editable:true,
-              editaction:"dblclick",
+              editaction:"custom",
               footer:true,
               select : "row",
-              editmath:true,
               drag : true,
               hover : "rowHover",
               columns : [
@@ -181,9 +189,7 @@ var view_main_breakdown__breakdown_details =
                     $$("treetable_main_breakdown").refresh();
                   },
                   onAfterDrop: function(){
-                    //refresh table after edit to recalculate
-                    $$("datatable_mtw_main_breakdown").refreshColumns();
-                    $$("treetable_main_breakdown").refresh();
+                    
                   },
                   onBeforeDrop:function(context){
                       //instead move, do copy
@@ -198,12 +204,20 @@ var view_main_breakdown__breakdown_details =
                         var copiedId =  context.from.copy(context.source,context.index,this,{newId:webix.uid()});
                         var copiedItem = $$("datatable_mtw_main_breakdown").getItem(copiedId);
                         
-                        console.log(records);
+                        //console.log(copiedId);
+                        //console.log(records);
                         records.push(copiedItem);
-                        console.log(records);
-                        $$("datatable_mtw_main_breakdown").refresh();
+                        //console.log(records);
+                        randomizeId("datatable_mtw_main_breakdown");
+                        
+                        //refresh table after edit to recalculate
+                        $$("datatable_mtw_main_breakdown").refreshColumns();
+                        $$("treetable_main_breakdown").refreshColumns();
+                        $$("treetable_main_breakdown").refresh();
+                        
                         return false;
                       }
+                    
                       
                       
                       
