@@ -132,7 +132,10 @@ function open_details(){
 function add_item() {
   var posId = $$("treetable_main_breakdown").getSelectedId();
   var parentId = $$("treetable_main_breakdown").getParentId(posId);
-  var pos = $$("treetable_main_breakdown").getBranchIndex(posId);  
+  var pos = $$("treetable_main_breakdown").getBranchIndex(posId);
+  if(!parentId){
+    parentId = "root";
+  }  
   $$("treetable_main_breakdown").add({ value:"New item"}, pos+1, parentId);
   webix.UIManager.setFocus( $$("treetable_main_breakdown") );
 };

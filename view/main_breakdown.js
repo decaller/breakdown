@@ -93,6 +93,7 @@ var view_main_breakdown__project_breakdown =
             
             //only place as child of root
             if (!context.target || context.target.row == "root"){
+              
              context.index = -1;
              context.parent = context.target = "root";
             };
