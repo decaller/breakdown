@@ -64,7 +64,12 @@ var logic ={
     $$("details-search_resizer").disable();
     $$("breakdown_resizer").disable();
        
+<<<<<<< HEAD
       
+=======
+       //webix.message ("all loaded");
+       //console.log("all loaded");
+>>>>>>> simulation
   }  
 }; //logic done
 
@@ -131,7 +136,10 @@ function open_details(){
 function add_item() {
   var posId = $$("treetable_main_breakdown").getSelectedId();
   var parentId = $$("treetable_main_breakdown").getParentId(posId);
-  var pos = $$("treetable_main_breakdown").getBranchIndex(posId);  
+  var pos = $$("treetable_main_breakdown").getBranchIndex(posId);
+  if(!parentId){
+    parentId = "root";
+  }  
   $$("treetable_main_breakdown").add({ value:"New item"}, pos+1, parentId);
   webix.UIManager.setFocus( $$("treetable_main_breakdown") );
 };
@@ -248,31 +256,65 @@ function childTotal_search(item) {
   	return total;
 };
 
+//function for mtw
+function mtw_unit(item){
+  if(item.mtw_unitprice){
+    return webix.i18n.priceFormat(item.mtw_unitprice);  
+  }
+  
+}
+function mtw_total(item){
+  if(item.mtw_unitprice && item.mtw_index){
+    var total = item.mtw_unitprice * item.mtw_index;
+    return  webix.i18n.priceFormat(total);
+  }
+  
+}
+//EXPORT
 //window export function
 window.export = function(){
-  var temp_data = [];
+  //randomize all first 
+  randomizeTree();
   
+  var temp_data = [];
+ 
+ //reserve selected id
+ var selectedId = $$("treetable_main_breakdown").getSelectedId(); 
+ 
+ //go to each data in table
  $$("treetable_main_breakdown").data.each(function(obj){
-   $$("treetable_main_breakdown").select(obj.id);
+   
+    //get selected 
+    $$("treetable_main_breakdown").select(obj.id);
 
- 
- var head = {Breakdown : obj.br_item};
- temp_data = temp_data.concat(head);
- 
- dataTable = $$("datatable_mtw_main_breakdown").serialize();
- temp_data = temp_data.concat(dataTable);
- 
- var space = {};
- temp_data = temp_data.concat(space);
+    //pasang head isi dari tree nya
+    var head = {Breakdown : obj.br_item};
+    temp_data = temp_data.concat(head);
+    
+    //pasang mtw nya
+    dataTable = $$("datatable_mtw_main_breakdown").serialize();
+    temp_data = temp_data.concat(dataTable);
+    
+    //pasang total
+    var total = {Total : sumTotal(obj)};
+    temp_data = temp_data.concat(total);
+    
+    
+    
+    //kasih space
+    var space = {};
+    temp_data = temp_data.concat(space);
  
  
  });
  
+ //put the data in imaginary view
  var temp_grid = new webix.DataCollection({
    data:temp_data
 
  }); 
  
+ //export data
  webix.toExcel(temp_grid,{
    columns:{
      Breakdown : true,
@@ -280,14 +322,43 @@ window.export = function(){
      "mtw_item" : {header: "Item", width: 200},
      "mtw_index" : {header: "Index", width: 200},
      "mtw_unit" : {header: "Unit", width: 200},
-     "mtw_unitprice" : {header: "Unit Price", width: 200, format : webix.i18n.priceFormat},
-     "mtw_totalprice" : {header: "Total Price", width: 200, format : webix.i18n.priceFormat},
+     "mtw_unitprice" : {header: "Unit Price", width: 200, template: mtw_unit},
+     "mtw_totalprice" : {header: "Total Price", width: 200, template: mtw_total},
+     Total : true
    }
  });
+ 
+
+ //reselect back 
+ $$("treetable_main_breakdown").select(selectedId);
  
  webix.delay(function(){
   	temp_grid.destructor();
   }, 0, 0, 5000); //destroy it after 5 seconds
   
 };
+//export datatable
+function exportDtbl(){
+  console.log($$('datatable_mtw_main_breakdown').serialize());
+}
+ 
+//HELPER FUNCTION
+//random id
+function randomizeId(table){
+  if($$(table).data){
+    $$(table).data.each(function(obj){
+      var newId = webix.uid();
+      $$(table).data.changeId(obj.id, newId);
+      //console.log(newId);
+    })  
+  } 
+}
+//randomize ALLLLLL
+function randomizeTree(){
+  randomizeId("treetable_main_breakdown");
+  $$("treetable_main_breakdown").data.each(function(obj){
+    $$("treetable_main_breakdown").select(obj.id);
+    randomizeId("datatable_mtw_main_breakdown");
+  })
+}
 

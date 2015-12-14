@@ -12,8 +12,11 @@ var view_main_breakdown__project_breakdown =
         { view: "button", icon: "bars", type : "iconButtonTop", click: function(){$$("menu_side").show();}, width : 35, tooltip: "Export Menu"},
         { label : "Project's Breakdown", view : "label" },
         { view : "spacer" },
+        //{ view : "button", click:exportDtbl,  type : "iconButtonTop", icon : "code", width : 35, tooltip: "Serialize MTW"},
+        
         { view : "button", click:add_item, hotkey: "ctrl+up",  type : "iconButtonTop", icon : "plus", width : 35, tooltip: "Add New Breakdown Item (Crtl + Up)"},
         { view : "button", click:add_child , hotkey: "ctrl+down",  type : "iconButtonTop", icon : "child", width : 35, tooltip: "Add Breakdown Child (Ctrl + Down)"},
+        { view : "button", click:randomizeTree,  type : "iconButtonTop", icon : "refresh", width : 35, tooltip: "Refresh"},
         { click : open_search,id:"open_search", view : "toggle", type : "iconButtonTop", icon : "search", width : 35, tooltip:"Search an Item"},
         { click : open_details,id:"open_details", view : "toggle", type : "iconButtonTop", icon : "info", width : 35, tooltip: "View Item Details"}
       ],
@@ -21,9 +24,15 @@ var view_main_breakdown__project_breakdown =
     },
     {
       columns : [
+<<<<<<< HEAD
         { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br></br><b>**Press F2 for Editing**</b>"},
         { id : "br_index", header : "Index" , fillspace : 1 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br></br><b>Press F2 for Editing</b>"},
         { id : "br_unit", header : "Unit", fillspace : 1, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br></br><b>Press F2 for Editing</b>"},
+=======
+        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
+        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
+        { id : "br_unit", header : "Unit", fillspace : 1, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
+>>>>>>> simulation
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal, sort:"int"},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal, sort:"int"},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal , sort:"int"},
@@ -34,13 +43,13 @@ var view_main_breakdown__project_breakdown =
       select : "row",
       id:"treetable_main_breakdown",
       data : main_breakdown_treetable_data,
-      editaction:"dblclick",
+      editaction:"custom",
       multiselect : true,
       borderless : true,
       editable : true,
       navigation:true,
       drag : true,
-      math : true,
+      math : false,
       tooltip : true,
       hover : "rowHover",
       onClick:{
@@ -76,11 +85,11 @@ var view_main_breakdown__project_breakdown =
           //clear selection from treetable search 
           $$("treetable_search_breakdown").clearSelection();
           },
-        onAfterEditStop: function () {
+        onAfterEditStop: function(){
           //refresh after editing
           $$("datatable_mtw_main_breakdown").refreshColumns();
         
-           $$("treetable_main_breakdown").refreshColumns();
+          $$("treetable_main_breakdown").refreshColumns();
           
           },
         onBeforeDrop:function(context){
@@ -90,18 +99,40 @@ var view_main_breakdown__project_breakdown =
             
             //only place as child of root
             if (!context.target || context.target.row == "root"){
+              
              context.index = -1;
              context.parent = context.target = "root";
             };
             
             //instead move, do copy
             if (context.from.config.id == "treetable_search_breakdown"){
-              var details = { parent:context.parent,newId:webix.uid() };
+              var newId = webix.uid();
+              var details = { parent:context.parent,newId:newId };
               context.from.copy( context.source, context.index, context.to, details);
+              $$("treetable_main_breakdown").select(newId);
+              $$("datatable_mtw_main_breakdown").refresh(); 
+              randomizeId("datatable_mtw_main_breakdown");             
+              
+              $$("treetable_main_breakdown").data.eachSubItem(newId,function(obj){
+                $$("treetable_main_breakdown").select(obj.id); 
+                randomizeId("datatable_mtw_main_breakdown");
+              })
+              
+              $$("treetable_main_breakdown").select(newId);
+              $$("datatable_mtw_main_breakdown").refresh();
+               
+              $$("treetable_main_breakdown").refreshColumns();
+              $$("treetable_main_breakdown").refresh();
+              
+               
               return false;
             }
             
+        },
+        onAfterDrop:function(){
+              
         }
+        
       }
     }
     
@@ -145,12 +176,10 @@ var view_main_breakdown__breakdown_details =
               
               minheight:300,
               id : "datatable_mtw_main_breakdown",
-              math: true,
+              math: false,
               editable:true,
-              editaction:"dblclick",
-              footer:true,
+              editaction:"custom",
               select : "row",
-              editmath:true,
               drag : true,
               hover : "rowHover",
               columns : [
@@ -158,8 +187,8 @@ var view_main_breakdown__breakdown_details =
                 { editor : "text", id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
                 { editor : "text", id : "mtw_index", header : "Index", fillspace : 1 , sort:"int"},
                 { editor : "text", id : "mtw_unit", header : "Unit", fillspace : 1 },
-                { editor : "text", id : "mtw_unitprice", format : webix.i18n.priceFormat, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
-                { id : "mtw_totalprice", format : webix.i18n.priceFormat, header : "Total", fillspace : 1.5, sort:"int" ,  math : "[$r,mtw_index] * [$r,mtw_unitprice]", footer:{content:"summColumn", colspan:2}},
+                { editor : "text", id : "mtw_unitprice", template: mtw_unit, header : "Price", fillspace : 1.5, footer:"Total" , sort:"int"},
+                { id : "mtw_totalprice", template: mtw_total, header : "Total", fillspace : 1.5, sort:"int" },
                 { id : "mtw_menu",  header : "", fillspace : 0.8, template:"<span class='webix_icon fa-ellipsis-v menu_mtw'></span>" }
               ],
               onClick:{
@@ -181,9 +210,7 @@ var view_main_breakdown__breakdown_details =
                     $$("treetable_main_breakdown").refresh();
                   },
                   onAfterDrop: function(){
-                    //refresh table after edit to recalculate
-                    $$("datatable_mtw_main_breakdown").refreshColumns();
-                    $$("treetable_main_breakdown").refresh();
+                    
                   },
                   onBeforeDrop:function(context){
                       //instead move, do copy
@@ -198,12 +225,20 @@ var view_main_breakdown__breakdown_details =
                         var copiedId =  context.from.copy(context.source,context.index,this,{newId:webix.uid()});
                         var copiedItem = $$("datatable_mtw_main_breakdown").getItem(copiedId);
                         
-                        console.log(records);
+                        //console.log(copiedId);
+                        //console.log(records);
                         records.push(copiedItem);
-                        console.log(records);
-                        $$("datatable_mtw_main_breakdown").refresh();
+                        //console.log(records);
+                        randomizeId("datatable_mtw_main_breakdown");
+                        
+                        //refresh table after edit to recalculate
+                        $$("datatable_mtw_main_breakdown").refreshColumns();
+                        $$("treetable_main_breakdown").refreshColumns();
+                        $$("treetable_main_breakdown").refresh();
+                        
                         return false;
                       }
+                    
                       
                       
                       
