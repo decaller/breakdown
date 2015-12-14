@@ -64,12 +64,7 @@ var logic ={
     $$("details-search_resizer").disable();
     $$("breakdown_resizer").disable();
        
-<<<<<<< HEAD
-      
-=======
-       //webix.message ("all loaded");
-       //console.log("all loaded");
->>>>>>> simulation
+
   }  
 }; //logic done
 

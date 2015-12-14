@@ -24,15 +24,10 @@ var view_main_breakdown__project_breakdown =
     },
     {
       columns : [
-<<<<<<< HEAD
+
         { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br></br><b>**Press F2 for Editing**</b>"},
         { id : "br_index", header : "Index" , fillspace : 1 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br></br><b>Press F2 for Editing</b>"},
         { id : "br_unit", header : "Unit", fillspace : 1, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br></br><b>Press F2 for Editing</b>"},
-=======
-        { id : "br_item", header : "Item", fillspace : 3, template : "{common.treetable()} #br_item#", editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
-        { id : "br_index", header : "Index" , fillspace : 1 , editor : "text" , sort:"string", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
-        { id : "br_unit", header : "Unit", fillspace : 1, editor : "text", tooltip : "Item: #br_item#</br>Index: #br_index#</br>Unit: #br_unit#</br>Id: #id#"},
->>>>>>> simulation
         { id : "br_child_prc", header : "ChildPrice", fillspace : 1.5, template: childTotal, sort:"int"},
         { id : "br_mtw_prc", header : "MTWPrice", fillspace : 1.5, template: sumTotal, sort:"int"},
         { id : "br_total_prc", header : "Total", fillspace : 1.5, template: priceTotal , sort:"int"},
