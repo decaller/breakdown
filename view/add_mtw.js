@@ -17,12 +17,14 @@ var view_add_mtw__search =
       view : "datatable",
       data : search_mtw_data,
       drag: true,
+      tooltip : {
+        template: "<span class='webix_strong'>Item: </span> #mtw_item#<br/><span class='webix_strong'>Unit: </span> #mtw_unit#</br><span class='webix_strong'>Unit Price: </span> #mtw_unitprice#</br></br></br><b>**Drag and Drop Item to Add to Details**</b>"},
       hover : "rowHover",
       columns : [
         
         { id : "mtw_item", header : "Item", fillspace :2 , sort:"string"},
         { id : "mtw_unit", header : "Unit", fillspace : 1 },
-        { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 , sort:"int"}        
+        { id : "mtw_unitprice", header : "Unit Price", fillspace : 1.5 , sort:"int", format: webix.i18n.priceFormat}        
       ],
       on: {
         onBeforeDragIn:function(context){
