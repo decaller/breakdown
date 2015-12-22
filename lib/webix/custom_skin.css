@@ -5,12 +5,12 @@
   cursor: default;
   overflow: hidden;
   border: 0px solid #fafafa;
-  background-color: #fafafa;
+  background-color: #FFFFFF;
   white-space: normal;
   -webkit-appearance: none;
 }
 .webix_view.webix_form {
-  background-color: #fafafa;
+  background-color: #ffffff;
   /*.webix_view{
 		background-color: @backColor;
 	}*/
@@ -31,7 +31,7 @@ button,
 	known types are: line, clean, wide, space;
 */
 .webix_layout_space {
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 .webix_layout_wide {
   background-color: transparent;
@@ -111,12 +111,12 @@ body.webix_full_screen {
 }
 .webix_section > .webix_template {
   padding: 0px 8px;
-  background-color: #fafafa;
+  background-color: #ffffff;
   display: inline;
 }
 .webix_layout_space > .webix_section > .webix_template {
   padding: 0px 8px;
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 .webix_layout_wide > .webix_section > .webix_template {
   padding: 0px 8px;
@@ -125,7 +125,7 @@ body.webix_full_screen {
 .webix_layout_line > .webix_section > .webix_template,
 .webix_layout_clean > .webix_section > .webix_template {
   padding: 0px 8px;
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 .webix_header > div {
   padding-left: 10px;
@@ -134,7 +134,7 @@ body.webix_full_screen {
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
-  background: #fafafa;
+  background: #ffffff;
   line-height: 43px;
   line-height: 45px;
   padding-top: 0;
@@ -229,7 +229,7 @@ x\:ui {
   position: relative;
 }
 .webix_accordionitem_header {
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid #ffffff;
   position: relative;
   z-index: 2;
   font-family: Roboto, Arial;
@@ -237,7 +237,7 @@ x\:ui {
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
-  background: #fafafa;
+  background: #ffffff;
   line-height: 43px;
   cursor: pointer;
   overflow: hidden;
@@ -480,11 +480,11 @@ x\:ui {
 .webix_list-x .webix_list_item {
   display: inline-block;
   vertical-align: top;
-  border-right: 1px solid #fafafa;
+  border-right: 1px solid #ffffff;
   border-bottom: none;
 }
 .webix_list-x .webix_list_item.webix_selected {
-  border-left: 1px solid #fafafa;
+  border-left: 1px solid #ffffff;
   border-right: 1px solid #cfd8dc;
   padding-left: 9px;
 }
@@ -7265,4 +7265,8 @@ label.webix_required:after {
 
 .webix_el_toggle .webix_el_box.webix_pressed .webix_img_btn_abs, .webix_el_toggle .webix_el_box.webix_pressed .webixtype_base{
   background-color: #455a64
+}
+
+.webix_column .webix_cell {
+ border-bottom: 1px solid #ECEFF1; 
 }
