@@ -5,10 +5,15 @@ var context_menu_breakdown = {
     data:["Remove"],
     click:function(id){ 
         var context = this.$context;
-        var item = $$('treetable_main_breakdown').getItem(context.id);
-        webix.message(id+" on row "+item.br_item);
-        if(id === "Remove" )
-            context.obj.remove(context.id);
+        if(context.id != "root"){
+            var item = $$('treetable_main_breakdown').getItem(context.id);
+            webix.message(id+" on row "+item.br_item);
+            if(id === "Remove" )
+                context.obj.remove(context.id); 
+        } else {
+            webix.message("root cannot be removed, please change the content instead!");
+        }
+        
     }
 };
     
