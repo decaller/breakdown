@@ -1963,8 +1963,8 @@ var search_breakdown_treetable_data = [
                             {id:"b.3.4",  br_item:"Lantai Keramik 30x30 (Spesi 1 pc : 3 ps ; t = 2cm)", br_index:"1", br_unit: "m2", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
                     
                                 mtw : [
-                                        {id : 1, mtw_sku : "", mtw_item : "Ubin Keramik", mtw_index : "11870.00", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "10000.00", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
+                                        {id : 1, mtw_sku : "", mtw_item : "Ubin Keramik", mtw_index : "11.8700", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "10.000", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.045", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Semen Warna", mtw_index : "1500.00", mtw_unit : "kg", mtw_unitprice : "63200.00", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.700", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
@@ -1978,7 +1978,7 @@ var search_breakdown_treetable_data = [
                     
                                 mtw : [
                                         {id : 1, mtw_sku : "", mtw_item : "Ubin Keramik", mtw_index : "26.500", mtw_unit : "buah", mtw_unitprice : "97500.00", mtw_totalprice : ""},
-                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "10400.00", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
+                                        {id : 2, mtw_sku : "", mtw_item : "PC", mtw_index : "10.4000", mtw_unit : "kg", mtw_unitprice : "1264.00", mtw_totalprice : ""},
                                         {id : 3, mtw_sku : "", mtw_item : "PP", mtw_index : "0.045", mtw_unit : "m3", mtw_unitprice : "249780.00", mtw_totalprice : ""},
                                         {id : 4, mtw_sku : "", mtw_item : "Semen Warna", mtw_index : "1620.00", mtw_unit : "kg", mtw_unitprice : "63200.00", mtw_totalprice : ""},
                                         {id : 5, mtw_sku : "", mtw_item : "Pekerja", mtw_index : "0.700", mtw_unit : "OH", mtw_unitprice : "98000.00", mtw_totalprice : ""},
@@ -2670,11 +2670,11 @@ var search_breakdown_treetable_data = [
                          ]
                    },
                    
-                   /**{id:"12",  br_item:"Arsitektur", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
+                   {id:"12",  br_item:"Arsitektur", br_index:"1", br_unit: "", br_child_prc : "", br_mtw_prc : "", br_total_prc : "",
           
                     mtw : [],
                     data : []
-                   },**/
+                   },
                   
                    
           ]
