@@ -8,6 +8,7 @@ var view_add_breakdown__search =
       elements : [
         { id : "searchbar_br_search",label : "Search", view : "search" , color : "white", tooltip: "Type to Search Breakdown Item"},
         { view : "button", click:show_mtw_search,  type : "iconButtonTop", icon : "leaf", width : 35, tooltip: "Switch to Search MTW"},
+        { view : "button", align:"left",  type : "iconButtonTop", icon : "times", width : 35, tooltip: "Close", click:close_search}
       ]
     },
     {

@@ -77,6 +77,16 @@ function show_breakdown_search(){
 function show_mtw_search(){
     $$("mtw_search").show();
 };
+
+function close_details(){
+  $$("open_details").toggle();
+  open_details();
+};
+function close_search(){
+  $$("open_search").toggle();
+  open_search();
+};
+
 //toggle collapsed search accordion
 function open_search(){
     if($$("search_pane").config.collapsed){

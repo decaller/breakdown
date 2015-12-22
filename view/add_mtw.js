@@ -9,6 +9,7 @@ var view_add_mtw__search =
       elements : [
         { label : "Search", view : "search", id:"searchbar_mtw_search", color : "white", tooltip : "Type to Search MTW"},
         { view : "button", click:show_breakdown_search,  type : "iconButtonTop", icon : "tree", width : 35, tooltip : "Switch to Search Breakdown Item"},
+        { view : "button", align:"left",  type : "iconButtonTop", icon : "times", width : 35, tooltip: "Close", click:close_search},
       ]
     },
     {

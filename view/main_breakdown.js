@@ -143,6 +143,7 @@ var view_main_breakdown__breakdown_details =
                 view : "toolbar",
                 elements : [
                   { label : "Details", view : "label" },
+                  { view : "button", click:close_details, align:"left",  type : "iconButtonTop", icon : "times", width : 35, tooltip: "Close"},
                 ]
               },
           {
