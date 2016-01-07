@@ -82,8 +82,8 @@ var view_main_breakdown__project_breakdown =
           },
         onAfterEditStop: function(){
           //initialize benchmark marker
-          console.log("editing benchmark started");
-          benchmarkTestSubject = "editing";
+          console.log("editing tree benchmark started");
+          benchmarkTestSubject = "editing tree";
           timeStart = performance.now();
               
             
@@ -95,8 +95,8 @@ var view_main_breakdown__project_breakdown =
           },
         onBeforeDrop:function(context){
             //initialize benchmark marker
-            console.log("dropping benchmark started");
-            benchmarkTestSubject = "dropping";
+            console.log("dropping tree benchmark started");
+            benchmarkTestSubject = "dropping tree";
             timeStart = performance.now();
             
             
@@ -213,6 +213,11 @@ var view_main_breakdown__breakdown_details =
                     if ((context.from.config.id != "datatable_search_mtw") && (context.from.config.id != "datatable_mtw_main_breakdown")) return false;
                   },
                   onAfterEditStop: function () {
+                    //initialize benchmark marker
+            console.log("editing details benchmark started");
+            benchmarkTestSubject = "editing details";
+            timeStart = performance.now();
+                    
                     //refresh table after edit to recalculate
                     $$("datatable_mtw_main_breakdown").refreshColumns();
                     $$("treetable_main_breakdown").refresh();
@@ -221,6 +226,12 @@ var view_main_breakdown__breakdown_details =
                     
                   },
                   onBeforeDrop:function(context){
+                    //initialize benchmark marker
+            console.log("dropping details benchmark started");
+            benchmarkTestSubject = "dropping details";
+            timeStart = performance.now();
+                    
+                    
                       //instead move, do copy
                       if (context.from.config.id == "datatable_search_mtw"){
                                                 
