@@ -54,7 +54,7 @@ var side_menu  = {
     },
         on: {
         onItemClick:function(id){
-						webix.message("Click: "+this.getItem(id).value);
+						//webix.message("Click: "+this.getItem(id).value);
                         if(this.getItem(id).id==1){
                              webix.toExcel("treetable_main_breakdown", {
                                 columns:{
