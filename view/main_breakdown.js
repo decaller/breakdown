@@ -58,7 +58,7 @@ var view_main_breakdown__project_breakdown =
       
       on : {
         onBeforeDragIn:function(context){
-            //disable dro from other place except treetable search
+            //disable drop from other place except treetable search
            if ((context.from.config.id != "treetable_search_breakdown") && (context.from.config.id != "treetable_main_breakdown")) return false;
          },
         onBeforeSelect:function(context){
@@ -81,6 +81,12 @@ var view_main_breakdown__project_breakdown =
           $$("treetable_search_breakdown").clearSelection();
           },
         onAfterEditStop: function(){
+          //initialize benchmark marker
+          console.log("editing benchmark started");
+          benchmarkTestSubject = "editing";
+          timeStart = performance.now();
+              
+            
           //refresh after editing
           $$("datatable_mtw_main_breakdown").refreshColumns();
         
@@ -88,6 +94,12 @@ var view_main_breakdown__project_breakdown =
           
           },
         onBeforeDrop:function(context){
+            //initialize benchmark marker
+            console.log("dropping benchmark started");
+            benchmarkTestSubject = "dropping";
+            timeStart = performance.now();
+            
+            
             //config drop placement
             context.parent = context.target;    //drop as child
             context.index = -1;                 //as last child

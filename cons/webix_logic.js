@@ -172,7 +172,6 @@ function sumTotal(item) {
     	total += (records[i]["mtw_unitprice"]) * (records[i]["mtw_index"]);
     if(loop == 1){
       loop = 0;
-      
       return webix.i18n.priceFormat(total);
     };
     loop--;
@@ -185,7 +184,17 @@ function priceTotal(item) {
     total = (sumTotal(item) + childTotal(item))*item.br_index;
     if(loop ==  1){
       loop = 0;
-  
+      
+      //stop benchmark
+      if(item.id == "root"){
+          if(benchmarkTestSubject){
+              timeEnd = performance.now();
+              console.log(benchmarkTestSubject," selesai dengan waktu : ",(timeEnd - timeStart).toFixed(4));
+              benchmarkTestSubject = null;
+          }
+          
+      }
+      
       return webix.i18n.priceFormat(total);
     }
     loop--;
@@ -202,7 +211,6 @@ function childTotal(item) {
       });
   	if(loop == 1){
       loop = 0;
-    
       return webix.i18n.priceFormat(total);
     };
     loop--;
